@@ -6,19 +6,22 @@ import com.theokanning.openai.service.OpenAiService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class APITEST {
     public static void main(String[] args) {
         String token = System.getenv("OPENAI_API_KEY");
 
         OpenAiService service = new OpenAiService(token);
+        Scanner scanner = new Scanner(System.in);
 
         ChatMessage chatMessage = new ChatMessage("system","You answer every message in the same style as yoda");
-        ChatMessage chatMessage1 = new ChatMessage("user","what word rhymes with orange");
 
         List<ChatMessage> messages = new ArrayList<>();
         messages.add(chatMessage);
-        messages.add(chatMessage1);
+        System.out.println("Enter your message:");
+        String input = scanner.nextLine();
+        messages.add(new ChatMessage("user", input));
 
         ChatCompletionRequest chatCompletionRequest = ChatCompletionRequest.builder()
                 .model("gpt-3.5-turbo")
