@@ -37,7 +37,6 @@ public class API {
 
         EmbeddingResult result = service.createEmbeddings(embeddingRequest);
 
-
         return result.getData();
     }
 
