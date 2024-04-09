@@ -13,7 +13,7 @@ import java.util.List;
 
 public class API {
     static OpenAiService service = null;
-    static ChatMessage  getChatCompletion(String Token, String Model, List<ChatMessage> Messages){
+    static ChatMessage getChatCompletion(String Token, String Model, List<ChatMessage> Messages){
         if(service ==  null) service = new OpenAiService(Token);
 
         ChatCompletionRequest chatCompletionRequest = ChatCompletionRequest.builder()
