@@ -1,3 +1,5 @@
+package Main;
+
 import com.theokanning.openai.completion.chat.ChatMessage;
 import com.theokanning.openai.embedding.Embedding;
 
@@ -9,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter your OpenAI API token:");
+        System.out.println("Enter your OpenAI Main.API token:");
         String token = scanner.nextLine();
 
         System.out.println("Enter the model (e.g., gpt-3.5-turbo):");
@@ -18,9 +20,9 @@ public class Main {
         System.out.println("Enter the prompt for chat completion:");
         String prompt = scanner.nextLine();
 
-        ChatMessage chatMessage = new ChatMessage("user", prompt);
-
-        String chatCompletionResponse = API.getChatCompletion(token, model, List.of(chatMessage));
+        Conversation context = new Conversation();
+        String chatCompletionResponse = context.getResponse(prompt);
+        
         System.out.println("Chat Completion Response: " + chatCompletionResponse);
 
         System.out.println("Enter the text for which you want embeddings:");

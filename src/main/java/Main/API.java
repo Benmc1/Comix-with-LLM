@@ -1,3 +1,5 @@
+package Main;
+
 import com.theokanning.openai.completion.chat.ChatCompletionChoice;
 import com.theokanning.openai.completion.chat.ChatCompletionRequest;
 import com.theokanning.openai.completion.chat.ChatCompletionResult;
@@ -11,7 +13,7 @@ import java.util.List;
 
 public class API {
     static OpenAiService service = null;
-    static String  getChatCompletion(String Token, String Model, List<ChatMessage> Messages){
+    static ChatMessage  getChatCompletion(String Token, String Model, List<ChatMessage> Messages){
         if(service ==  null) service = new OpenAiService(Token);
 
         ChatCompletionRequest chatCompletionRequest = ChatCompletionRequest.builder()
@@ -24,7 +26,7 @@ public class API {
 
         //only ever 1 choice unless stated otherwise in the chatCompletionRequest
         ChatCompletionChoice result = resultsList.getChoices().get(0);
-        return result.getMessage().getContent();
+        return result.getMessage();
     }
 
     static List<Embedding> getEmbedding(String Token, String Model, List<String> Message){
