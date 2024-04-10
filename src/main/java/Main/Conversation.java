@@ -23,10 +23,10 @@ public class Conversation implements Interfaces.Conversation {
     @Override
     public String getResponse(String message) {
         messageList.add(new ChatMessage("user", message));
-        ChatMessage chatMessage = API.getChatCompletion(messageList);
-        messageList.add(chatMessage);
+        ChatMessage responseMessage = API.getChatCompletion(messageList);
+        messageList.add(responseMessage);
 
-        return chatMessage.getContent();
+        return responseMessage.getContent();
     }
 
     public List<ChatMessage> getMessageList() {
