@@ -8,19 +8,16 @@ import java.util.List;
 public class Conversation implements Interfaces.Conversation {
     private final List<ChatMessage> messageList = new ArrayList<>();
 
-    @Override
     public void addSystemMessage(String message) {
         messageList.add(new ChatMessage("system", message));
     }
 
-    @Override
     public void addMessageAndResponse(String userMessage, String response) {
         messageList.add(new ChatMessage("user", userMessage));
 
         messageList.add(new ChatMessage("assistant", response));
     }
 
-    @Override
     public String getResponse(String message) {
         messageList.add(new ChatMessage("user", message));
         ChatMessage responseMessage = API.getChatCompletion(messageList);
