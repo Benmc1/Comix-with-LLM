@@ -8,18 +8,19 @@ import com.theokanning.openai.embedding.Embedding;
 import com.theokanning.openai.embedding.EmbeddingRequest;
 import com.theokanning.openai.embedding.EmbeddingResult;
 import com.theokanning.openai.service.OpenAiService;
+import config.ConfigurationFile;
 
 import java.util.List;
 
 public class API {
     static OpenAiService service = null;
-    static ChatMessage getChatCompletion(String Token, String Model, List<ChatMessage> Messages){
-        if(service ==  null) service = new OpenAiService(Token);
+    static ChatMessage getChatCompletion( List<ChatMessage> Messages){
+        if(service ==  null) service = new OpenAiService(ConfigurationFile.getProperty("API_KEY"));
 
         ChatCompletionRequest chatCompletionRequest = ChatCompletionRequest.builder()
-                .model(Model)
+                .model(ConfigurationFile.getProperty("MODEL"))
                 .messages(Messages)
-                .maxTokens(50)
+                .maxTokens(Integer.valueOf(ConfigurationFile.getProperty("TOKEN_LIMIT")))
                 .build();
 
         ChatCompletionResult resultsList = service.createChatCompletion(chatCompletionRequest);
@@ -29,11 +30,11 @@ public class API {
         return result.getMessage();
     }
 
-    static List<Embedding> getEmbedding(String Token, String Model, List<String> Message){
-        if(service ==  null) service = new OpenAiService(Token);
+    static List<Embedding> getEmbedding(List<String> Message){
+        if(service ==  null) service = new OpenAiService(ConfigurationFile.getProperty("API_KEY"));
 
         EmbeddingRequest embeddingRequest = EmbeddingRequest.builder()
-                .model(Model)
+                .model(ConfigurationFile.getProperty("EMBEDDINGS_MODEL"))
                 .input(Message)
                 .build();
 

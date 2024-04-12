@@ -16,11 +16,18 @@ public class Lines {
                 "controversial topics and you always try to be interesting and unique.");
         String points = conversation.getResponse("Write a list of " + numOfPanels + " points about "+ topic
                 + ". Theses points should be concise and benign.");
-        if(conversation.isDOS(points)){
+        if(points.isEmpty()){
             //TODO
         }
-        String lines = conversation.getResponse("Use these points to create a numbered list where each point " +
+        String text = conversation.getResponse("Use these points to create a numbered list where each point " +
                 "has a pro outlook and a negative anti outlook. This should read like a conversation between two people");
+        if(text.isEmpty()){
+            // not sure if this can happen
+            System.out.println("Lines returned a DOS");
+        }
+        extractLines(text);
+    }
+    private void extractLines(String text){
 
     }
 

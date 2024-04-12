@@ -22,6 +22,7 @@ public class Conversation implements Interfaces.Conversation {
     public String getResponse(String message) {
         messageList.add(new ChatMessage("user", message));
         ChatMessage responseMessage = API.getChatCompletion(messageList);
+        if(isDOS(responseMessage)) return "";
         messageList.add(responseMessage);
 
         return responseMessage.getContent();
@@ -39,7 +40,7 @@ public class Conversation implements Interfaces.Conversation {
     }
 
     @Override
-    public Boolean isDOS(String message) {
+    public Boolean isDOS(ChatMessage message) {
         List<String> denialPhrases = Arrays.asList(
                 "I'm sorry, but I can't",
                 "unable to comply with that request",
@@ -49,7 +50,7 @@ public class Conversation implements Interfaces.Conversation {
                 "unable to complete your request"
         );
         for (String phrase : denialPhrases) {
-            if (message.contains(phrase)) {
+            if (message.getContent().contains(phrase)) {
                 return true;
             }
         }
