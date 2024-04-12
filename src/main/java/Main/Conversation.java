@@ -3,6 +3,7 @@ package Main;
 import com.theokanning.openai.completion.chat.ChatMessage;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Conversation implements Interfaces.Conversation {
@@ -38,8 +39,21 @@ public class Conversation implements Interfaces.Conversation {
     }
 
     @Override
-    //#TODO write is Denial of Service
     public Boolean isDOS(String message) {
-        return null;
+        List<String> denialPhrases = Arrays.asList(
+                "I'm sorry, but I can't",
+                "unable to comply with that request",
+                "can't assist with",
+                "I don't have the ability to",
+                "I'm not able to",
+                "unable to complete your request"
+        );
+        for (String phrase : denialPhrases) {
+            if (message.contains(phrase)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
