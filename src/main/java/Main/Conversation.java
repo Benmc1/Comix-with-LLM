@@ -3,30 +3,29 @@ package Main;
 import com.theokanning.openai.completion.chat.ChatMessage;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Conversation implements Interfaces.Conversation {
     private final List<ChatMessage> messageList = new ArrayList<>();
 
-    @Override
     public void addSystemMessage(String message) {
         messageList.add(new ChatMessage("system", message));
     }
 
-    @Override
     public void addMessageAndResponse(String userMessage, String response) {
         messageList.add(new ChatMessage("user", userMessage));
 
         messageList.add(new ChatMessage("assistant", response));
     }
 
-    @Override
     public String getResponse(String message) {
         messageList.add(new ChatMessage("user", message));
-        ChatMessage chatMessage = API.getChatCompletion(messageList);
-        messageList.add(chatMessage);
+        ChatMessage responseMessage = API.getChatCompletion(messageList);
+        if(isDOS(responseMessage)) return "";
+        messageList.add(responseMessage);
 
-        return chatMessage.getContent();
+        return responseMessage.getContent();
     }
 
     public List<ChatMessage> getMessageList() {
@@ -41,8 +40,21 @@ public class Conversation implements Interfaces.Conversation {
     }
 
     @Override
-    //#TODO write is Denial of Service
-    public Boolean isDOS(String message) {
-        return null;
+    public Boolean isDOS(ChatMessage message) {
+        List<String> denialPhrases = Arrays.asList(
+                "I'm sorry, but I can't",
+                "unable to comply with that request",
+                "can't assist with",
+                "I don't have the ability to",
+                "I'm not able to",
+                "unable to complete your request"
+        );
+        for (String phrase : denialPhrases) {
+            if (message.getContent().contains(phrase)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
