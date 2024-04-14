@@ -1,30 +1,22 @@
 package Main;
+import config.ConfigurationFile;
 
-import com.theokanning.openai.embedding.Embedding;
-
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        if(Objects.equals(ConfigurationFile.getProperty("API_KEY"), "")) {
+            System.out.println("api key is missing add it in configuration file");
+            return;
+        }
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter the prompt for chat completion:");
         String prompt = scanner.nextLine();
+        System.out.println("Enter the number of panels to generate:");
+        Comic comic = new Comic(prompt,5);
 
-        Conversation context = new Conversation();
-        String chatCompletionResponse = context.getResponse(prompt);
-        
-        System.out.println("Chat Completion Response: " + chatCompletionResponse);
-
-        System.out.println("Enter the text for which you want embeddings:");
-        String text = scanner.nextLine();
-
-        List<String> messages = new ArrayList<>();
-        messages.add(text);
-
-        List<Embedding> embeddings = API.getEmbedding(messages);
-        System.out.println("Embeddings: " + embeddings);
+        System.out.println(comic.getLines().toString());
     }
 }

@@ -3,8 +3,6 @@ package Test;
 import Main.Conversation;
 import com.theokanning.openai.completion.chat.ChatMessage;
 
-import java.util.List;
-
 public class TestChatEndpoint {
     public static void main(String[] args) {
         Conversation conversation = new Conversation();
@@ -15,7 +13,7 @@ public class TestChatEndpoint {
         System.out.println("Chat Completion Response: " + response);
 
         // Test denial of service  // Remember to change message
-        String denialOfServiceMessage = "Sorry, as a language model I am unable to comply with that request.";
+        ChatMessage denialOfServiceMessage = new ChatMessage("assistant","Sorry, as a language model I am unable to comply with that request.");
         boolean isDos = conversation.isDOS(denialOfServiceMessage);
         System.out.println("Is Denial of Service: " + isDos);
     }
