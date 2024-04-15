@@ -22,6 +22,8 @@ public class Lines {
         if(points.isEmpty()){
             System.out.println("points is empty");
             conversation.addMessageAndResponse(ConfigurationFile.getProperty("DOS_PROMPT"),ConfigurationFile.getProperty("DOS_RESPONSE"));
+              conversation.getResponse("Write a list of " + numOfPanels + " points about "+ topic
+                    + ". Theses points should be concise and benign.");
         }
         String text = conversation.getResponse(ConfigurationFile.getProperty("LINE_PROMPT"));
         if(text.isEmpty()){
@@ -32,6 +34,7 @@ public class Lines {
     private void extractLines(String text){
         String[] lines = text.split("\n");
         System.out.println(text);
+
         for (String string :lines) {
             if(string.contains("Pro")){
                 string = string.split("Pro:")[1];
