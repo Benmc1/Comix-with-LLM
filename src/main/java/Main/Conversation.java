@@ -42,12 +42,15 @@ public class Conversation implements Interfaces.Conversation {
     @Override
     public Boolean isDOS(ChatMessage message) {
         List<String> denialPhrases = Arrays.asList(
-                "I'm sorry, but I can't",
+                "I can't",
                 "unable to comply with that request",
                 "can't assist with",
                 "I don't have the ability to",
                 "I'm not able to",
-                "unable to complete your request"
+                "unable to complete your request",
+                "I cannot",
+                "I'm sorry",
+                "an AI language model"
         );
         for (String phrase : denialPhrases) {
             if (message.getContent().contains(phrase)) {
