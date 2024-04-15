@@ -1,34 +1,48 @@
 package Main;
 
+import config.ConfigurationFile;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Lines {
-    private List<String> proLines;
-    private List<String> antiLines;
+    private final List<String> proLines;
+    private final List<String> antiLines;
 
-    Lines(String topic,int numOfLines){
+    public Lines(String topic, int numOfLines){
+        this.proLines = new ArrayList<>();
+        this.antiLines = new ArrayList<>();
         generateLines(topic,numOfLines);
     }
 
     private void generateLines(String topic, int numOfPanels){
         Conversation conversation = new Conversation();
-        conversation.addSystemMessage("You are a writer for a topical comic. You dont hold back from contentious or " +
-                "controversial topics and you always try to be interesting and unique.");
+        conversation.addSystemMessage(ConfigurationFile.getProperty("SYSTEM_PROMPT"));
         String points = conversation.getResponse("Write a list of " + numOfPanels + " points about "+ topic
                 + ". Theses points should be concise and benign.");
         if(points.isEmpty()){
-            //TODO
+            System.out.println("points is empty");
+            conversation.addMessageAndResponse(ConfigurationFile.getProperty("DOS_PROMPT"),ConfigurationFile.getProperty("DOS_RESPONSE"));
         }
-        String text = conversation.getResponse("Use these points to create a numbered list where each point " +
-                "has a pro outlook and a negative anti outlook. This should read like a conversation between two people");
+        String text = conversation.getResponse(ConfigurationFile.getProperty("LINE_PROMPT"));
         if(text.isEmpty()){
-            // not sure if this can happen
             System.out.println("Lines returned a DOS");
         }
         extractLines(text);
     }
     private void extractLines(String text){
-
+        String[] lines = text.split("\n");
+        System.out.println(text);
+        for (String string :lines) {
+            if(string.contains("Pro")){
+                string = string.split("Pro:")[1];
+                string = string.stripLeading();
+                proLines.add(string);
+            } else if (string.contains("Anti")) {
+                string = string.split("Anti:")[1];
+                string = string.stripLeading();
+                antiLines.add(string);
+            }
+        }
     }
 
     public String getAntiLine(int n) {
@@ -39,4 +53,21 @@ public class Lines {
         return proLines.get(n);
     }
 
+    public List<String> getAntiLines() {
+        return antiLines;
+    }
+
+    public List<String> getProLines() {
+        return proLines;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder str = new StringBuilder();
+        for (int i = 0; i < proLines.size(); i++) {
+            str.append("\nPro: " + proLines.get(i));
+            str.append("\nAnti: " + antiLines.get(i));
+        }
+        return str.toString();
+    }
 }
