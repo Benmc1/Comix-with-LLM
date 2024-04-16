@@ -18,5 +18,9 @@ public class Main {
         Comic comic = new Comic(prompt,5);
 
         System.out.println(comic.getLines().toString());
+
+        ComicSerializer serializer = new ComicSerializer(); // Instantiate ComicSerializer
+        serializer.serializeToXml(comic, "comic.xml"); // Serialize Comic object to XML and write to file
+
     }
 }
