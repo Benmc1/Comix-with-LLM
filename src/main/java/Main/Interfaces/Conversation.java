@@ -1,4 +1,4 @@
-package Interfaces;
+package Main.Interfaces;
 
 import com.theokanning.openai.completion.chat.ChatMessage;
 

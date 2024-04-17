@@ -2,13 +2,11 @@ package Main;
 
 public class Comic {
     private final String topic;
-    private final int numOfPanels;
     private final Lines lines;
 
-    Comic(String topic, int numOfPanels){
+    Comic(String topic){
         this.topic = topic;
-        this.numOfPanels = numOfPanels;
-        lines = new Lines(topic, numOfPanels);
+        lines = new Lines(topic);
     }
 
     public Lines getLines() {

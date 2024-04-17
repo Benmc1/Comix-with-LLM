@@ -1,11 +1,11 @@
-package config;
+package Main.config;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigurationFile {
-    private static final String CONFIG_FILE_PATH = "config.properties";
+    private static final String CONFIG_FILE_PATH = "Main.config.properties";
     private static final Properties properties;
 
     static {
