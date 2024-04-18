@@ -12,4 +12,7 @@ public class Comic {
     public Lines getLines() {
         return lines;
     }
+    public String getTopic() {
+        return topic;
+    }
 }
