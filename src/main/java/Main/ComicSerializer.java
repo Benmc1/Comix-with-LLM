@@ -2,7 +2,6 @@ package Main;
 
 import java.io.File;
 import java.nio.file.Files;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ComicSerializer {
@@ -17,7 +16,7 @@ public class ComicSerializer {
 
             List<String> proLines = comic.getLines().getProLines();
             List<String> antiLines = comic.getLines().getAntiLines();
-            List<String> captions = generateCaptions(proLines.size()); // Generate captions for each panel
+            String captions = Narrator.generateCaption(comic.getTopic(), Narrator.getRandomNarratorStyle()); // Generate captions for each panel
 
             for (int i = 0; i < proLines.size(); i++) {
                 xmlBuilder.append("<Panel>\n");
@@ -25,7 +24,7 @@ public class ComicSerializer {
                 xmlBuilder.append("<Pro>").append(proLines.get(i)).append("</Pro>\n");
                 xmlBuilder.append("<Anti>").append(antiLines.get(i)).append("</Anti>\n");
                 xmlBuilder.append("</Dialogue>\n");
-                xmlBuilder.append("<Caption>").append(captions.get(i)).append("</Caption>\n");
+                xmlBuilder.append("<Caption>").append(captions).append("</Caption>\n");
                 xmlBuilder.append("</Panel>\n");
             }
 
@@ -39,16 +38,5 @@ public class ComicSerializer {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    private List<String> generateCaptions(int numPanels) {
-        // Implement logic to generate captions for each panel
-        // This could be randomized or based on specific criteria
-        // For simplicity, let's generate dummy captions here
-        List<String> captions = new ArrayList<>();
-        for (int i = 1; i <= numPanels; i++) {
-            captions.add("Caption for Panel " + i);
-        }
-        return captions;
     }
 }
