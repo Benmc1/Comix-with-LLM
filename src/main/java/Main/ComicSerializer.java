@@ -4,13 +4,13 @@ import java.io.File;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
-import Main.config.ConfigurationFile;
 
 public class ComicSerializer {
     
     public void serializeToXml(Comic comic, String filePath) {
         try {
             StringBuilder xmlBuilder = new StringBuilder();
+            xmlBuilder.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
             xmlBuilder.append("<Comic>\n");
             xmlBuilder.append("<Topic>").append(comic.getTopic()).append("</Topic>\n");
             xmlBuilder.append("<Panels>\n");
