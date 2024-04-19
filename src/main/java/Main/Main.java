@@ -1,5 +1,5 @@
 package Main;
-import Main.config.ConfigurationFile;
+import config.ConfigurationFile;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;

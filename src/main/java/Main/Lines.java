@@ -1,6 +1,6 @@
 package Main;
 
-import Main.config.ConfigurationFile;
+import config.ConfigurationFile;
 
 import java.util.*;
 

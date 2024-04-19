@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Conversation implements Main.Interfaces.Conversation {
+public class Conversation implements Interfaces.Conversation {
     private final List<ChatMessage> messageList = new ArrayList<>();
 
     public void addSystemMessage(String message) {

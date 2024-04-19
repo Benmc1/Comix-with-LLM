@@ -8,7 +8,7 @@ import com.theokanning.openai.embedding.Embedding;
 import com.theokanning.openai.embedding.EmbeddingRequest;
 import com.theokanning.openai.embedding.EmbeddingResult;
 import com.theokanning.openai.service.OpenAiService;
-import Main.config.ConfigurationFile;
+import config.ConfigurationFile;
 
 import java.util.List;
 
