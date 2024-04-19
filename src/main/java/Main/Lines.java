@@ -1,16 +1,18 @@
 package Main;
 
 import Main.config.ConfigurationFile;
-import java.util.ArrayList;
-import java.util.List;
+
+import java.util.*;
 
 public class Lines {
     private final List<String> proLines;
     private final List<String> antiLines;
+    private final List<String> captions;
 
     public Lines(String topic){
         this.proLines = new ArrayList<>();
         this.antiLines = new ArrayList<>();
+        this.captions = new ArrayList<>();
         generateLines(topic);
     }
 
@@ -32,6 +34,11 @@ public class Lines {
             System.out.println("Lines returned a DOS");
         }
         extractLines(text);
+
+        String narratorStyle = Narrator.getRandomNarratorStyle();
+        for (String point : this.proLines) {
+            this.captions.add(Narrator.generateCaption(point, narratorStyle));
+        }
     }
     private void extractLines(String text){
         //divide into individual lines
@@ -51,7 +58,6 @@ public class Lines {
             }
         }
     }
-
     public String getAntiLine(int n) {
         return antiLines.get(n);
     }
@@ -67,6 +73,8 @@ public class Lines {
     public List<String> getProLines() {
         return proLines;
     }
+
+    public List<String> getCaptions() { return captions; }
 
     @Override
     public String toString() {
