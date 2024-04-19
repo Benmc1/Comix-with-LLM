@@ -16,7 +16,7 @@ public class ComicSerializer {
 
             List<String> proLines = comic.getLines().getProLines();
             List<String> antiLines = comic.getLines().getAntiLines();
-            String captions = Narrator.generateCaption(comic.getTopic(), Narrator.getRandomNarratorStyle()); // Generate captions for each panel
+            List<String> captions = comic.getLines().getCaptions(); // Generate captions for each panel
 
             for (int i = 0; i < proLines.size(); i++) {
                 xmlBuilder.append("<Panel>\n");
@@ -24,7 +24,7 @@ public class ComicSerializer {
                 xmlBuilder.append("<Pro>").append(proLines.get(i)).append("</Pro>\n");
                 xmlBuilder.append("<Anti>").append(antiLines.get(i)).append("</Anti>\n");
                 xmlBuilder.append("</Dialogue>\n");
-                xmlBuilder.append("<Caption>").append(captions).append("</Caption>\n");
+                xmlBuilder.append("<Caption>").append(captions.get(i)).append("</Caption>\n");
                 xmlBuilder.append("</Panel>\n");
             }
 
