@@ -30,6 +30,6 @@ class ConversationTest {
     void isDOS() {
         ChatMessage message = new ChatMessage("assistant","As an AI language model, I don't have personal opinions, but I can provide an analysis based on available information up to my last update in January 2022.");
 
-        assertFalse(new Conversation().isDOS(message));
+        assertTrue(new Conversation().isDOS(message));
     }
 }

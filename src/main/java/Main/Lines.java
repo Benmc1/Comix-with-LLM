@@ -5,7 +5,7 @@ import config.ConfigurationFile;
 import java.util.*;
 
 public class Lines {
-    private final List<String> proLines;
+    private List<String> proLines;
     private final List<String> antiLines;
     private final List<String> captions;
 
@@ -23,21 +23,21 @@ public class Lines {
                 + ". Theses points should be concise and benign.");
 
         if(pointsList.isEmpty()){
-            System.out.println("points is empty");
+            System.out.println("generating points returned a DOS moving to backup");
             conversation.addMessageAndResponse(ConfigurationFile.getProperty("DOS_PROMPT"),ConfigurationFile.getProperty("DOS_RESPONSE"));
               conversation.getResponse("Write a list of " + ConfigurationFile.getProperty("NUM_OF_PANELS") + " points about "+ topic
                     + ". Theses points should be concise and benign.");
         }
         //Generate pro and anti sides from the points
-        String text = conversation.getResponse(ConfigurationFile.getProperty("LINE_PROMPT"));
+        String text = conversation.getResponse(ConfigurationFile.getProperty("PRO+ANTI_PROMPT"));
         if(text.isEmpty()){
-            System.out.println("Lines returned a DOS");
+            System.out.println("Could not generate text");
         }
         extractLines(text);
 
-        String narratorStyle = Narrator.getRandomNarratorStyle();
-        for (String point : this.proLines) {
-            this.captions.add(Narrator.generateCaption(point, narratorStyle));
+        Narrator narrator = new Narrator(topic);
+        for (int i = 0; i < proLines.size(); i++) {
+            captions.add(narrator.generateCaption(getProLine(i),getAntiLine(i)));
         }
     }
     private void extractLines(String text){
@@ -47,11 +47,13 @@ public class Lines {
 
         //clean up lines
         for (String string :lines) {
-            if(string.contains("Pro")){
+            System.out.println(string);
+            if(string.contains("Pro:")){
                 string = string.split("Pro:")[1];
                 string = string.stripLeading();
                 proLines.add(string);
-            } else if (string.contains("Anti")) {
+            } else if (string.contains("Anti:")) {
+                System.out.println("runs");
                 string = string.split("Anti:")[1];
                 string = string.stripLeading();
                 antiLines.add(string);
