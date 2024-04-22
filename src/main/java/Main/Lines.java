@@ -5,7 +5,7 @@ import config.ConfigurationFile;
 import java.util.*;
 
 public class Lines {
-    private List<String> proLines;
+    private final List<String> proLines;
     private final List<String> antiLines;
     private final List<String> captions;
 
@@ -67,7 +67,13 @@ public class Lines {
     public String getProLine(int n) {
         return proLines.get(n);
     }
+    public String getCaption(int n){
+        return captions.get(n);
+    }
 
+    public String[] getPanelLines(int n){
+        return new String[]{getProLine(n),getAntiLine(n),getCaption(n)};
+    }
     public List<String> getAntiLines() {
         return antiLines;
     }
@@ -82,8 +88,8 @@ public class Lines {
     public String toString() {
         StringBuilder str = new StringBuilder();
         for (int i = 0; i < proLines.size(); i++) {
-            str.append("\nPro: " + proLines.get(i));
-            str.append("\nAnti: " + antiLines.get(i));
+            str.append("\nPro: ").append(proLines.get(i));
+            str.append("\nAnti: ").append(antiLines.get(i));
         }
         return str.toString();
     }

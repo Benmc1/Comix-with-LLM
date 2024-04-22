@@ -18,7 +18,7 @@ public class Conversation implements Interfaces.Conversation {
 
         messageList.add(new ChatMessage("assistant", response));
     }
-
+    //If the response is a DOS we return an empty string
     public String getResponse(String message) {
         messageList.add(new ChatMessage("user", message));
         ChatMessage responseMessage = API.getChatCompletion(messageList);
@@ -38,18 +38,15 @@ public class Conversation implements Interfaces.Conversation {
                 "messageList=" + messageList +
                 '}';
     }
-
+    //Check by having a list of banned words
     @Override
     public Boolean isDOS(ChatMessage message) {
         List<String> denialPhrases = Arrays.asList(
-                "I can't",
                 "unable to comply with that request",
                 "can't assist with",
                 "I don't have the ability to",
                 "I'm not able to",
                 "unable to complete your request",
-                "I cannot",
-                "I'm sorry",
                 "an AI language model"
         );
         for (String phrase : denialPhrases) {
@@ -57,7 +54,6 @@ public class Conversation implements Interfaces.Conversation {
                 return true;
             }
         }
-
         return false;
     }
 }
