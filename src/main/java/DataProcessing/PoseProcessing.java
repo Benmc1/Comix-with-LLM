@@ -2,16 +2,17 @@ package DataProcessing;
 
 import Main.API;
 import com.opencsv.CSVReader;
+import com.opencsv.CSVWriter;
 import com.opencsv.exceptions.CsvValidationException;
 import com.theokanning.openai.embedding.Embedding;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+
+import java.io.*;
 import java.util.*;
 
 
 public class PoseProcessing {
 
+    Map<String , List<Double>> embeddingData;
 
     private List<List<String>> readData(String file) {
         List<List<String>> PoseData = new ArrayList<>();
@@ -48,7 +49,64 @@ public class PoseProcessing {
         return embeddingData;
     }
 
-    public static void main(String[] args) {
+    private void writeEmbeddingData(Map<String, List<Double>> data){
 
+        try (CSVWriter writer = new CSVWriter(new FileWriter("data.csv"))) {
+            // Writing header: 1 key + 1536 doubles
+            String[] headers = new String[1537];
+            headers[0] = "Key";
+            for (int i = 1; i <= 1536; i++) {
+                headers[i] = "Value " + i;
+            }
+            writer.writeNext(headers);
+
+            // Writing data from the map
+            for (Map.Entry<String, List<Double>> entry : data.entrySet()) {
+                String key = entry.getKey();
+                List<Double> values = entry.getValue();
+                String[] record = new String[1537];
+                record[0] = key;
+                for (int i = 0; i < 1536; i++) {
+                    record[i + 1] = String.valueOf(values.get(i));
+                }
+                writer.writeNext(record);
+            }
+
+            System.out.println("CSV file has been created successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private Map<String, List<Double>> readEmbeddingData(){
+        Map<String, List<Double>> data = new HashMap<>();
+
+        try (CSVReader reader = new CSVReader(new FileReader("data.csv"))) {
+            String[] nextLine;
+            boolean headersSkipped = false;
+            while ((nextLine = reader.readNext()) != null) {
+                if (!headersSkipped) {
+                    headersSkipped = true;
+                    continue; // Skip headers
+                }
+                String key = nextLine[0];
+                List<Double> values = new ArrayList<>();
+                for (int i = 1; i < nextLine.length; i++) {
+                    values.add(Double.parseDouble(nextLine[i]));
+                }
+                data.put(key, values);
+            }
+        } catch (FileNotFoundException e){
+            writeEmbeddingData(getEmbeddings(readData("pose database.csv")));
+            return readEmbeddingData();
+        } catch (IOException | CsvValidationException e) {
+            e.printStackTrace();
+        }
+
+        return data;
+    }
+
+    public static void main(String[] args) {
+    PoseProcessing p = new PoseProcessing();
+        System.out.println(p.readEmbeddingData());
     }
 }
