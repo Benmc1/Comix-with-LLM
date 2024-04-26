@@ -99,6 +99,7 @@ public class EmbeddingData  {
             e.printStackTrace();
         }
     }
+    
     private void readEmbeddingData(){
         String file = ConfigurationFile.getProperty("EMBEDDING_DATA");
 
