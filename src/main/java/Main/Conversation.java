@@ -18,7 +18,7 @@ public class Conversation implements Interfaces.Conversation {
 
         messageList.add(new ChatMessage("assistant", response));
     }
-    //If the response is a DOS we return an empty string
+
     public String getResponse(String message) {
         messageList.add(new ChatMessage("user", message));
         ChatMessage responseMessage = API.getChatCompletion(messageList);
@@ -38,7 +38,7 @@ public class Conversation implements Interfaces.Conversation {
                 "messageList=" + messageList +
                 '}';
     }
-    //Check by having a list of banned words
+
     @Override
     public Boolean isDOS(ChatMessage message) {
         List<String> denialPhrases = Arrays.asList(

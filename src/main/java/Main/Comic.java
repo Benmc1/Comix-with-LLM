@@ -14,9 +14,9 @@ public class Comic {
     private final Character characterRight;
     Comic(String topic){
         this.topic = topic;
-        lines = new Lines(topic);
         characterLeft = new Character(IO.getCharacterName());
         characterRight = new Character(IO.getCharacterName());
+        lines = new Lines(topic);
         makePanels();
     }
     private void makePanels(){
@@ -29,6 +29,9 @@ public class Comic {
 
     public Lines getLines() {
         return lines;
+    }
+    private  void createPanels(){
+
     }
     public String getTopic() {
         return topic;
