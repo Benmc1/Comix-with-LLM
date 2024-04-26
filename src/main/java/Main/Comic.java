@@ -30,9 +30,6 @@ public class Comic {
     public Lines getLines() {
         return lines;
     }
-    private  void createPanels(){
-
-    }
     public String getTopic() {
         return topic;
     }
@@ -41,7 +38,11 @@ public class Comic {
         return panels;
     }
 
-    public Panel getPanel(int n) {
-        return panels.get(n);
+    public Character getCharacterLeft() {
+        return characterLeft;
+    }
+
+    public Character getCharacterRight() {
+        return characterRight;
     }
 }

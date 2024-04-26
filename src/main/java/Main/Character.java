@@ -48,7 +48,7 @@ public class Character {
                 '}';
     }
 
-    public String getXML() {
+    public String toXML() {
         return "<figure>\n" +
                 "\t<name>" + name + "</name>\n" +
                 "\t<appearance>" + appearance + "</appearance>\n" +

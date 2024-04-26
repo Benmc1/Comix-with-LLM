@@ -18,14 +18,14 @@ public class EmbeddingData  {
             embeddingData.readEmbeddingData();
         }
         return poseData;
-    };
+    }
     public static List<Embedding> getSettingEmbedding(){
         if (settingData.isEmpty()){
             EmbeddingData embeddingData = new EmbeddingData();
             embeddingData.readEmbeddingData();
         }
         return settingData;
-    };
+    }
 
     private List<List<String>> readPlainData() {
         List<List<String>> PoseData = new ArrayList<>();
@@ -33,7 +33,12 @@ public class EmbeddingData  {
 
         try (CSVReader csvReader = new CSVReader(new FileReader(file))) {
             String[] values;
+            boolean headersSkipped = false;
             while ((values = csvReader.readNext()) != null) {
+                if (!headersSkipped) {
+                    headersSkipped = true;
+                    continue; // Skip headers
+                }
                 String strB = values[0] + values[2] + values[3] + values[4];
                 values[2] = strB;
 
@@ -66,12 +71,13 @@ public class EmbeddingData  {
     }
 
     private void writeEmbeddingData(Map<String, List<Double>> data){
+        int embeddingLen = Integer.parseInt(ConfigurationFile.getProperty("EMBEDDING_LEN"));
 
         try (CSVWriter writer = new CSVWriter(new FileWriter("EmbeddingData.csv"))) {
             // Writing header: 1 key + 1536 doubles
-            String[] headers = new String[1537];
+            String[] headers = new String[embeddingLen+1];
             headers[0] = "Key";
-            for (int i = 1; i <= 1536; i++) {
+            for (int i = 1; i <= embeddingLen; i++) {
                 headers[i] = "Value " + i;
             }
             writer.writeNext(headers);
@@ -80,9 +86,9 @@ public class EmbeddingData  {
             for (Map.Entry<String, List<Double>> entry : data.entrySet()) {
                 String key = entry.getKey();
                 List<Double> values = entry.getValue();
-                String[] record = new String[1537];
+                String[] record = new String[embeddingLen];
                 record[0] = key;
-                for (int i = 0; i < 1536; i++) {
+                for (int i = 0; i < embeddingLen; i++) {
                     record[i + 1] = String.valueOf(values.get(i));
                 }
                 writer.writeNext(record);
@@ -94,8 +100,9 @@ public class EmbeddingData  {
         }
     }
     private void readEmbeddingData(){
+        String file = ConfigurationFile.getProperty("EMBEDDING_DATA");
 
-        try (CSVReader reader = new CSVReader(new FileReader("data.csv"))) {
+        try (CSVReader reader = new CSVReader(new FileReader(file))) {
             String[] nextLine;
             boolean headersSkipped = false;
             while ((nextLine = reader.readNext()) != null) {
