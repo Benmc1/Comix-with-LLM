@@ -9,18 +9,18 @@ import java.util.Map;
 public class BackgroundSelector {
 
     // Map to store pre-built vectors for each background setting
-    private static final Map<String, List<Double>> backgroundVectors = new HashMap<>();
+    private static final Map<String, List<Double>> settingEmbeddings = new HashMap<>();
 
     // Method to select the most suitable background setting for the given prompt
     public static String selectBackground(String prompt) {
-        List<Double> promptEmbeddings = getPromptEmbedding(prompt);
+        List<Double> promptEmbeddings = API.getEmbedding(prompt);
 
         String selectedBackground = null;
         double maxSimilarity = -1.0;
 
         // Iterate over each background setting and calculate cosine similarity
         // Select the background setting with the highest similarity score  [cos(0°) = 1]*
-        for (Map.Entry<String, List<Double>> entry : backgroundVectors.entrySet()) {
+        for (Map.Entry<String, List<Double>> entry : settingEmbeddings.entrySet()) {
             List<Double> backgroundVector = entry.getValue();
             double similarity = calculateCosineSimilarity(promptEmbeddings, backgroundVector);
             if (similarity > maxSimilarity) {
@@ -28,7 +28,6 @@ public class BackgroundSelector {
                 selectedBackground = entry.getKey();
             }
         }
-
         return selectedBackground;
     }
 
@@ -45,8 +44,4 @@ public class BackgroundSelector {
         return dotProduct / (Math.sqrt(norm1) * Math.sqrt(norm2));
     }
 
-    private static List<Double> getPromptEmbedding(String text) {
-        // TODO fix this
-        return API.getEmbedding(text);
-    }
 }
