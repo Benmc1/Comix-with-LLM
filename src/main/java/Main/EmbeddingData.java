@@ -10,16 +10,16 @@ import java.io.*;
 import java.util.*;
 
 public class EmbeddingData  {
-    private static List<Embedding> poseData;
-    private static List<Embedding> settingData;
-    public static List<Embedding> getPoseEmbedding(){
+    private static final List<Embedding> poseData = new ArrayList<>();
+    private static final List<Embedding> settingData = new ArrayList<>();
+    public static List<Embedding> getPoseEmbeddings(){
         if (poseData.isEmpty()){
             EmbeddingData embeddingData = new EmbeddingData();
             embeddingData.readEmbeddingData();
         }
         return poseData;
     }
-    public static List<Embedding> getSettingEmbedding(){
+    public static List<Embedding> getSettingEmbeddings(){
         if (settingData.isEmpty()){
             EmbeddingData embeddingData = new EmbeddingData();
             embeddingData.readEmbeddingData();
@@ -72,8 +72,9 @@ public class EmbeddingData  {
 
     private void writeEmbeddingData(Map<String, List<Double>> data){
         int embeddingLen = Integer.parseInt(ConfigurationFile.getProperty("EMBEDDING_LEN"));
+        String file = ConfigurationFile.getProperty("EMBEDDING_DATA");
 
-        try (CSVWriter writer = new CSVWriter(new FileWriter("EmbeddingData.csv"))) {
+        try (CSVWriter writer = new CSVWriter(new FileWriter(file))) {
             // Writing header: 1 key + 1536 doubles
             String[] headers = new String[embeddingLen+1];
             headers[0] = "Key";
@@ -86,7 +87,7 @@ public class EmbeddingData  {
             for (Map.Entry<String, List<Double>> entry : data.entrySet()) {
                 String key = entry.getKey();
                 List<Double> values = entry.getValue();
-                String[] record = new String[embeddingLen];
+                String[] record = new String[embeddingLen+1];
                 record[0] = key;
                 for (int i = 0; i < embeddingLen; i++) {
                     record[i + 1] = String.valueOf(values.get(i));

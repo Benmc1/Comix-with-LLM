@@ -6,6 +6,7 @@ public class Panel {
     private final String charLeft;
 
     private final String charRight;
+    //0 = left, 1 = right, 2 = caption
     private final String[] lines;
     private String poseLeft;
     private String poseRight;
@@ -21,10 +22,12 @@ public class Panel {
     }
 
     private void generatePoses(){
-
+        poseLeft = EmbeddingSelector.selectEmbedding(lines[0],EmbeddingData.getPoseEmbeddings());
+        poseRight = EmbeddingSelector.selectEmbedding(lines[1],EmbeddingData.getPoseEmbeddings());
     }
     private void generateSetting(){
-
+        String input = String.join("",lines);
+        setting = EmbeddingSelector.selectEmbedding(input, EmbeddingData.getSettingEmbeddings());
     }
 
     @Override
@@ -46,7 +49,7 @@ public class Panel {
                 "       <figure>\n"+
                 "           <name>" + charLeft + "</name>\n"+
                 "           <pose>" + poseLeft + "</pose>\n"+
-                "           <facing>left</facing>\n"+
+                "           <facing>right</facing>\n"+
                 "       </figure>\n\n"+
                         speechBalloon(lines[0])+
                 "   </left>\n\n"+
@@ -54,7 +57,7 @@ public class Panel {
                 "       <figure>\n"+
                 "           <name>" + charRight + "</name>\n"+
                 "           <pose>" + poseRight + "</pose>\n"+
-                "           <facing>right</facing>\n"+
+                "           <facing>left</facing>\n"+
                 "       </figure>\n\n"+
                         speechBalloon(lines[1])+
                 "   </right>\n\n"+
@@ -63,12 +66,5 @@ public class Panel {
     }
     private String speechBalloon(String speech){
         return "\t\t<balloon status=\"speech\">\r\t\t\t<content>" + speech + "</content>\n\t\t</balloon>\n";
-    }
-
-    public static void main(String[] args) {
-        Panel panel = new Panel("tom","jack", new String[]{"Hello there", "How are you", "This is a test"});
-        panel.poseLeft="tpose";
-        panel.poseRight="Apose";
-        System.out.println("\t"+panel.toXML());
     }
 }
