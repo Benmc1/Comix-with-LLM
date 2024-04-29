@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<comic>
+	<figures>
+<figure>
+	<name>alex</name>
+	<appearance>null</appearance>
+	<hair>null</hair>
+	<skin>null</skin>
+	<lips>null</lips>
+</figure>
+<figure>
+	<name>sam</name>
+	<appearance>null</appearance>
+	<hair>null</hair>
+	<skin>null</skin>
+	<lips>null</lips>
+</figure>
+	</figures>
+	<topic>write a poem</topic>
+	<panels>
+<panel>
+   <above>Poetry spurs the mind, but stick to sense or risk perplexity.</above>
+   <left>
+       <figure>
+           <name>alex</name>
+           <pose>inspiring</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It fuels creativity</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>sam</name>
+           <pose>overshadowed</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It may lead to obscurity</content>
+		</balloon>
+   </right>
+
+   <setting>forked path</setting>
+</panel><panel>
+   <above>A tale's preface, or bind mind? Let's not pen in poetry.</above>
+   <left>
+       <figure>
+           <name>alex</name>
+           <pose>pointing</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It sets the stage for the story to be told</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>sam</name>
+           <pose>gagged</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It limits the freedom that a poem can hold</content>
+		</balloon>
+   </right>
+
+   <setting>forest path</setting>
+</panel><panel>
+   <above>Precision's key, yet we must steer clear of hackneyed verse.</above>
+   <left>
+       <figure>
+           <name>alex</name>
+           <pose>purposeful</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It ensures your poem is meaningful and clear</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>sam</name>
+           <pose>scared</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It can lead to clichés, a poet's biggest fear</content>
+		</balloon>
+   </right>
+
+   <setting>open city gates</setting>
+</panel><panel>
+   <above>Paint worlds with words; avoid reducing depth to mere description.</above>
+   <left>
+       <figure>
+           <name>alex</name>
+           <pose>impressed</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It creates an immersive experience</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>sam</name>
+           <pose>discarding book</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It could get too literal, losing poetic essence</content>
+		</balloon>
+   </right>
+
+   <setting>forest path</setting>
+</panel><panel>
+   <above>A personal stamp imbues a poem with authenticity, not artifice.</above>
+   <left>
+       <figure>
+           <name>alex</name>
+           <pose>purposeful</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It adds a unique personal touch</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>sam</name>
+           <pose>pushing</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It could be seen as trying too much</content>
+		</balloon>
+   </right>
+
+   <setting>forest path</setting>
+</panel><panel>
+   <above>Let your heart’s harmony sing, but guard against discordance in verse.</above>
+   <left>
+       <figure>
+           <name>alex</name>
+           <pose>singing</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It's the only way to allow your heart to sing</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>sam</name>
+           <pose>falling</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It risks a messy poem, a terrible thing</content>
+		</balloon>
+   </right>
+
+   <setting>forest path</setting>
+</panel><panel>
+   <above>Refine verse with a fine-toothed comb, but beware of sapping its soul.</above>
+   <left>
+       <figure>
+           <name>alex</name>
+           <pose>confident</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It ensures your poem is polished to the core</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>sam</name>
+           <pose>pushing</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It risks changing your art and making it a bore</content>
+		</balloon>
+   </right>
+
+   <setting>forest path</setting>
+</panel><panel>
+   <above>Each word adds meaning and texture, yet beware the fetters of constraint.</above>
+   <left>
+       <figure>
+           <name>alex</name>
+           <pose>painting</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>Every word will add meaning and texture to your piece</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>sam</name>
+           <pose>thinking with beard</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It can make one feel constrained and their ideas lease</content>
+		</balloon>
+   </right>
+
+   <setting>forest path</setting>
+</panel><panel>
+   <above>Gahterin’ diverse perspectives broadens horizons, but doubt can leave lasting wounds.</above>
+   <left>
+       <figure>
+           <name>alex</name>
+           <pose>pointing</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It helps gather perspectives from afar</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>sam</name>
+           <pose>scared</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It could lead to self-doubt, some poets fear that scar</content>
+		</balloon>
+   </right>
+
+   <setting>forked path</setting>
+</panel><panel>
+   <above>Flaunt thyself, set the soul free, share thy verse despite thyself.</above>
+   <left>
+       <figure>
+           <name>alex</name>
+           <pose>freeing</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It's a chance to express yourself and set your soul free</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>sam</name>
+           <pose>pushing</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It may be daunting to share, but still well worth the spree</content>
+		</balloon>
+   </right>
+
+   <setting>open city gates</setting>
+</panel>	</panels>
+</comic>
