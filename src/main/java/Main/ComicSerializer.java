@@ -13,10 +13,10 @@ public class ComicSerializer {
             xmlBuilder.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
             xmlBuilder.append("<comic>\n");
 
-            xmlBuilder.append("\t<figures>");
+            xmlBuilder.append("\t<figures>\n");
             xmlBuilder.append(comic.getCharacterLeft().toXML());
             xmlBuilder.append(comic.getCharacterRight().toXML());
-            xmlBuilder.append("\t</figures>");
+            xmlBuilder.append("\t</figures>\n");
 
             xmlBuilder.append("\t<topic>").append(comic.getTopic()).append("</topic>\n");
             xmlBuilder.append("\t<panels>\n");

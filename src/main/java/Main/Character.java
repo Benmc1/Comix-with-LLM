@@ -55,6 +55,6 @@ public class Character {
                 "\t<hair>" + hairColour + "</hair>\n" +
                 "\t<skin>" + skinColour + "</skin>\n" +
                 "\t<lips>" + lips + "</lips>\n" +
-                "</figure>";
+                "</figure>\n";
     }
 }
