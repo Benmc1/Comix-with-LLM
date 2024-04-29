@@ -13,21 +13,25 @@ public class Panel {
 
     private String setting;
 
-    public Panel(String charLeft, String charRight,String[] lines) {
+    public Panel(String charLeft, String charRight, String[] lines, String topic) {
         this.charLeft = charLeft;
         this.charRight = charRight;
         this.lines = lines;
         generatePoses();
-        generateSetting();
+        generateSetting(topic);
     }
 
     private void generatePoses(){
         poseLeft = EmbeddingSelector.selectEmbedding(lines[0],EmbeddingData.getPoseEmbeddings());
         poseRight = EmbeddingSelector.selectEmbedding(lines[1],EmbeddingData.getPoseEmbeddings());
     }
-    private void generateSetting(){
-        String input = String.join("",lines);
+    private void generateSetting(String topic){
+        String input = String.join("", lines) + " " + topic;
         setting = EmbeddingSelector.selectEmbedding(input, EmbeddingData.getSettingEmbeddings());
+    }
+
+    public String getSetting() {
+        return this.setting;
     }
 
     @Override

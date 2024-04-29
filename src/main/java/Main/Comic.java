@@ -23,7 +23,7 @@ public class Comic {
         int numOfPanels = Integer.parseInt(ConfigurationFile.getProperty("NUM_OF_PANELS"));
 
         for (int i = 0; i < numOfPanels; i++) {
-            panels.add(new Panel(characterLeft.getName(), characterRight.getName(), lines.getPanelLines(i)));
+            panels.add(new Panel(characterLeft.getName(), characterRight.getName(), lines.getPanelLines(i), topic));
         }
     }
 
