@@ -34,11 +34,4 @@ public class EmbeddingSelector {
         }
         return dotProduct;
     }
-
-    public static void main(String[] args) {
-        List<Embedding> test = EmbeddingData.getPoseEmbeddings();
-        double ans = EmbeddingSelector.calculateCosineSimilarity(test.get(0).getEmbedding(),test.get(1).getEmbedding());
-        System.out.println(ans);
-        System.out.println("0.7611426465881476");
-    }
 }
