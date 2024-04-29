@@ -10,7 +10,7 @@ public class Character {
     private String lips;
 
     //If the name is blank it will create a random character
-    Character(String name) {
+    public Character(String name) {
         this.name = name;
         generateFeatures();
     }
