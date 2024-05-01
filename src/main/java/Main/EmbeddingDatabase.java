@@ -10,9 +10,9 @@ public class EmbeddingDatabase {
 
     }
     public int findClosestMatchIndex(String s){
-        List<Double> promptEmbedding = API.getEmbedding(List.of(prompt)).get(0).getEmbedding();
+        List<Double> promptEmbedding = API.getEmbedding(List.of(s)).get(0).getEmbedding();
 
-        String selectedBackground = null;
+        int selectedBackground = -1;
         double maxSimilarity = -1.0;
 
         // Iterate over each background setting and calculate cosine similarity
@@ -27,7 +27,9 @@ public class EmbeddingDatabase {
         }
         return selectedBackground;
     }
-    appendToFile(List<Double>);
+    private void appendToFile(List<Double> embedding){
+
+    };
 
     private double calculateCosineSimilarity(List<Double> vector1, List<Double> vector2) {
         double dotProduct = 0.0;

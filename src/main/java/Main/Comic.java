@@ -10,12 +10,12 @@ public class Comic {
     private final Lines lines;
 
     private final List<Panel> panels = new ArrayList<>();
-    private final Character characterLeft;
+    private final Character characterLeft ;
     private final Character characterRight;
     Comic(String topic){
         this.topic = topic;
-        characterLeft = new Character(IO.getCharacterName());
-        characterRight = new Character(IO.getCharacterName());
+        characterLeft = new Character("");
+        characterRight = new Character("");
         lines = new Lines(topic);
         makePanels();
     }

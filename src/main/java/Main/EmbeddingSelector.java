@@ -15,7 +15,7 @@ import java.util.List;
 public class EmbeddingSelector {
     enum type{POSE,SETTING}
 
-    public String getRelevantChoice(String description,String type){
+    public static String getRelevantChoice(String description,String type){
         File file = new File("data.txt");
         if(!file.exists()){
 

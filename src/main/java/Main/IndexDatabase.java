@@ -24,7 +24,12 @@ public class IndexDatabase {
             e.printStackTrace();
         }
     }
-    getByIndex
-    appendNewLine
+    public String
+    public String getByIndex(int index){
+        return "";
+    }
+    public void appendToFile(String newDescription,int index){
+
+    }
 
 }
