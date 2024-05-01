@@ -2,271 +2,291 @@
 <comic>
 	<figures>
 <figure>
-	<name>alex</name>
+	<name>tom</name>
 	<appearance>null</appearance>
 	<hair>null</hair>
 	<skin>null</skin>
 	<lips>null</lips>
 </figure>
 <figure>
-	<name>sam</name>
+	<name>toma</name>
 	<appearance>null</appearance>
 	<hair>null</hair>
 	<skin>null</skin>
 	<lips>null</lips>
 </figure>
 	</figures>
-	<topic>write a poem</topic>
+	<topic>Temple OS</topic>
 	<panels>
 <panel>
-   <above>Poetry spurs the mind, but stick to sense or risk perplexity.</above>
+   <above>"The power of Temple OS may be limited, but its interface is impressive."</above>
    <left>
        <figure>
-           <name>alex</name>
-           <pose>inspiring</pose>
+           <name>tom</name>
+           <pose>designing</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>It fuels creativity</content>
+		<balloon status="speech">
+			<content>Innovative software with a unique interface</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>sam</name>
+           <name>toma</name>
            <pose>overshadowed</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>It may lead to obscurity</content>
+		<balloon status="speech">
+			<content>Only has a small niche and not widely in use place</content>
 		</balloon>
    </right>
 
-   <setting>forked path</setting>
+   <setting>yosemite</setting>
 </panel><panel>
-   <above>A tale's preface, or bind mind? Let's not pen in poetry.</above>
+   <above>"Temple OS is malleable, yet its lack of resources is disturbing."</above>
    <left>
        <figure>
-           <name>alex</name>
-           <pose>pointing</pose>
+           <name>tom</name>
+           <pose>hacking</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>It sets the stage for the story to be told</content>
+		<balloon status="speech">
+			<content>Free software that can be easily modified</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>sam</name>
-           <pose>gagged</pose>
+           <name>toma</name>
+           <pose>brown horse prop</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>It limits the freedom that a poem can hold</content>
+		<balloon status="speech">
+			<content>Not backed by a larger company with resources and suture fit</content>
 		</balloon>
    </right>
 
-   <setting>forest path</setting>
+   <setting>yosemite</setting>
 </panel><panel>
-   <above>Precision's key, yet we must steer clear of hackneyed verse.</above>
+   <above>"Temple OS's distinct features are notable, but novices may struggle to navigate."</above>
    <left>
        <figure>
-           <name>alex</name>
-           <pose>purposeful</pose>
+           <name>tom</name>
+           <pose>three flipped</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>It ensures your poem is meaningful and clear</content>
+		<balloon status="speech">
+			<content>Specialized features make it stand out</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>sam</name>
-           <pose>scared</pose>
+           <name>toma</name>
+           <pose>put out</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>It can lead to clichés, a poet's biggest fear</content>
+		<balloon status="speech">
+			<content>Hard for beginners to navigate in challenges they might doubt </content>
 		</balloon>
    </right>
 
-   <setting>open city gates</setting>
+   <setting>yosemite</setting>
 </panel><panel>
-   <above>Paint worlds with words; avoid reducing depth to mere description.</above>
+   <above>"Temple OS adapts to different devices, yet modern machines may prove challenging."</above>
    <left>
        <figure>
-           <name>alex</name>
-           <pose>impressed</pose>
+           <name>tom</name>
+           <pose>shrugging</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>It creates an immersive experience</content>
+		<balloon status="speech">
+			<content>Can work on a variety of different devices</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>sam</name>
-           <pose>discarding book</pose>
+           <name>toma</name>
+           <pose>competing with</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>It could get too literal, losing poetic essence</content>
+		<balloon status="speech">
+			<content>Will struggle on modern high-end machines without devices for interceded </content>
 		</balloon>
    </right>
 
-   <setting>forest path</setting>
+   <setting>yosemite</setting>
 </panel><panel>
-   <above>A personal stamp imbues a poem with authenticity, not artifice.</above>
+   <above>"Temple OS's ability to run on older hardware is commendable, but its multitasking capabilities are wanting."</above>
    <left>
        <figure>
-           <name>alex</name>
-           <pose>purposeful</pose>
+           <name>tom</name>
+           <pose>running away</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>It adds a unique personal touch</content>
+		<balloon status="speech">
+			<content>Runs on old hardware and reduces the E-waste stream</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>sam</name>
-           <pose>pushing</pose>
+           <name>toma</name>
+           <pose>lying down</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>It could be seen as trying too much</content>
+		<balloon status="speech">
+			<content>The system might be limited when multitasking or running resource-intensive dreams</content>
 		</balloon>
    </right>
 
-   <setting>forest path</setting>
+   <setting>yosemite</setting>
 </panel><panel>
-   <above>Let your heart’s harmony sing, but guard against discordance in verse.</above>
+   <above>"Temple OS's inbuilt terminals are convenient, but its popularity pales in comparison to other programming languages."</above>
    <left>
        <figure>
-           <name>alex</name>
-           <pose>singing</pose>
+           <name>tom</name>
+           <pose>carrying for</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>It's the only way to allow your heart to sing</content>
+		<balloon status="speech">
+			<content>Built-in terminals and makes it easy for you</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>sam</name>
-           <pose>falling</pose>
+           <name>toma</name>
+           <pose>overshadowed</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>It risks a messy poem, a terrible thing</content>
+		<balloon status="speech">
+			<content>Is not as widely used or popular as other well-known language crews </content>
 		</balloon>
    </right>
 
-   <setting>forest path</setting>
+   <setting>yosemite</setting>
 </panel><panel>
-   <above>Refine verse with a fine-toothed comb, but beware of sapping its soul.</above>
+   <above>"Temple OS's potential is immense, but attracting support from others may prove difficult."</above>
    <left>
        <figure>
-           <name>alex</name>
-           <pose>confident</pose>
+           <name>tom</name>
+           <pose>smitten</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>It ensures your poem is polished to the core</content>
+		<balloon status="speech">
+			<content>Huge potential for a very devoted group of fanatics</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>sam</name>
-           <pose>pushing</pose>
+           <name>toma</name>
+           <pose>supporting</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>It risks changing your art and making it a bore</content>
+		<balloon status="speech">
+			<content>Getting help and support from others would be a difficult tactic </content>
 		</balloon>
    </right>
 
-   <setting>forest path</setting>
+   <setting>yosemite</setting>
 </panel><panel>
-   <above>Each word adds meaning and texture, yet beware the fetters of constraint.</above>
+   <above>"Temple OS' religious and gorilla-based backstory is intriguing, yet it may also deter some users."</above>
    <left>
        <figure>
-           <name>alex</name>
-           <pose>painting</pose>
+           <name>tom</name>
+           <pose>silverback prop</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Every word will add meaning and texture to your piece</content>
+		<balloon status="speech">
+			<content>Creates a religious backstory and a programming gorilla </content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>sam</name>
-           <pose>thinking with beard</pose>
+           <name>toma</name>
+           <pose>denouncing</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>It can make one feel constrained and their ideas lease</content>
+		<balloon status="speech">
+			<content>Could turn people away from the software, and the story might be polar</content>
 		</balloon>
    </right>
 
-   <setting>forest path</setting>
+   <setting>yosemite</setting>
 </panel><panel>
-   <above>Gahterin’ diverse perspectives broadens horizons, but doubt can leave lasting wounds.</above>
+   <above>"Temple OS's smaller size makes it more secure, yet it may limit its functionality for users."</above>
    <left>
        <figure>
-           <name>alex</name>
-           <pose>pointing</pose>
+           <name>tom</name>
+           <pose>opening jar</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>It helps gather perspectives from afar</content>
+		<balloon status="speech">
+			<content>Smaller size makes it more secure and harder to hack a kit</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>sam</name>
-           <pose>scared</pose>
+           <name>toma</name>
+           <pose>competing with</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>It could lead to self-doubt, some poets fear that scar</content>
+		<balloon status="speech">
+			<content>Could make it challenging or limited for people to intermit </content>
 		</balloon>
    </right>
 
-   <setting>forked path</setting>
+   <setting>yosemite</setting>
 </panel><panel>
-   <above>Flaunt thyself, set the soul free, share thy verse despite thyself.</above>
+   <above>"Temple OS's evolution is fueled by a supportive community, but delays in upgrades may leave it lagging behind newer operating systems."</above>
    <left>
        <figure>
-           <name>alex</name>
-           <pose>freeing</pose>
+           <name>tom</name>
+           <pose>supporting</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>It's a chance to express yourself and set your soul free</content>
+		<balloon status="speech">
+			<content>Community support keeps it evolving and growing in stature</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>sam</name>
-           <pose>pushing</pose>
+           <name>toma</name>
+           <pose>withholding</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>It may be daunting to share, but still well worth the spree</content>
+		<balloon status="speech">
+			<content>Could hinder growth and slow upgrades means behind new operating factors</content>
 		</balloon>
    </right>
 
-   <setting>open city gates</setting>
+   <setting>yosemite</setting>
 </panel>	</panels>
 </comic>

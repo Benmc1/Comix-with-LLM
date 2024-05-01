@@ -1,56 +1,57 @@
 package Main;
 
+import com.opencsv.CSVReader;
+import com.opencsv.exceptions.CsvValidationException;
 import com.theokanning.openai.embedding.Embedding;
+import config.ConfigurationFile;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class EmbeddingSelector {
     enum type{POSE,SETTING}
 
-    public String getRelevantChoice(String description,type t){
-        String ans =  checkInDatabase(type.POSE,description);
+    public String getRelevantChoice(String description,String type){
+        File file = new File("data.txt");
+        if(!file.exists()){
+
+        }
+        String ans =  IndexDatabase.CheckInDatabase(type.POSE,description);
         if(ans.isBlank()) {
-            API.getEmbedding(List.of(description)).get(0);
-            ans = findClosest(description);
+
+            ans = EmfindClosest(description);
         }
         return ans;
     }
-    public String getRelevantSetting(String Description){
-        return "";
-    }
-    private String checkInDatabase(type t, String Description){
-    }
-    private String findClosest(String description){
+    private List<String[]> readPlainData() {
+        List<String[]> PoseData = new ArrayList<>();
+        String file = ConfigurationFile.getProperty("PLAIN_DATA");
 
-    }
-
-
-    // Method to select the most suitable background setting for the given prompt
-    public static String selectEmbedding(String prompt, List<Embedding> choices) {
-        List<Double> promptEmbedding = API.getEmbedding(List.of(prompt)).get(0).getEmbedding();
-
-        String selectedBackground = null;
-        double maxSimilarity = -1.0;
-
-        // Iterate over each background setting and calculate cosine similarity
-        // Select the background setting with the highest similarity score
-        for (Embedding entry : choices) {
-            List<Double> backgroundVector = entry.getEmbedding();
-            double similarity = calculateCosineSimilarity(promptEmbedding, backgroundVector);
-            if (similarity > maxSimilarity) {
-                maxSimilarity = similarity;
-                selectedBackground = entry.getObject();
+        try (CSVReader csvReader = new CSVReader(new FileReader(file))) {
+            String[] values;
+            boolean headersSkipped = false;
+            while ((values = csvReader.readNext()) != null) {
+                // Skip headers
+                if (!headersSkipped) {
+                    headersSkipped = true;
+                    continue;
+                }
+                String[] descriptions = values[2].split(",");
+                for (String s : descriptions) {
+                    String[] line = {s,values[1],values[0]};
+                    PoseData.add(line);
+                }
             }
+        }catch (FileNotFoundException e){
+            System.out.println(file + " not found, cannot create embeddings data");
+        } catch (IOException | CsvValidationException e) {
+            throw new RuntimeException(e);
         }
-        return selectedBackground;
+        return PoseData;
     }
 
-    // Method to calculate cosine similarity between two vectors
-    private static double calculateCosineSimilarity(List<Double> vector1, List<Double> vector2) {
-        double dotProduct = 0.0;
-        for (int i = 0; i < vector1.size(); i++) {
-            dotProduct += vector1.get(i) * vector2.get(i);
-        }
-        return dotProduct;
-    }
 }

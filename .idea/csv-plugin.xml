@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\embedding data.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\pose database.csv">
           <value>
             <Attribute>
