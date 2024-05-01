@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Test.NarratorTest" time="0.6" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="D:\LeStoreDownload\CS\COMP30880\Comix-with-LLM\target\test-classes;D:\LeStoreDownload\CS\COMP30880\Comix-with-LLM\target\classes;C:\Users\ruhao yang\.m2\repository\com\theokanning\openai-gpt3-java\service\0.18.2\service-0.18.2.jar;C:\Users\ruhao yang\.m2\repository\com\squareup\retrofit2\retrofit\2.9.0\retrofit-2.9.0.jar;C:\Users\ruhao yang\.m2\repository\com\squareup\okhttp3\okhttp\3.14.9\okhttp-3.14.9.jar;C:\Users\ruhao yang\.m2\repository\com\squareup\okio\okio\1.17.2\okio-1.17.2.jar;C:\Users\ruhao yang\.m2\repository\com\squareup\retrofit2\adapter-rxjava2\2.9.0\adapter-rxjava2-2.9.0.jar;C:\Users\ruhao yang\.m2\repository\io\reactivex\rxjava2\rxjava\2.0.0\rxjava-2.0.0.jar;C:\Users\ruhao yang\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\ruhao yang\.m2\repository\com\squareup\retrofit2\converter-jackson\2.9.0\converter-jackson-2.9.0.jar;C:\Users\ruhao yang\.m2\repository\com\kjetland\mbknor-jackson-jsonschema_2.12\1.0.34\mbknor-jackson-jsonschema_2.12-1.0.34.jar;C:\Users\ruhao yang\.m2\repository\org\scala-lang\scala-library\2.12.8\scala-library-2.12.8.jar;C:\Users\ruhao yang\.m2\repository\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;C:\Users\ruhao yang\.m2\repository\org\slf4j\slf4j-api\1.7.26\slf4j-api-1.7.26.jar;C:\Users\ruhao yang\.m2\repository\io\github\classgraph\classgraph\4.8.21\classgraph-4.8.21.jar;C:\Users\ruhao yang\.m2\repository\com\theokanning\openai-gpt3-java\api\0.18.2\api-0.18.2.jar;C:\Users\ruhao yang\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.14.2\jackson-annotations-2.14.2.jar;C:\Users\ruhao yang\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.14.2\jackson-databind-2.14.2.jar;C:\Users\ruhao yang\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.14.2\jackson-core-2.14.2.jar;C:\Users\ruhao yang\.m2\repository\com\knuddels\jtokkit\0.5.1\jtokkit-0.5.1.jar;C:\Users\ruhao yang\.m2\repository\com\theokanning\openai-gpt3-java\client\0.18.2\client-0.18.2.jar;C:\Users\ruhao yang\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.1\junit-jupiter-5.8.1.jar;C:\Users\ruhao yang\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.1\junit-jupiter-params-5.8.1.jar;C:\Users\ruhao yang\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;C:\Users\ruhao yang\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;C:\Users\ruhao yang\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\ruhao yang\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\ruhao yang\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\ruhao yang\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ruhao yang\.m2\repository\com\opencsv\opencsv\5.6\opencsv-5.6.jar;C:\Users\ruhao yang\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\ruhao yang\.m2\repository\org\apache\commons\commons-text\1.9\commons-text-1.9.jar;C:\Users\ruhao yang\.m2\repository\commons-beanutils\commons-beanutils\1.9.4\commons-beanutils-1.9.4.jar;C:\Users\ruhao yang\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\ruhao yang\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\ruhao yang\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Dublin"/>
+    <property name="user.country.format" value="150"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.boot.library.path" value="D:\LeStoreDownload\bin"/>
+    <property name="sun.java.command" value="C:\Users\ruhao yang\AppData\Local\Temp\surefire18379496526801397624\surefirebooter-20240429151010484_3.jar C:\Users\ruhao yang\AppData\Local\Temp\surefire18379496526801397624 2024-04-29T15-10-09_076-jvmRun1 surefire-20240429151010484_1tmp surefire_0-20240429151010484_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="D:\LeStoreDownload\CS\COMP30880\Comix-with-LLM\target\test-classes;D:\LeStoreDownload\CS\COMP30880\Comix-with-LLM\target\classes;C:\Users\ruhao yang\.m2\repository\com\theokanning\openai-gpt3-java\service\0.18.2\service-0.18.2.jar;C:\Users\ruhao yang\.m2\repository\com\squareup\retrofit2\retrofit\2.9.0\retrofit-2.9.0.jar;C:\Users\ruhao yang\.m2\repository\com\squareup\okhttp3\okhttp\3.14.9\okhttp-3.14.9.jar;C:\Users\ruhao yang\.m2\repository\com\squareup\okio\okio\1.17.2\okio-1.17.2.jar;C:\Users\ruhao yang\.m2\repository\com\squareup\retrofit2\adapter-rxjava2\2.9.0\adapter-rxjava2-2.9.0.jar;C:\Users\ruhao yang\.m2\repository\io\reactivex\rxjava2\rxjava\2.0.0\rxjava-2.0.0.jar;C:\Users\ruhao yang\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\ruhao yang\.m2\repository\com\squareup\retrofit2\converter-jackson\2.9.0\converter-jackson-2.9.0.jar;C:\Users\ruhao yang\.m2\repository\com\kjetland\mbknor-jackson-jsonschema_2.12\1.0.34\mbknor-jackson-jsonschema_2.12-1.0.34.jar;C:\Users\ruhao yang\.m2\repository\org\scala-lang\scala-library\2.12.8\scala-library-2.12.8.jar;C:\Users\ruhao yang\.m2\repository\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;C:\Users\ruhao yang\.m2\repository\org\slf4j\slf4j-api\1.7.26\slf4j-api-1.7.26.jar;C:\Users\ruhao yang\.m2\repository\io\github\classgraph\classgraph\4.8.21\classgraph-4.8.21.jar;C:\Users\ruhao yang\.m2\repository\com\theokanning\openai-gpt3-java\api\0.18.2\api-0.18.2.jar;C:\Users\ruhao yang\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.14.2\jackson-annotations-2.14.2.jar;C:\Users\ruhao yang\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.14.2\jackson-databind-2.14.2.jar;C:\Users\ruhao yang\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.14.2\jackson-core-2.14.2.jar;C:\Users\ruhao yang\.m2\repository\com\knuddels\jtokkit\0.5.1\jtokkit-0.5.1.jar;C:\Users\ruhao yang\.m2\repository\com\theokanning\openai-gpt3-java\client\0.18.2\client-0.18.2.jar;C:\Users\ruhao yang\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.1\junit-jupiter-5.8.1.jar;C:\Users\ruhao yang\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.1\junit-jupiter-params-5.8.1.jar;C:\Users\ruhao yang\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;C:\Users\ruhao yang\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;C:\Users\ruhao yang\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\ruhao yang\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\ruhao yang\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\ruhao yang\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ruhao yang\.m2\repository\com\opencsv\opencsv\5.6\opencsv-5.6.jar;C:\Users\ruhao yang\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\ruhao yang\.m2\repository\org\apache\commons\commons-text\1.9\commons-text-1.9.jar;C:\Users\ruhao yang\.m2\repository\commons-beanutils\commons-beanutils\1.9.4\commons-beanutils-1.9.4.jar;C:\Users\ruhao yang\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\ruhao yang\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\ruhao yang\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\ruhao yang"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-01-16"/>
+    <property name="java.home" value="D:\LeStoreDownload"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\LeStoreDownload\CS\COMP30880\Comix-with-LLM"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\ruhao yang\AppData\Local\Temp\surefire18379496526801397624\surefirebooter-20240429151010484_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.2+13-LTS-58"/>
+    <property name="user.name" value="ruhao yang"/>
+    <property name="stdout.encoding" value="GBK"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\ruhao yang\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\RUHAOY~1\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.2"/>
+    <property name="user.dir" value="D:\LeStoreDownload\CS\COMP30880\Comix-with-LLM"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="GBK"/>
+    <property name="java.library.path" value="D:\LeStoreDownload\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python312\Scripts\;C:\Python312\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;D:\LeStoreDownload\bin;D:\LeStoreDownload\;C:\ProgramData\chocolatey\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;D:\LeStoreDownload\apache-maven-3.9.6\bin;C:\Users\ruhao yang\AppData\Local\Microsoft\WindowsApps;;C:\Users\ruhao yang\AppData\Local\Coursier\data\bin;D:\LeStoreDownload\Microsoft VS Code\bin;C:\Users\ruhao yang\AppData\Roaming\npm;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="GBK"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.2+13-LTS-58"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="generateCaption" classname="Test.NarratorTest" time="0.6">
+    <system-out><![CDATA[Donald Trump
+]]></system-out>
+  </testcase>
+</testsuite>
