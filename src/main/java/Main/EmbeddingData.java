@@ -9,52 +9,58 @@ import config.ConfigurationFile;
 import java.io.*;
 import java.util.*;
 
-public class EmbeddingData  {
-    private static final List<Embedding> poseData = new ArrayList<>();
-    private static final List<Embedding> settingData = new ArrayList<>();
-    public static List<Embedding> getPoseEmbeddings(){
-        if (poseData.isEmpty()){
-            EmbeddingData embeddingData = new EmbeddingData();
-            embeddingData.readEmbeddingData();
+public class EmbeddingData {
+
+    private final RandomAccessFile indexFile;
+    private final RandomAccessFile dataFile;
+
+    EmbeddingData(){
+        try{
+            indexFile = new RandomAccessFile("","");
+            dataFile = new RandomAccessFile("","");
+        } catch (FileNotFoundException e) {
+            System.out.println("Data missing creating from scratch");
+            List<String[]> data = readPlainData();
+            writeIndexFile(data);
+            getEmbeddings(data);
         }
-        return poseData;
     }
-    public static List<Embedding> getSettingEmbeddings(){
-        if (settingData.isEmpty()){
-            EmbeddingData embeddingData = new EmbeddingData();
-            embeddingData.readEmbeddingData();
-        }
-        return settingData;
+    public RandomAccessFile getIndexFile(){
+        return indexFile;
     }
 
-    private List<List<String>> readPlainData() {
-        List<List<String>> PoseData = new ArrayList<>();
+    public RandomAccessFile getDataFile(){
+        return dataFile;
+    }
+
+    private List<String[]> readPlainData() {
+        List<String[]> PoseData = new ArrayList<>();
         String file = ConfigurationFile.getProperty("PLAIN_DATA");
 
         try (CSVReader csvReader = new CSVReader(new FileReader(file))) {
             String[] values;
             boolean headersSkipped = false;
             while ((values = csvReader.readNext()) != null) {
+                // Skip headers
                 if (!headersSkipped) {
                     headersSkipped = true;
-                    continue; // Skip headers
+                    continue;
                 }
-                String strB = values[0] + values[2] + values[3] + values[4];
-                values[2] = strB;
-
-                // we pass the first 3 entries of value as these now contain all the data we need
-                PoseData.add(Arrays.asList(Arrays.copyOf(values,3)));
+                String[] descriptions = values[2].split(",");
+                for (String s : descriptions) {
+                    String[] line = {s,values[1],values[0]};
+                    PoseData.add(line);
+                }
             }
         }catch (FileNotFoundException e){
-            System.out.println(file + " not found, cannot calculate embeddings");
+            System.out.println(file + " not found, cannot create embeddings data");
         } catch (IOException | CsvValidationException e) {
             throw new RuntimeException(e);
         }
         return PoseData;
     }
 
-    // Creating a Map of name,type ->  embedding
-    private Map<String, List<Double>> getEmbeddings(List<List<String>> PoseData){
+    private List<List<Double>> getEmbeddings(List<String[]> PoseData){
         Map<String, List<Double>> embeddingData = new HashMap<>();
         //create a separate list to send all the requests at once
         List<String> messageList = new ArrayList<>();
@@ -70,72 +76,19 @@ public class EmbeddingData  {
         return embeddingData;
     }
 
-    private void writeEmbeddingData(Map<String, List<Double>> data){
-        int embeddingLen = Integer.parseInt(ConfigurationFile.getProperty("EMBEDDING_LEN"));
-        String file = ConfigurationFile.getProperty("EMBEDDING_DATA");
+    private void writeIndexFile(List<String[]> keys){
+        String indexFile = ConfigurationFile.getProperty("INDEX_FILE");
+        try (CSVWriter writer = new CSVWriter(new FileWriter(indexFile))) {
 
-        try (CSVWriter writer = new CSVWriter(new FileWriter(file))) {
-            // Writing header: 1 key + 1536 doubles
-            String[] headers = new String[embeddingLen+1];
-            headers[0] = "Key";
-            for (int i = 1; i <= embeddingLen; i++) {
-                headers[i] = "Value " + i;
-            }
+            String[] headers = {"Description","Type","Value"};
             writer.writeNext(headers);
-
-            // Writing data from the map
-            for (Map.Entry<String, List<Double>> entry : data.entrySet()) {
-                String key = entry.getKey();
-                List<Double> values = entry.getValue();
-                String[] record = new String[embeddingLen+1];
-                record[0] = key;
-                for (int i = 0; i < embeddingLen; i++) {
-                    record[i + 1] = String.valueOf(values.get(i));
-                }
-                writer.writeNext(record);
-            }
-
-            System.out.println("CSV file has been created successfully.");
+            writer.writeAll(keys);
+            System.out.println("Index file has been created successfully.");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    
-    private void readEmbeddingData(){
-        String file = ConfigurationFile.getProperty("EMBEDDING_DATA");
-
-        try (CSVReader reader = new CSVReader(new FileReader(file))) {
-            String[] nextLine;
-            boolean headersSkipped = false;
-            while ((nextLine = reader.readNext()) != null) {
-                if (!headersSkipped) {
-                    headersSkipped = true;
-                    continue; // Skip headers
-                }
-                //getting the name and type. name = 0, type = 1
-                String[] key = nextLine[0].split(",");
-
-                List<Double> values = new ArrayList<>();
-                for (int i = 1; i < nextLine.length; i++) {
-                    values.add(Double.parseDouble(nextLine[i]));
-                }
-                Embedding e = new Embedding();
-                e.setEmbedding(values);
-                e.setObject(key[0]);
-
-                if(key[1].equals("pose")) poseData.add(e);
-                else settingData.add(e);
-            }
-        } catch (FileNotFoundException e){
-            //need to make the data if it isn't here
-            List<List<String>> plainData = readPlainData();
-            Map<String, List<Double>> embeddings = getEmbeddings(plainData);
-            writeEmbeddingData(embeddings);
-            readEmbeddingData();
-
-        } catch (IOException | CsvValidationException e) {
-            e.printStackTrace();
-        }
+    private void writeDataFile(List<String[]> keys){
 
     }
 }

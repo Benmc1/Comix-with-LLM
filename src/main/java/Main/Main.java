@@ -2,6 +2,7 @@ package Main;
 import config.ConfigurationFile;
 
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,7 +14,8 @@ public class Main {
         Comic comic = new Comic(IO.getTopic());
 
         System.out.println(comic.getLines().toString());
-
+        Scanner s = new Scanner(System.in);
+        s.nextLine();
         
         ComicSerializer serializer = new ComicSerializer();
         // Serialize Comic object to XML and write to file

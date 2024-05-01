@@ -22,12 +22,12 @@ public class Panel {
     }
 
     private void generatePoses(){
-        poseLeft = EmbeddingSelector.selectEmbedding(lines[0],EmbeddingData.getPoseEmbeddings());
-        poseRight = EmbeddingSelector.selectEmbedding(lines[1],EmbeddingData.getPoseEmbeddings());
+        poseLeft = EmbeddingSelector.selectEmbedding(lines[0]);
+        poseRight = EmbeddingSelector.selectEmbedding(lines[1]);
     }
     private void generateSetting(String topic){
         String input = String.join("", lines) + " " + topic;
-        setting = EmbeddingSelector.selectEmbedding(input, EmbeddingData.getSettingEmbeddings());
+        setting = EmbeddingSelector.selectEmbedding(input);
     }
 
     public String getSetting() {

@@ -5,6 +5,25 @@ import com.theokanning.openai.embedding.Embedding;
 import java.util.List;
 
 public class EmbeddingSelector {
+    enum type{POSE,SETTING}
+
+    public String getRelevantChoice(String description,type t){
+        String ans =  checkInDatabase(type.POSE,description);
+        if(ans.isBlank()) {
+            API.getEmbedding(List.of(description)).get(0);
+            ans = findClosest(description);
+        }
+        return ans;
+    }
+    public String getRelevantSetting(String Description){
+        return "";
+    }
+    private String checkInDatabase(type t, String Description){
+    }
+    private String findClosest(String description){
+
+    }
+
 
     // Method to select the most suitable background setting for the given prompt
     public static String selectEmbedding(String prompt, List<Embedding> choices) {
