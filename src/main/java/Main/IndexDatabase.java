@@ -8,6 +8,9 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.List;
 
+import org.apache.commons.collections.map.HashedMap;
+import org.apache.commons.collections4.multiset.HashMultiSet;
+
 public class IndexDatabase {
 
     private final RandomAccessFile indexFile;
@@ -24,11 +27,27 @@ public class IndexDatabase {
             e.printStackTrace();
         }
     }
-    public String
+
+    // Method to get description value by index
     public String getByIndex(int index){
-        return "";
+        try {
+            indexFile.seek(index); // Move the file pointer to the position of desired index
+            return indexFile.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
-    public void appendToFile(String newDescription,int index){
+
+    // Method to append a new description value to the index file 
+    public void appendToFile(String newDescription, int index){
+        try {
+            indexFile.seek(indexFile.length());
+            indexFile.writeBytes(newDescription + "\n");
+            System.out.println("Description has been appended to the index file.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
