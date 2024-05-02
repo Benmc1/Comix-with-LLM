@@ -1,57 +1,50 @@
 package Main;
 
-import com.opencsv.CSVReader;
-import com.opencsv.exceptions.CsvValidationException;
-import com.theokanning.openai.embedding.Embedding;
 import config.ConfigurationFile;
-
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class EmbeddingSelector {
-    enum type{POSE,SETTING}
-
     public static String getRelevantChoice(String description,String type){
-        File file = new File("data.txt");
-        if(!file.exists()){
+        List<String[]> data = readPlainData();
+        //Extract the descriptions to save them as embeddings
+        List<String> EmbeddingData = data.stream().map(array -> array[0]).toList();
+        EmbeddingDatabase embeddingDatabase = new EmbeddingDatabase(EmbeddingData);
+        System.out.println(embeddingDatabase.readFromFile(2));
 
-        }
-        String ans =  IndexDatabase.CheckInDatabase(type.POSE,description);
-        if(ans.isBlank()) {
-
-            ans = EmfindClosest(description);
-        }
-        return ans;
+        return "";
     }
-    private List<String[]> readPlainData() {
+    private static List<String[]> readPlainData() {
         List<String[]> PoseData = new ArrayList<>();
         String file = ConfigurationFile.getProperty("PLAIN_DATA");
 
-        try (CSVReader csvReader = new CSVReader(new FileReader(file))) {
-            String[] values;
-            boolean headersSkipped = false;
-            while ((values = csvReader.readNext()) != null) {
-                // Skip headers
-                if (!headersSkipped) {
-                    headersSkipped = true;
-                    continue;
-                }
+        try (Scanner scanner = new Scanner(new File(file))) {
+            //skip headers
+            scanner.nextLine();
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                String[] values = line.split("\t");
+
+                //if there arnt any descriptions skip
+                if(values.length != 3) continue;
+
                 String[] descriptions = values[2].split(",");
                 for (String s : descriptions) {
-                    String[] line = {s,values[1],values[0]};
-                    PoseData.add(line);
+                    String[] newline = {s,values[1],values[0]};
+                    PoseData.add(newline);
                 }
             }
         }catch (FileNotFoundException e){
             System.out.println(file + " not found, cannot create embeddings data");
-        } catch (IOException | CsvValidationException e) {
-            throw new RuntimeException(e);
         }
         return PoseData;
     }
 
+    public static void main(String[] args) {
+
+        EmbeddingSelector.getRelevantChoice("pose","waving heavily");
+    }
 }

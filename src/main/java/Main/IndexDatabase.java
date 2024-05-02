@@ -8,12 +8,13 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.List;
 
-import org.apache.commons.collections.map.HashedMap;
-import org.apache.commons.collections4.multiset.HashMultiSet;
-
 public class IndexDatabase {
 
     private final RandomAccessFile indexFile;
+
+    public IndexDatabase(RandomAccessFile indexFile) {
+        this.indexFile = indexFile;
+    }
 
     private void writeIndexFile(List<String[]> keys){
         String indexFile = ConfigurationFile.getProperty("INDEX_FILE");
