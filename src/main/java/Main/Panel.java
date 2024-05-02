@@ -1,5 +1,7 @@
 package Main;
 
+import Databases.EmbeddingSelector;
+
 import java.util.Arrays;
 
 public class Panel {

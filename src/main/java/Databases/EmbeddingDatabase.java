@@ -1,5 +1,6 @@
-package Main;
+package Databases;
 
+import Main.API;
 import com.theokanning.openai.embedding.Embedding;
 import config.ConfigurationFile;
 import java.io.FileNotFoundException;
