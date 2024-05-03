@@ -1,46 +1,56 @@
 package Databases;
 
-import config.ConfigurationFile;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
+import Main.API;
 import java.util.List;
-import java.util.Scanner;
+
 
 public class EmbeddingSelector {
-    public static String getRelevantChoice(String description,String type){
-        List<String[]> data = readPlainData();
-        //Extract the descriptions to save them as embeddings
-        List<String> EmbeddingData = data.stream().map(array -> array[0]).toList();
-        EmbeddingDatabase embeddingDatabase = new EmbeddingDatabase(EmbeddingData);
-        System.out.println(embeddingDatabase.readFromFile(2));
 
-        return "";
+    private static EmbeddingDatabase embeddingDatabase;
+    private static IndexDatabase indexDatabase;
+
+    public EmbeddingSelector() {
+
     }
-    private static List<String[]> readPlainData() {
-        List<String[]> PoseData = new ArrayList<>();
-        String file = ConfigurationFile.getProperty("PLAIN_DATA");
 
-        try (Scanner scanner = new Scanner(new File(file))) {
-            //skip headers
-            scanner.nextLine();
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
-                String[] values = line.split("\t");
+    public static String  getRelevantChoice(String description,String type){
+        String ans;
+        embeddingDatabase = new EmbeddingDatabase();
+        indexDatabase = new IndexDatabase();
+        ans = findClosestMatchIndex(description,type);
+        return ans;
+    }
 
-                //if there arnt any descriptions skip
-                if(values.length != 3) continue;
+    private static String findClosestMatchIndex(String description, String type){
 
-                String[] descriptions = values[2].split(",");
-                for (String s : descriptions) {
-                    String[] newline = {s,values[1],values[0]};
-                    PoseData.add(newline);
+        List<Double> promptEmbedding = API.getEmbedding(List.of(description)).get(0).getEmbedding();
+
+        String closestMatch = "";
+        double maxSimilarity = -1.0;
+
+        // Iterate over each background setting and calculate cosine similarity
+        // Select the background setting with the highest similarity score
+        int index = 0;
+        String keys = indexDatabase.getByIndex(index);
+        while (!keys.isBlank()) {
+            if(keys.contains(type)) {
+                List<Double> savedEmbedding = embeddingDatabase.getByIndex(index);
+                double similarity = calculateCosineSimilarity(promptEmbedding, savedEmbedding);
+                if (similarity > maxSimilarity) {
+                    maxSimilarity = similarity;
+                    closestMatch = keys.split(",")[2];
                 }
             }
-        }catch (FileNotFoundException e){
-            System.out.println(file + " not found, cannot create embeddings data");
+
         }
-        return PoseData;
+        return closestMatch;
+    }
+    private static double calculateCosineSimilarity(List<Double> vector1, List<Double> vector2) {
+        double dotProduct = 0.0;
+        for (int i = 0; i < vector1.size(); i++) {
+            dotProduct += vector1.get(i) * vector2.get(i);
+        }
+        return dotProduct;
     }
 
     public static void main(String[] args) {

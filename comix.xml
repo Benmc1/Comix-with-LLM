@@ -2,291 +2,271 @@
 <comic>
 	<figures>
 <figure>
-	<name>tom</name>
-	<appearance>null</appearance>
-	<hair>null</hair>
-	<skin>null</skin>
-	<lips>null</lips>
+	<name>Jack</name>
+	<appearance>female</appearance>
+	<hair>Red</hair>
+	<skin>Orange</skin>
+	<lips>Red</lips>
 </figure>
 <figure>
-	<name>toma</name>
-	<appearance>null</appearance>
-	<hair>null</hair>
-	<skin>null</skin>
-	<lips>null</lips>
+	<name>Rebecca</name>
+	<appearance>female</appearance>
+	<hair>White</hair>
+	<skin>Black</skin>
+	<lips>Red</lips>
 </figure>
 	</figures>
-	<topic>Temple OS</topic>
+	<topic>the eiffel tower </topic>
 	<panels>
 <panel>
-   <above>"The power of Temple OS may be limited, but its interface is impressive."</above>
+   <above>"The Eiffel Tower, beautiful and tremendous! But should have followed zoning laws."</above>
    <left>
        <figure>
-           <name>tom</name>
-           <pose>designing</pose>
+           <name>Jack</name>
+           <pose></pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">
-			<content>Innovative software with a unique interface</content>
+		<balloon status="speech">			<content>A landmark of the fair's celebration. </content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>toma</name>
-           <pose>overshadowed</pose>
+           <name>Rebecca</name>
+           <pose></pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">
-			<content>Only has a small niche and not widely in use place</content>
+		<balloon status="speech">			<content>A temporary structure that stayed, it's hoarding of land a violation. </content>
 		</balloon>
    </right>
 
-   <setting>yosemite</setting>
+   <setting></setting>
 </panel><panel>
-   <above>"Temple OS is malleable, yet its lack of resources is disturbing."</above>
+   <above>"The Eiffel Tower is huge, amazing! But built by exploiting workers, not good."</above>
    <left>
        <figure>
-           <name>tom</name>
-           <pose>hacking</pose>
+           <name>Jack</name>
+           <pose></pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">
-			<content>Free software that can be easily modified</content>
+		<balloon status="speech">			<content>Tall in height, an architectural wonder. </content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>toma</name>
-           <pose>brown horse prop</pose>
+           <name>Rebecca</name>
+           <pose></pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">
-			<content>Not backed by a larger company with resources and suture fit</content>
+		<balloon status="speech">			<content>A product of a colonial past, exploiting labour without any ponder. </content>
 		</balloon>
    </right>
 
-   <setting>yosemite</setting>
+   <setting></setting>
 </panel><panel>
-   <above>"Temple OS's distinct features are notable, but novices may struggle to navigate."</above>
+   <above>"I love the Eiffel Tower, fantastic name, great design! But the engineer probably cheated people, not good!"</above>
    <left>
        <figure>
-           <name>tom</name>
-           <pose>three flipped</pose>
+           <name>Jack</name>
+           <pose></pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">
-			<content>Specialized features make it stand out</content>
+		<balloon status="speech">			<content>Named after the man who designed it right.</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>toma</name>
-           <pose>put out</pose>
+           <name>Rebecca</name>
+           <pose></pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">
-			<content>Hard for beginners to navigate in challenges they might doubt </content>
+		<balloon status="speech">			<content>An engineer who thrived off of exploitation, in construction schemes of questionable might.</content>
 		</balloon>
    </right>
 
-   <setting>yosemite</setting>
+   <setting></setting>
 </panel><panel>
-   <above>"Temple OS adapts to different devices, yet modern machines may prove challenging."</above>
+   <above>"Eiffel Tower - beautiful feat of engineering, amazing work in short time. But workers' casualties and substandard iron is unacceptable."</above>
    <left>
        <figure>
-           <name>tom</name>
-           <pose>shrugging</pose>
+           <name>Jack</name>
+           <pose></pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">
-			<content>Can work on a variety of different devices</content>
+		<balloon status="speech">			<content>A marvel of engineering in not too long a time.</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>toma</name>
-           <pose>competing with</pose>
+           <name>Rebecca</name>
+           <pose></pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">
-			<content>Will struggle on modern high-end machines without devices for interceded </content>
+		<balloon status="speech">			<content>Made with iron wrought by workers, broken and crushed, it's a crime. </content>
 		</balloon>
    </right>
 
-   <setting>yosemite</setting>
+   <setting></setting>
 </panel><panel>
-   <above>"Temple OS's ability to run on older hardware is commendable, but its multitasking capabilities are wanting."</above>
+   <above>"Everybody loves the Eiffel Tower, great attraction, beautiful views. But standing in long lines is a disaster, not worth it!"</above>
    <left>
        <figure>
-           <name>tom</name>
-           <pose>running away</pose>
+           <name>Jack</name>
+           <pose></pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">
-			<content>Runs on old hardware and reduces the E-waste stream</content>
+		<balloon status="speech">			<content>A visitor's delight, with views to behold.</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>toma</name>
-           <pose>lying down</pose>
+           <name>Rebecca</name>
+           <pose></pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">
-			<content>The system might be limited when multitasking or running resource-intensive dreams</content>
+		<balloon status="speech">			<content>The long wait in line, not worth the cold, it's a story that's often told. </content>
 		</balloon>
    </right>
 
-   <setting>yosemite</setting>
+   <setting></setting>
 </panel><panel>
-   <above>"Temple OS's inbuilt terminals are convenient, but its popularity pales in comparison to other programming languages."</above>
+   <above>"The Eiffel Tower is amazing, pride of Paris! But it symbolizes colonial past and nationalism, weak and useless!"</above>
    <left>
        <figure>
-           <name>tom</name>
-           <pose>carrying for</pose>
+           <name>Jack</name>
+           <pose></pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">
-			<content>Built-in terminals and makes it easy for you</content>
+		<balloon status="speech">			<content>The city's pride, it's a beautiful sight.</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>toma</name>
-           <pose>overshadowed</pose>
+           <name>Rebecca</name>
+           <pose></pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">
-			<content>Is not as widely used or popular as other well-known language crews </content>
+		<balloon status="speech">			<content>Represents colonialism and nationalist might, it's all bark, no bite. </content>
 		</balloon>
    </right>
 
-   <setting>yosemite</setting>
+   <setting></setting>
 </panel><panel>
-   <above>"Temple OS's potential is immense, but attracting support from others may prove difficult."</above>
+   <above>"Eiffel Tower - beautiful, but designed for an event! Now it stands as an eyesore, unplanned and temporary construction."</above>
    <left>
        <figure>
-           <name>tom</name>
-           <pose>smitten</pose>
+           <name>Jack</name>
+           <pose></pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">
-			<content>Huge potential for a very devoted group of fanatics</content>
+		<balloon status="speech">			<content>Designed for an event, now standing tall.</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>toma</name>
-           <pose>supporting</pose>
+           <name>Rebecca</name>
+           <pose></pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">
-			<content>Getting help and support from others would be a difficult tactic </content>
+		<balloon status="speech">			<content>An unplanned eyesore, its place here is just a stall. </content>
 		</balloon>
    </right>
 
-   <setting>yosemite</setting>
+   <setting></setting>
 </panel><panel>
-   <above>"Temple OS' religious and gorilla-based backstory is intriguing, yet it may also deter some users."</above>
+   <above>"The Eiffel Tower hosts grand events, full of life, beautiful! But it's also a security risk, enemies target it, terrible!"</above>
    <left>
        <figure>
-           <name>tom</name>
-           <pose>silverback prop</pose>
+           <name>Jack</name>
+           <pose></pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">
-			<content>Creates a religious backstory and a programming gorilla </content>
+		<balloon status="speech">			<content>Hosts occasions full of life and grandeur.</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>toma</name>
-           <pose>denouncing</pose>
+           <name>Rebecca</name>
+           <pose></pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">
-			<content>Could turn people away from the software, and the story might be polar</content>
+		<balloon status="speech">			<content>A security threat, often the target of attackers. </content>
 		</balloon>
    </right>
 
-   <setting>yosemite</setting>
+   <setting></setting>
 </panel><panel>
-   <above>"Temple OS's smaller size makes it more secure, yet it may limit its functionality for users."</above>
+   <above>"The Eiffel Tower looks beautiful at night, a bright shining light! But it's wasteful and hurts the environment, very bad!"</above>
    <left>
        <figure>
-           <name>tom</name>
-           <pose>opening jar</pose>
+           <name>Jack</name>
+           <pose></pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">
-			<content>Smaller size makes it more secure and harder to hack a kit</content>
+		<balloon status="speech">			<content>At night it shines bright, painting the skyline.</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>toma</name>
-           <pose>competing with</pose>
+           <name>Rebecca</name>
+           <pose></pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">
-			<content>Could make it challenging or limited for people to intermit </content>
+		<balloon status="speech">			<content>A waste of energy, at the cost of the earth's lifeline. </content>
 		</balloon>
    </right>
 
-   <setting>yosemite</setting>
+   <setting></setting>
 </panel><panel>
-   <above>"Temple OS's evolution is fueled by a supportive community, but delays in upgrades may leave it lagging behind newer operating systems."</above>
+   <above>"The Eiffel Tower is iconic and world-famous, with mentions in books and movies! But, honestly, it's a bit overrated, not as great as hyped."</above>
    <left>
        <figure>
-           <name>tom</name>
-           <pose>supporting</pose>
+           <name>Jack</name>
+           <pose></pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">
-			<content>Community support keeps it evolving and growing in stature</content>
+		<balloon status="speech">			<content>Known worldwide, through literature and screen.</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>toma</name>
-           <pose>withholding</pose>
+           <name>Rebecca</name>
+           <pose></pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">
-			<content>Could hinder growth and slow upgrades means behind new operating factors</content>
+		<balloon status="speech">			<content>Anti-climactic and over-hyped, it's not all it may seem.</content>
 		</balloon>
    </right>
 
-   <setting>yosemite</setting>
+   <setting></setting>
 </panel>	</panels>
 </comic>
