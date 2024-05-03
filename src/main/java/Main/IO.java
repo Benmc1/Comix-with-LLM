@@ -8,16 +8,18 @@ import java.util.List;
 import java.util.Scanner;
 
 public class IO {
-    public static String getTopic(){
+    public static String getTopic() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the prompt for chat completion:");
         return scanner.nextLine();
     }
-    public static String getCharacterName(){
+
+    public static String getCharacterName() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the name of the character you want in the comic.");
         return scanner.nextLine();
     }
+
     public static List<String[]> readPlainData() {
         List<String[]> PoseData = new ArrayList<>();
         String file = ConfigurationFile.getProperty("PLAIN_DATA");
@@ -38,7 +40,7 @@ public class IO {
                     PoseData.add(newline);
                 }
             }
-        }catch (FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             System.out.println(file + " not found, cannot create embeddings data");
         }
         return PoseData;

@@ -1,7 +1,6 @@
 package Main;
 
 import config.ConfigurationFile;
-
 import java.util.*;
 
 public class Lines {
@@ -9,20 +8,20 @@ public class Lines {
     private final List<String> antiLines;
     private final List<String> captions;
 
-    public Lines(String topic){
+    public Lines(String topic) {
         this.proLines = new ArrayList<>();
         this.antiLines = new ArrayList<>();
         this.captions = new ArrayList<>();
         generateLines(topic);
     }
 
-    private void generateLines(String topic){
+    private void generateLines(String topic) {
         Conversation conversation = new Conversation();
         conversation.addSystemMessage(ConfigurationFile.getProperty("SYSTEM_PROMPT"));
         String pointsList = conversation.getResponse("Write a list of " + ConfigurationFile.getProperty("NUM_OF_PANELS") + " points about "+ topic
                 + ". Theses points should be concise and benign.");
 
-        if(pointsList.isEmpty()){
+        if(pointsList.isEmpty()) {
             System.out.println("generating points returned a DOS moving to backup");
             conversation.addMessageAndResponse(ConfigurationFile.getProperty("DOS_PROMPT"),ConfigurationFile.getProperty("DOS_RESPONSE"));
               conversation.getResponse("Write a list of " + ConfigurationFile.getProperty("NUM_OF_PANELS") + " points about "+ topic
@@ -30,7 +29,7 @@ public class Lines {
         }
         //Generate pro and anti sides from the points
         String text = conversation.getResponse(ConfigurationFile.getProperty("PRO+ANTI_PROMPT"));
-        if(text.isEmpty()){
+        if(text.isEmpty()) {
             System.out.println("Could not generate text");
         }
         extractLines(text);
@@ -40,7 +39,8 @@ public class Lines {
             captions.add(narrator.generateCaption(getProLine(i),getAntiLine(i)));
         }
     }
-    private void extractLines(String text){
+
+    private void extractLines(String text) {
         //divide into individual lines
         String[] lines = text.split("\n");
         System.out.println(text);
@@ -48,7 +48,7 @@ public class Lines {
         //clean up lines
         for (String string :lines) {
             System.out.println(string);
-            if(string.contains("Pro:")){
+            if(string.contains("Pro:")) {
                 string = string.split("Pro:")[1];
                 string = string.stripLeading();
                 proLines.add(string);
@@ -60,6 +60,7 @@ public class Lines {
             }
         }
     }
+
     public String getAntiLine(int n) {
         return antiLines.get(n);
     }
@@ -67,13 +68,15 @@ public class Lines {
     public String getProLine(int n) {
         return proLines.get(n);
     }
-    public String getCaption(int n){
+
+    public String getCaption(int n) {
         return captions.get(n);
     }
 
-    public String[] getPanelLines(int n){
+    public String[] getPanelLines(int n) {
         return new String[]{getProLine(n),getAntiLine(n),getCaption(n)};
     }
+
     public List<String> getAntiLines() {
         return antiLines;
     }
@@ -82,7 +85,9 @@ public class Lines {
         return proLines;
     }
 
-    public List<String> getCaptions() { return captions; }
+    public List<String> getCaptions() { 
+        return captions; 
+    }
 
     @Override
     public String toString() {

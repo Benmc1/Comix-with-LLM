@@ -3,7 +3,6 @@ package Databases;
 import Main.API;
 import java.util.List;
 
-
 public class EmbeddingSelector {
 
     private static EmbeddingDatabase embeddingDatabase;
@@ -13,12 +12,12 @@ public class EmbeddingSelector {
 
     }
 
-    public static String getRelevantChoice(String description,String type){
+    public static String getRelevantChoice(String description,String type) {
         String ans = "";
         embeddingDatabase = new EmbeddingDatabase();
         indexDatabase = new IndexDatabase();
-        if(false){
-        }else{
+        if(false) {
+        } else {
             int index = findClosestMatchIndex(description,type);
             embeddingDatabase.appendToFile(description);
 
@@ -27,11 +26,10 @@ public class EmbeddingSelector {
             indexDatabase.appendToFile(newEntry);
             ans = match[2];
         }
-
         return ans;
     }
 
-    private static int findClosestMatchIndex(String description, String type){
+    private static int findClosestMatchIndex(String description, String type) {
 
         List<Double> promptEmbedding = API.getEmbedding(List.of(description)).get(0).getEmbedding();
 

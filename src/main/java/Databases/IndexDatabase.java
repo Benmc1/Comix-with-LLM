@@ -19,14 +19,14 @@ public class IndexDatabase {
                 List<String[]> data = IO.readPlainData();
                 initializeDatabase(data);
             }
-        }catch (FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             System.out.println("could not find or create embedding file");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    private void initializeDatabase(List<String[]> keys){
+    private void initializeDatabase(List<String[]> keys) {
         try {
             String headers = "Description, Type, Value";
             file.writeBytes(headers);
@@ -41,7 +41,7 @@ public class IndexDatabase {
     }
 
     // Method to get description value by index
-    public String getByIndex(int index){
+    public String getByIndex(int index) {
         try {
             file.seek(index); // Move the file pointer to the position of desired index
             return file.readLine();
@@ -52,8 +52,8 @@ public class IndexDatabase {
     }
 
     // Method to append a new description value to the index file 
-    public void appendToFile(String newDescription){   
-        if(!doesDescriptionExist(newDescription)){
+    public void appendToFile(String newDescription) {
+        if(!doesDescriptionExist(newDescription)) {
         try {
             file.seek(file.length());
             file.writeBytes(newDescription + "\n");
@@ -63,8 +63,8 @@ public class IndexDatabase {
         }
     } else {
         System.out.println("Description and/or type already exists in the database.");
-    }
-    }   
+    }    
+}   
 
     // Method to check if a description exists in the database
     private boolean doesDescriptionExist(String description) {
@@ -96,10 +96,3 @@ public class IndexDatabase {
         System.out.println("Description at index " + index + ": " + descAtIndex);
     }
 }
-
-
-
-
-
-
-

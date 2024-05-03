@@ -15,7 +15,6 @@ public class Conversation implements Interfaces.Conversation {
 
     public void addMessageAndResponse(String userMessage, String response) {
         messageList.add(new ChatMessage("user", userMessage));
-
         messageList.add(new ChatMessage("assistant", response));
     }
 

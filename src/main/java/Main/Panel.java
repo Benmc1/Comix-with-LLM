@@ -6,13 +6,11 @@ import java.util.Arrays;
 
 public class Panel {
     private final String charLeft;
-
     private final String charRight;
     //0 = left, 1 = right, 2 = caption
     private final String[] lines;
     private String poseLeft;
     private String poseRight;
-
     private String setting;
 
     public Panel(String charLeft, String charRight, String[] lines, String topic) {
@@ -27,6 +25,7 @@ public class Panel {
         poseLeft = EmbeddingSelector.getRelevantChoice(lines[0], "pose");
         poseRight = EmbeddingSelector.getRelevantChoice(lines[1], "pose");
     }
+
     private void generateSetting(String topic){
         String input = String.join("", lines) + " " + topic;
         setting = EmbeddingSelector.getRelevantChoice(input, "setting");
@@ -48,7 +47,7 @@ public class Panel {
                 '}';
     }
 
-    public String toXML(){
+    public String toXML() {
         return "<panel>\n" +
                 "   <above>" + lines[2] + "</above>\n"+
                 "   <left>\n"+
@@ -70,7 +69,8 @@ public class Panel {
                 "   <setting>" + setting + "</setting>\n"+
                 "</panel>";
     }
-    private String speechBalloon(String speech){
+
+    private String speechBalloon(String speech) {
         return "\t\t<balloon status=\"speech\">\r\t\t\t<content>" + speech + "</content>\n\t\t</balloon>\n";
     }
 }

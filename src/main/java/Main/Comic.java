@@ -8,18 +8,19 @@ import java.util.List;
 public class Comic {
     private final String topic;
     private final Lines lines;
-
     private final List<Panel> panels = new ArrayList<>();
-    private final Character characterLeft ;
+    private final Character characterLeft;
     private final Character characterRight;
-    Comic(String topic){
+
+    Comic(String topic) {
         this.topic = topic;
         characterLeft = new Character("");
         characterRight = new Character("");
         lines = new Lines(topic);
         makePanels();
     }
-    private void makePanels(){
+
+    private void makePanels() {
         int numOfPanels = Integer.parseInt(ConfigurationFile.getProperty("NUM_OF_PANELS"));
 
         for (int i = 0; i < numOfPanels; i++) {
@@ -30,6 +31,7 @@ public class Comic {
     public Lines getLines() {
         return lines;
     }
+
     public String getTopic() {
         return topic;
     }

@@ -23,14 +23,14 @@ public class EmbeddingDatabase  {
                 List<String[]> data = IO.readPlainData();
                 initializeDatabase(data);
             }
-        }catch (FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             System.out.println("could not find or create embedding file");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public void initializeDatabase(List<String[]> data){
+    public void initializeDatabase(List<String[]> data) {
         //get a new list with just the descriptions
         List<String> descriptions = data.stream().map(array -> array[0]).toList();
         List<Embedding> embeddingList = API.getEmbedding(descriptions);
@@ -49,7 +49,7 @@ public class EmbeddingDatabase  {
 
     }
 
-    public List<Double> getByIndex(int index)  {
+    public List<Double> getByIndex(int index) {
         List<Double> list = new ArrayList<>();
         try {
             long position = (long) index * DOUBLE_SIZE * EMBEDDING_LEN;
@@ -79,9 +79,8 @@ public class EmbeddingDatabase  {
             }
             file.write(buffer.array());
 
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
 }

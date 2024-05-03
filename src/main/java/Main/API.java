@@ -14,7 +14,7 @@ import java.util.List;
 
 public class API {
     static OpenAiService service = null;
-    static public ChatMessage getChatCompletion( List<ChatMessage> Messages){
+    static public ChatMessage getChatCompletion( List<ChatMessage> Messages) {
         if(service ==  null) service = new OpenAiService(ConfigurationFile.getProperty("API_KEY"));
 
         ChatCompletionRequest chatCompletionRequest = ChatCompletionRequest.builder()
@@ -30,7 +30,7 @@ public class API {
         return result.getMessage();
     }
 
-    static public List<Embedding> getEmbedding(List<String> Message){
+    static public List<Embedding> getEmbedding(List<String> Message) {
         if(service ==  null) service = new OpenAiService(ConfigurationFile.getProperty("API_KEY"));
 
         EmbeddingRequest embeddingRequest = EmbeddingRequest.builder()

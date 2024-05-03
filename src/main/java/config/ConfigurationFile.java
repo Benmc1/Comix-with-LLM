@@ -22,6 +22,4 @@ public class ConfigurationFile {
     public static String getProperty(String key) {
         return properties.getProperty(key);
     }
-
-    
 }

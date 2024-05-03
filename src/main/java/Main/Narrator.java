@@ -3,12 +3,13 @@ package Main;
 import java.util.Random;
 
 public class Narrator {
-     String style;
-     Conversation conversation;
+    String style;
+    Conversation conversation;
     private static final String[] NARRATOR_STYLES = {
             "Yoda", "Darth Vader", "Donald Trump", "Bane", "Boris Johnson"
     };
-    public Narrator(String topic){
+
+    public Narrator(String topic) {
         style = getRandomNarratorStyle();
         conversation = new Conversation();
         System.out.println(style);
@@ -16,6 +17,7 @@ public class Narrator {
                 "that describes the conversation. Your answer should be no more than 12 words. Answer in the style and vocabulary of" + style+". " +
                 "The lines will be talking about " + topic);
     }
+
     private static String getRandomNarratorStyle() {
         Random rand = new Random();
         return NARRATOR_STYLES[rand.nextInt(NARRATOR_STYLES.length)];
