@@ -68,7 +68,7 @@ public class EmbeddingDatabase  {
     }
 
     //add a single embedding to the file
-    private void appendToFile(String input) {
+    public void appendToFile(String input) {
         Embedding embedding = API.getEmbedding(List.of(input)).get(0);
         try{
             file.seek(file.length());

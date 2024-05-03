@@ -1,13 +1,10 @@
 package Databases;
 
 import Main.IO;
-import com.opencsv.CSVWriter;
 import config.ConfigurationFile;
 
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.RandomAccessFile;
+import java.io.*;
+import java.util.Arrays;
 import java.util.List;
 
 public class IndexDatabase {
@@ -30,12 +27,13 @@ public class IndexDatabase {
     }
 
     private void initializeDatabase(List<String[]> keys){
-        String indexFile = ConfigurationFile.getProperty("INDEX_FILE");
-        try (CSVWriter writer = new CSVWriter(new FileWriter(indexFile))) {
-
-            String[] headers = {"Description","Type","Value"};
-            writer.writeNext(headers);
-            writer.writeAll(keys);
+        try {
+            String headers = "Description, Type, Value";
+            file.writeBytes(headers);
+            for (String[] key : keys) {
+                String line = Arrays.stream(key).map(string ->  string+", ").toString();
+                file.writeBytes(line);
+            }
             System.out.println("Index file has been created successfully.");
         } catch (IOException e) {
             e.printStackTrace();

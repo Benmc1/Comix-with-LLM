@@ -1,7 +1,6 @@
 package Main;
 
 import config.ConfigurationFile;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;

@@ -13,19 +13,29 @@ public class EmbeddingSelector {
 
     }
 
-    public static String  getRelevantChoice(String description,String type){
-        String ans;
+    public static String getRelevantChoice(String description,String type){
+        String ans = "";
         embeddingDatabase = new EmbeddingDatabase();
         indexDatabase = new IndexDatabase();
-        ans = findClosestMatchIndex(description,type);
+        if(false){
+        }else{
+            int index = findClosestMatchIndex(description,type);
+            embeddingDatabase.appendToFile(description);
+
+            String[] match = indexDatabase.getByIndex(index).split(",");
+            String newEntry = description + ","+match[1]+","+match[2];
+            indexDatabase.appendToFile(newEntry);
+            ans = match[2];
+        }
+
         return ans;
     }
 
-    private static String findClosestMatchIndex(String description, String type){
+    private static int findClosestMatchIndex(String description, String type){
 
         List<Double> promptEmbedding = API.getEmbedding(List.of(description)).get(0).getEmbedding();
 
-        String closestMatch = "";
+        int closestMatchIndex = -1;
         double maxSimilarity = -1.0;
 
         // Iterate over each background setting and calculate cosine similarity
@@ -38,12 +48,11 @@ public class EmbeddingSelector {
                 double similarity = calculateCosineSimilarity(promptEmbedding, savedEmbedding);
                 if (similarity > maxSimilarity) {
                     maxSimilarity = similarity;
-                    closestMatch = keys.split(",")[2];
+                    closestMatchIndex = index;
                 }
             }
-
         }
-        return closestMatch;
+        return closestMatchIndex;
     }
     private static double calculateCosineSimilarity(List<Double> vector1, List<Double> vector2) {
         double dotProduct = 0.0;
