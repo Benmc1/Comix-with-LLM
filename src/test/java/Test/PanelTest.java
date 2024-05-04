@@ -10,7 +10,8 @@ class PanelTest {
     @Test
     void string() {
         String[] lines = {"Hello there", "How are you", "This is a test"};
-        Panel panel = new Panel("tom","jack", lines, "hollywood");
+        String[] suggestions = {};
+        Panel panel = new Panel("tom","jack", lines, "hollywood", suggestions);
         String xmlAns = "Panel{charLeft='tom', charRight='jack', lines=[Hello there, How are you, This is a test], poseLeft='greeting', poseRight='shaking hands', setting='hollywood'}";
 
         assertEquals(xmlAns,panel.toString());
@@ -19,7 +20,8 @@ class PanelTest {
     @Test
     void testSettingGeneration() {
         String[] lines = {"Hello", "Goodbye"};
-        Panel panel = new Panel("Alice", "Bob", lines, "Manhattan project");
-        assertEquals("manhattan", panel.getSetting()); 
+        String[] suggestions = {};
+        Panel panel = new Panel("Alice", "Bob", lines, "Manhattan project", suggestions);
+        assertEquals("manhattan", panel.getSetting());
     }
 }
