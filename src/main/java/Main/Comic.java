@@ -22,9 +22,10 @@ public class Comic {
 
     private void makePanels() {
         int numOfPanels = Integer.parseInt(ConfigurationFile.getProperty("NUM_OF_PANELS"));
+        List<String[]> suggestions = lines.generateBatchedSuggestions(topic);
 
         for (int i = 0; i < numOfPanels; i++) {
-            panels.add(new Panel(characterLeft.getName(), characterRight.getName(), lines.getPanelLines(i), topic));
+            panels.add(new Panel(characterLeft.getName(), characterRight.getName(), lines.getPanelLines(i), topic, suggestions.get(i)));
         }
     }
 

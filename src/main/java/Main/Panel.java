@@ -13,7 +13,7 @@ public class Panel {
     private String poseRight;
     private String setting;
 
-    public Panel(String charLeft, String charRight, String[] lines, String topic) {
+    public Panel(String charLeft, String charRight, String[] lines, String topic, String[] suggestions) {
         this.charLeft = charLeft;
         this.charRight = charRight;
         this.lines = lines;
