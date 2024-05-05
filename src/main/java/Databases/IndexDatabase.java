@@ -28,7 +28,7 @@ public class IndexDatabase {
 
     private void initializeDatabase(List<String[]> keys) {
         try {
-            String headers = "Description, Type, Value";
+            String headers = "Description, Type, Value\n";
             file.writeBytes(headers);
             for (String[] key : keys) {
                 String line = Arrays.stream(key).map(string ->  string+", ").collect(Collectors.joining());
