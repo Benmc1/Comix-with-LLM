@@ -44,7 +44,10 @@ public class IndexDatabase {
     // Method to get description value by index
     public String getByIndex(int index) {
         try {
-            file.seek(index); // Move the file pointer to the position of desired index
+            // Move the file pointer to the position of desired index
+            for (int i = 0; i < index; i++){
+                file.readLine();
+            }
             return file.readLine();
         } catch (IOException e) {
             e.printStackTrace();
