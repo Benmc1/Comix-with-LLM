@@ -20,7 +20,6 @@ public class API {
         ChatCompletionRequest chatCompletionRequest = ChatCompletionRequest.builder()
                 .model(ConfigurationFile.getProperty("MODEL"))
                 .messages(Messages)
-                .maxTokens(Integer.valueOf(ConfigurationFile.getProperty("TOKEN_LIMIT")))
                 .build();
 
         ChatCompletionResult resultsList = service.createChatCompletion(chatCompletionRequest);

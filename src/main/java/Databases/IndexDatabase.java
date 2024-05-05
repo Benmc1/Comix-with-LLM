@@ -6,13 +6,13 @@ import config.ConfigurationFile;
 import java.io.*;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class IndexDatabase {
 
     private static RandomAccessFile file;
-
+    private final String DATA_FILE = ConfigurationFile.getProperty("INDEX_DATA");
     public IndexDatabase() {
-        String DATA_FILE = ConfigurationFile.getProperty("INDEX_DATA");
         try{
             file = new RandomAccessFile(DATA_FILE, "rw");
             if(file.length() == 0) {
@@ -31,8 +31,9 @@ public class IndexDatabase {
             String headers = "Description, Type, Value";
             file.writeBytes(headers);
             for (String[] key : keys) {
-                String line = Arrays.stream(key).map(string ->  string+", ").toString();
-                file.writeBytes(line);
+                String line = Arrays.stream(key).map(string ->  string+", ").collect(Collectors.joining());
+                System.out.println(line);
+                file.writeBytes(line+"\n");
             }
             System.out.println("Index file has been created successfully.");
         } catch (IOException e) {
@@ -54,21 +55,21 @@ public class IndexDatabase {
     // Method to append a new description value to the index file 
     public void appendToFile(String newDescription) {
         if(!doesDescriptionExist(newDescription)) {
-        try {
-            file.seek(file.length());
-            file.writeBytes(newDescription + "\n");
-            System.out.println("Description has been appended to the index file.");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    } else {
+            try {
+                file.seek(file.length());
+                file.writeBytes(newDescription + "\n");
+                System.out.println("Description has been appended to the index file.");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }else {
         System.out.println("Description and/or type already exists in the database.");
-    }    
-}   
+    }
+}
 
     // Method to check if a description exists in the database
     private boolean doesDescriptionExist(String description) {
-        try (BufferedReader reader = new BufferedReader(new FileReader("INDEX_DATA"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(DATA_FILE))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
@@ -85,14 +86,9 @@ public class IndexDatabase {
     public static void main(String[] args) {
         IndexDatabase indexDatabase = new IndexDatabase();
 
-        String desc = "New description, pose, some_value";
-        indexDatabase.appendToFile(desc);
-
-        String existingDesc = "New description, pose, some_value";
-        indexDatabase.appendToFile(existingDesc);
-
-        int index = 0;
+        int index = 4;
         String descAtIndex = indexDatabase.getByIndex(index);
         System.out.println("Description at index " + index + ": " + descAtIndex);
+        indexDatabase.appendToFile("asdasdasdasdasdasdasdasdasdasdadadasdasdasdasd");
     }
 }

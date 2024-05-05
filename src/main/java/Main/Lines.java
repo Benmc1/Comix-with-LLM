@@ -61,7 +61,8 @@ public class Lines {
     }
 
     public List<String[]> generateBatchedSuggestions(String topic) {
-        String prompt = conversation.getResponse(ConfigurationFile.getProperty("SUGGESTIONS_PROMPT") + " Now suggest 10 poses and backgrounds for each panel about " + topic);
+        String prompt = conversation.getResponse(ConfigurationFile.getProperty("SUGGESTIONS_PROMPT") + "The topic of the comic is:" + topic);
+        System.out.println(prompt);
         return parseSuggestions(prompt);
     }
 
@@ -111,5 +112,15 @@ public class Lines {
             str.append("\nAnti: ").append(antiLines.get(i));
         }
         return str.toString();
+    }
+
+    public static void main(String[] args) {
+        Lines l = new Lines("The troubles in Northern Ireland");
+        List<String[]> sugg = l.generateBatchedSuggestions("The troubles in Northern Ireland");
+        System.out.println(sugg.size());
+        for (String[] s :
+                sugg) {
+            System.out.println(Arrays.toString(s));
+        }
     }
 }
