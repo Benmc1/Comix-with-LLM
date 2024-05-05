@@ -45,6 +45,7 @@ public class IndexDatabase {
     public String getByIndex(int index) {
         try {
             // Move the file pointer to the position of desired index
+            file.seek(0);
             for (int i = 0; i < index; i++){
                 file.readLine();
             }
@@ -89,7 +90,7 @@ public class IndexDatabase {
     public static void main(String[] args) {
         IndexDatabase indexDatabase = new IndexDatabase();
 
-        int index = 4;
+        int index = 5;
         String descAtIndex = indexDatabase.getByIndex(index);
         System.out.println("Description at index " + index + ": " + descAtIndex);
         indexDatabase.appendToFile("asdasdasdasdasdasdasdasdasdasdadadasdasdasdasd");

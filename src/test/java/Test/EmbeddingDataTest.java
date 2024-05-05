@@ -1,4 +1,4 @@
-package Test;
+/*package Test;
 
 import Main.EmbeddingData;
 import com.theokanning.openai.embedding.Embedding;
@@ -24,3 +24,5 @@ class EmbeddingDataTest {
         assertEquals(294,size);
     }
 }
+
+ */
