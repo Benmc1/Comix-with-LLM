@@ -16,18 +16,14 @@ class IndexDatabaseTest {
         File tempFile = File.createTempFile("index", ".dat");
         tempFile.deleteOnExit();
 
-        // Write some data to the temporary file
-        try (RandomAccessFile file = new RandomAccessFile(tempFile, "rw")) {
-            file.writeBytes("Description1, Type1, Value1\n");
-            file.writeBytes("Description2, Type2, Value2\n");
-            file.writeBytes("Description3, Type3, Value3\n");
-        }
         IndexDatabase indexDatabase = new IndexDatabase();
 
         // Test getting descriptions by index
-        assertEquals("Description1, Type1, Value1", indexDatabase.getByIndex(0));
-        assertEquals("Description2, Type2, Value2", indexDatabase.getByIndex(1));
-        assertEquals("Description3, Type3, Value3", indexDatabase.getByIndex(2));
+        assertEquals("in heat, pose, attracted, ", indexDatabase.getByIndex(1));
+        assertEquals(" attraction, pose, attracted, ", indexDatabase.getByIndex(2));
+        assertEquals(" attarcted to someone, pose, attracted, ", indexDatabase.getByIndex(3));
+        assertEquals("a bow, pose, bowing, ", indexDatabase.getByIndex(4));
+        assertEquals(" showing respect, pose, bowing, ", indexDatabase.getByIndex(5));
     }
 
     @Test
@@ -36,8 +32,9 @@ class IndexDatabaseTest {
         tempFile.deleteOnExit();
 
         IndexDatabase indexDatabase = new IndexDatabase();
-        indexDatabase.appendToFile("New Description, Type, New Value");
+        indexDatabase.appendToFile("Description, Type, Value");
+        int indexLength = (int) tempFile.length();
 
-        assertEquals("New Description, Type, New Value", indexDatabase.getByIndex(0));
+        assertEquals("Description, Type, Value", indexDatabase.getByIndex(indexLength));
     }
 }
