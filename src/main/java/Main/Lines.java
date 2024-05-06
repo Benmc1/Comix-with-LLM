@@ -1,5 +1,6 @@
 package Main;
 
+import Comic.Narrator;
 import config.ConfigurationFile;
 import java.util.*;
 

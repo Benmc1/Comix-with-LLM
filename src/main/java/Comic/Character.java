@@ -1,4 +1,4 @@
-package Main;
+package Comic;
 
 import java.util.Random;
 
@@ -32,8 +32,6 @@ public class Character {
             hairColour = hairColours[rand.nextInt(hairColours.length)];
             skinColour = skinColours[rand.nextInt(skinColours.length)];
             lips = lipColours[rand.nextInt(lipColours.length)];
-        } else {
-            //TODO use embeddings
         }
     }
 

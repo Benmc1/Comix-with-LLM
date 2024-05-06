@@ -1,7 +1,7 @@
 package Test;
 
 import org.junit.jupiter.api.Test;
-import Main.Character;
+import Comic.Character;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CharacterTest {

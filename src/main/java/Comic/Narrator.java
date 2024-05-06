@@ -1,4 +1,6 @@
-package Main;
+package Comic;
+
+import Main.Conversation;
 
 import java.util.Random;
 

@@ -1,5 +1,6 @@
-package Main;
+package Comic;
 
+import Main.Lines;
 import config.ConfigurationFile;
 
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ public class Comic {
     private final Character characterLeft;
     private final Character characterRight;
 
-    Comic(String topic) {
+    public Comic(String topic) {
         this.topic = topic;
         characterLeft = new Character("");
         characterRight = new Character("");

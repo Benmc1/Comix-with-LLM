@@ -1,6 +1,6 @@
-package Main;
+package Comic;
 
-import Databases.EmbeddingSelector;
+import Assests.AssetSelector;
 
 import java.util.Arrays;
 
@@ -22,12 +22,12 @@ public class Panel {
     }
 
     private void generatePoses(String[] suggestions){
-        poseLeft = EmbeddingSelector.getRelevantChoice(suggestions[0], "pose");
-        poseRight = EmbeddingSelector.getRelevantChoice(suggestions[1], "pose");
+        poseLeft = AssetSelector.getRelevantChoice(suggestions[0], "pose");
+        poseRight = AssetSelector.getRelevantChoice(suggestions[1], "pose");
     }
 
     private void generateSetting(String[] suggestions){
-        setting = EmbeddingSelector.getRelevantChoice(suggestions[2], "setting");
+        setting = AssetSelector.getRelevantChoice(suggestions[2], "setting");
     }
 
     public String getSetting() {

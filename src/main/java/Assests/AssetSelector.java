@@ -1,14 +1,14 @@
-package Databases;
+package Assests;
 
 import Main.API;
 import java.util.List;
 
-public class EmbeddingSelector {
+public class AssetSelector {
 
     private static EmbeddingDatabase embeddingDatabase;
     private static IndexDatabase indexDatabase;
 
-    public EmbeddingSelector() {
+    public AssetSelector() {
 
     }
 

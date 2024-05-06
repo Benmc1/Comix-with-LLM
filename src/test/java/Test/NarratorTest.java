@@ -1,6 +1,6 @@
 package Test;
 
-import Main.Narrator;
+import Comic.Narrator;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,6 +1,6 @@
 package Test;
 
-import Main.Panel;
+import Comic.Panel;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

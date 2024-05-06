@@ -1,4 +1,4 @@
-package Main;
+package Comic;
 
 import config.ConfigurationFile;
 

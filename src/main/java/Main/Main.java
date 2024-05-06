@@ -1,6 +1,7 @@
 package Main;
+import Comic.Comic;
 import config.ConfigurationFile;
-
+import Comic.ComicSerializer;
 import java.util.Objects;
 
 public class Main {
