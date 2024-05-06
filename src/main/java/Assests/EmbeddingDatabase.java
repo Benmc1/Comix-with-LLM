@@ -15,7 +15,7 @@ public class EmbeddingDatabase  {
     private static final int DOUBLE_SIZE = Double.BYTES;
     private static final int EMBEDDING_LEN = Integer.parseInt(ConfigurationFile.getProperty("EMBEDDING_LEN"));
     private static RandomAccessFile file;
-    EmbeddingDatabase() {
+    public EmbeddingDatabase() {
         String DATA_FILE = ConfigurationFile.getProperty("EMBEDDING_DATA");
         try{
             file = new RandomAccessFile(DATA_FILE, "rw");
@@ -51,6 +51,7 @@ public class EmbeddingDatabase  {
 
     public List<Double> getByIndex(int index) {
         List<Double> list = new ArrayList<>();
+        if(index > 9999 || index < 0) return null;
         try {
             long position = (long) index * DOUBLE_SIZE * EMBEDDING_LEN;
             file.seek(position);

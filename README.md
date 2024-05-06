@@ -36,5 +36,8 @@ Both these files are specified in the configuration file. Choosing which embeddi
  Finally, we added some more tests for the new classes.
 
 ## Sprint 5
-Equates "Lighting a memorial candle" to "terrorizing" so slight issues
+In the sprint we changed the embedding storage to avoid having all embeddings in memory we did this with a RandomAccessFile and an index database to store what was where.
+This index file is kept in memory as a hashtable for the desc+type -> value pairs and in an arraylist for the index's.
+We also got the AI to recommend poses and settings by adding to the lines class. Some class were moved into different packages.
+Cosine similarity equates "Lighting a memorial candle" to "terrorizing" so it's not perfect.
 ### To run "java -jar Comix-with-LLM-1.0-SNAPSHOT-jar-with-dependencies.jar"

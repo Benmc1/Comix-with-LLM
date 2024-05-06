@@ -2,232 +2,32 @@
 <comic>
 	<figures>
 <figure>
-	<name>Jane</name>
+	<name>John</name>
 	<appearance>female</appearance>
-	<hair>White</hair>
-	<skin>Orange</skin>
+	<hair>Red</hair>
+	<skin>White</skin>
 	<lips>White</lips>
 </figure>
 <figure>
 	<name>Jack</name>
-	<appearance>female</appearance>
-	<hair>Yellow</hair>
-	<skin>Black</skin>
+	<appearance>male</appearance>
+	<hair>Blonde</hair>
+	<skin>Yellow</skin>
 	<lips>Red</lips>
 </figure>
 	</figures>
-	<topic>The troubles in northern Ireland</topic>
+	<topic>The troubles in northern ireland</topic>
 	<panels>
 <panel>
-   <above>The people of Northern Ireland have endured vast turmoil and strife.</above>
+   <above>The conflict in Ireland, fueled by emotions of the weak.</above>
    <left>
        <figure>
-           <name>Jane</name>
-           <pose>poking</pose>
+           <name>John</name>
+           <pose>holding branch</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>A time of conflict for Northern Ireland</content>
-		</balloon>
-   </left>
-
-   <right>
-       <figure>
-           <name>Jack</name>
-           <pose>kneeling</pose>
-           <facing>left</facing>
-       </figure>
-
-		<balloon status="speech">			<content>A period of killing and violence, nothing to admire</content>
-		</balloon>
-   </right>
-
-   <setting>libya</setting>
-</panel><panel>
-   <above>Through newfound harmony, diversity blossoms and a bright future awaits.</above>
-   <left>
-       <figure>
-           <name>Jane</name>
-           <pose>shaking hands</pose>
-           <facing>right</facing>
-       </figure>
-
-		<balloon status="speech">			<content>Different views now expressed through unity</content>
-		</balloon>
-   </left>
-
-   <right>
-       <figure>
-           <name>Jack</name>
-           <pose>spitting</pose>
-           <facing>left</facing>
-       </figure>
-
-		<balloon status="speech">			<content>Deep-rooted sectarianism led to cultural poverty</content>
-		</balloon>
-   </right>
-
-   <setting>suburbs</setting>
-</panel><panel>
-   <above>The brave security forces fought to maintain peace, facing grave dangers.</above>
-   <left>
-       <figure>
-           <name>Jane</name>
-           <pose>defending</pose>
-           <facing>right</facing>
-       </figure>
-
-		<balloon status="speech">			<content>Maintaining order and security was their goal</content>
-		</balloon>
-   </left>
-
-   <right>
-       <figure>
-           <name>Jack</name>
-           <pose>patriotic</pose>
-           <facing>left</facing>
-       </figure>
-
-		<balloon status="speech">			<content>But bombs and bullets took a heavy toll</content>
-		</balloon>
-   </right>
-
-   <setting>airport</setting>
-</panel><panel>
-   <above>Terrorists thought violence a means to an end, but their ways were vile.</above>
-   <left>
-       <figure>
-           <name>Jane</name>
-           <pose>shooting</pose>
-           <facing>right</facing>
-       </figure>
-
-		<balloon status="speech">			<content>Some saw violence as a necessary tool</content>
-		</balloon>
-   </left>
-
-   <right>
-       <figure>
-           <name>Jack</name>
-           <pose>holding flower</pose>
-           <facing>left</facing>
-       </figure>
-
-		<balloon status="speech">			<content>The innocent were targeted and the country was made to rule</content>
-		</balloon>
-   </right>
-
-   <setting>battlefield</setting>
-</panel><panel>
-   <above>The terrorists believed arms would grant them strength, but only brought grief.</above>
-   <left>
-       <figure>
-           <name>Jane</name>
-           <pose>embracing</pose>
-           <facing>right</facing>
-       </figure>
-
-		<balloon status="speech">			<content>Weaponising capability was their statement of power</content>
-		</balloon>
-   </left>
-
-   <right>
-       <figure>
-           <name>Jack</name>
-           <pose>stargazing</pose>
-           <facing>left</facing>
-       </figure>
-
-		<balloon status="speech">			<content>Deaths, destruction, and lasting trauma - couldn't they have found another way to tower?</content>
-		</balloon>
-   </right>
-
-   <setting>libya</setting>
-</panel><panel>
-   <above>Northern Ireland has come far, a testament to resilience and spirit. Yet, scars remain.</above>
-   <left>
-       <figure>
-           <name>Jane</name>
-           <pose>lawyer</pose>
-           <facing>right</facing>
-       </figure>
-
-		<balloon status="speech">			<content>Long-term adaptation brought strength and pride</content>
-		</balloon>
-   </left>
-
-   <right>
-       <figure>
-           <name>Jack</name>
-           <pose>pleading</pose>
-           <facing>left</facing>
-       </figure>
-
-		<balloon status="speech">			<content>But segregation and hardship were never a welcome ride</content>
-		</balloon>
-   </right>
-
-   <setting>naples</setting>
-</panel><panel>
-   <above>In this historic moment, peace was won, though not all are content with the settlement.</above>
-   <left>
-       <figure>
-           <name>Jane</name>
-           <pose>shaking hands</pose>
-           <facing>right</facing>
-       </figure>
-
-		<balloon status="speech">			<content>A historic moment to remember down the line</content>
-		</balloon>
-   </left>
-
-   <right>
-       <figure>
-           <name>Jack</name>
-           <pose>holding flower</pose>
-           <facing>left</facing>
-       </figure>
-
-		<balloon status="speech">			<content>Some are still dissatisfied with federal compromise design</content>
-		</balloon>
-   </right>
-
-   <setting>michigan</setting>
-</panel><panel>
-   <above>Partnership kindled a new hope in Northern Ireland, though competing interests still menace it.</above>
-   <left>
-       <figure>
-           <name>Jane</name>
-           <pose>building</pose>
-           <facing>right</facing>
-       </figure>
-
-		<balloon status="speech">			<content>After decades of turmoil, partnership brought hope</content>
-		</balloon>
-   </left>
-
-   <right>
-       <figure>
-           <name>Jack</name>
-           <pose>shaking hands</pose>
-           <facing>left</facing>
-       </figure>
-
-		<balloon status="speech">			<content>Competing interests still threaten to undo the scope</content>
-		</balloon>
-   </right>
-
-   <setting>interview room</setting>
-</panel><panel>
-   <above>With differences come debate, healthy and vital, but conflict brings destruction.</above>
-   <left>
-       <figure>
-           <name>Jane</name>
-           <pose>kneeling</pose>
-           <facing>right</facing>
-       </figure>
-
-		<balloon status="speech">			<content>Difference of opinion is a vital aspect</content>
+		<balloon status="speech">			<content>It sparked passionate debate</content>
 		</balloon>
    </left>
 
@@ -238,35 +38,235 @@
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>But sometimes the conflict gets too much to accept</content>
+		<balloon status="speech">			<content>It caused senseless, pointless hate</content>
 		</balloon>
    </right>
 
-   <setting>garden party</setting>
+   <setting>restaurant</setting>
 </panel><panel>
-   <above>The progress in Northern Ireland has been slow yet steady, but deep-rooted issues still linger, burdening the people with despair.</above>
+   <above>The division in society, a weakness that led to unrest.</above>
    <left>
        <figure>
-           <name>Jane</name>
-           <pose>dying</pose>
+           <name>John</name>
+           <pose>holding fireball</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Slow and steady process continues</content>
+		<balloon status="speech">			<content>Highlighting issues society's focal</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
            <name>Jack</name>
-           <pose>shrugging</pose>
+           <pose>plugging ears</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Deep-rooted issues still unresolved, often leaving people in despair and feeling blue</content>
+		<balloon status="speech">			<content>The political divide, left things to boil</content>
 		</balloon>
    </right>
 
-   <setting>providence</setting>
+   <setting>montreal</setting>
+</panel><panel>
+   <above>The reality of violence, leaving death as the only lucid truth.</above>
+   <left>
+       <figure>
+           <name>John</name>
+           <pose>holding fireball</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It exposed the harshness, made people sincerer</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>Jack</name>
+           <pose>plugging ears</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>Life was taken away, that is the only clearer</content>
+		</balloon>
+   </right>
+
+   <setting>graveyard</setting>
+</panel><panel>
+   <above>Peace at last, delayed by a long past of animosity.</above>
+   <left>
+       <figure>
+           <name>John</name>
+           <pose>holding fireball</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It brought a sense of peace, it could not be late</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>Jack</name>
+           <pose>holding fireball</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It took too long, after so much hate</content>
+		</balloon>
+   </right>
+
+   <setting>buffalo</setting>
+</panel><panel>
+   <above>A will to perseverance, amidst an insurgency that should have been discontinued.</above>
+   <left>
+       <figure>
+           <name>John</name>
+           <pose>holding fireball</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It showed the passion and will to keep resolved</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>Jack</name>
+           <pose>holding fireball</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>The insurgency, it should have been dissolved</content>
+		</balloon>
+   </right>
+
+   <setting>suburbs</setting>
+</panel><panel>
+   <above>The necessity to act, to undo the damage of a lasting negative effect.</above>
+   <left>
+       <figure>
+           <name>John</name>
+           <pose>holding fireball</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It made people act, to bring resolve to impact</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>Jack</name>
+           <pose>holding fireball</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>The lasting negative effect, it's hard to subtract</content>
+		</balloon>
+   </right>
+
+   <setting>building site</setting>
+</panel><panel>
+   <above>A lasting cultural impact, amidst the negative influence that stained the land.</above>
+   <left>
+       <figure>
+           <name>John</name>
+           <pose>holding fireball</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>The creative output was a cultural stamp</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>Jack</name>
+           <pose>holding fireball</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>The negative influence, it had on the land</content>
+		</balloon>
+   </right>
+
+   <setting>interview room</setting>
+</panel><panel>
+   <above>Shed light on human rights abuses, leaving a harrowing impression on audiences.</above>
+   <left>
+       <figure>
+           <name>John</name>
+           <pose>plugging ears</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It raised awareness for those in human rights cruises</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>Jack</name>
+           <pose>holding fireball</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>The horrible treatment, it left many audiences</content>
+		</balloon>
+   </right>
+
+   <setting>airport</setting>
+</panel><panel>
+   <above>Bringing attention to the overlooked, amidst political tension that needs unhooked.</above>
+   <left>
+       <figure>
+           <name>John</name>
+           <pose>holding fireball</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>It brought attention to the people who were overlooked</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>Jack</name>
+           <pose>holding fireball</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>The political tension, needs to be unhooked</content>
+		</balloon>
+   </right>
+
+   <setting>mountain pass</setting>
+</panel><panel>
+   <above>Listening to different perspectives, revealing an honesty that unseals a painful past.</above>
+   <left>
+       <figure>
+           <name>John</name>
+           <pose>plugging ears</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>Listening to different sides, honesty revealing</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>Jack</name>
+           <pose>holding fireball</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>The past is hard to unseal, and the pain is unyielding</content>
+		</balloon>
+   </right>
+
+   <setting>statue</setting>
 </panel>	</panels>
 </comic>
