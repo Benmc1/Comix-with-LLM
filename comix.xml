@@ -2,271 +2,271 @@
 <comic>
 	<figures>
 <figure>
-	<name>Jack</name>
-	<appearance>female</appearance>
-	<hair>Red</hair>
-	<skin>Orange</skin>
-	<lips>Red</lips>
-</figure>
-<figure>
-	<name>Rebecca</name>
+	<name>Jane</name>
 	<appearance>female</appearance>
 	<hair>White</hair>
+	<skin>Orange</skin>
+	<lips>White</lips>
+</figure>
+<figure>
+	<name>Jack</name>
+	<appearance>female</appearance>
+	<hair>Yellow</hair>
 	<skin>Black</skin>
 	<lips>Red</lips>
 </figure>
 	</figures>
-	<topic>the eiffel tower </topic>
+	<topic>The troubles in northern Ireland</topic>
 	<panels>
 <panel>
-   <above>"The Eiffel Tower, beautiful and tremendous! But should have followed zoning laws."</above>
+   <above>The people of Northern Ireland have endured vast turmoil and strife.</above>
    <left>
        <figure>
-           <name>Jack</name>
-           <pose></pose>
+           <name>Jane</name>
+           <pose>poking</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>A landmark of the fair's celebration. </content>
+		<balloon status="speech">			<content>A time of conflict for Northern Ireland</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Rebecca</name>
-           <pose></pose>
+           <name>Jack</name>
+           <pose>kneeling</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>A temporary structure that stayed, it's hoarding of land a violation. </content>
+		<balloon status="speech">			<content>A period of killing and violence, nothing to admire</content>
 		</balloon>
    </right>
 
-   <setting></setting>
+   <setting>libya</setting>
 </panel><panel>
-   <above>"The Eiffel Tower is huge, amazing! But built by exploiting workers, not good."</above>
+   <above>Through newfound harmony, diversity blossoms and a bright future awaits.</above>
    <left>
        <figure>
-           <name>Jack</name>
-           <pose></pose>
+           <name>Jane</name>
+           <pose>shaking hands</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Tall in height, an architectural wonder. </content>
+		<balloon status="speech">			<content>Different views now expressed through unity</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Rebecca</name>
-           <pose></pose>
+           <name>Jack</name>
+           <pose>spitting</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>A product of a colonial past, exploiting labour without any ponder. </content>
+		<balloon status="speech">			<content>Deep-rooted sectarianism led to cultural poverty</content>
 		</balloon>
    </right>
 
-   <setting></setting>
+   <setting>suburbs</setting>
 </panel><panel>
-   <above>"I love the Eiffel Tower, fantastic name, great design! But the engineer probably cheated people, not good!"</above>
+   <above>The brave security forces fought to maintain peace, facing grave dangers.</above>
    <left>
        <figure>
-           <name>Jack</name>
-           <pose></pose>
+           <name>Jane</name>
+           <pose>defending</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Named after the man who designed it right.</content>
+		<balloon status="speech">			<content>Maintaining order and security was their goal</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Rebecca</name>
-           <pose></pose>
+           <name>Jack</name>
+           <pose>patriotic</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>An engineer who thrived off of exploitation, in construction schemes of questionable might.</content>
+		<balloon status="speech">			<content>But bombs and bullets took a heavy toll</content>
 		</balloon>
    </right>
 
-   <setting></setting>
+   <setting>airport</setting>
 </panel><panel>
-   <above>"Eiffel Tower - beautiful feat of engineering, amazing work in short time. But workers' casualties and substandard iron is unacceptable."</above>
+   <above>Terrorists thought violence a means to an end, but their ways were vile.</above>
    <left>
        <figure>
-           <name>Jack</name>
-           <pose></pose>
+           <name>Jane</name>
+           <pose>shooting</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>A marvel of engineering in not too long a time.</content>
+		<balloon status="speech">			<content>Some saw violence as a necessary tool</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Rebecca</name>
-           <pose></pose>
+           <name>Jack</name>
+           <pose>holding flower</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Made with iron wrought by workers, broken and crushed, it's a crime. </content>
+		<balloon status="speech">			<content>The innocent were targeted and the country was made to rule</content>
 		</balloon>
    </right>
 
-   <setting></setting>
+   <setting>battlefield</setting>
 </panel><panel>
-   <above>"Everybody loves the Eiffel Tower, great attraction, beautiful views. But standing in long lines is a disaster, not worth it!"</above>
+   <above>The terrorists believed arms would grant them strength, but only brought grief.</above>
    <left>
        <figure>
-           <name>Jack</name>
-           <pose></pose>
+           <name>Jane</name>
+           <pose>embracing</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>A visitor's delight, with views to behold.</content>
+		<balloon status="speech">			<content>Weaponising capability was their statement of power</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Rebecca</name>
-           <pose></pose>
+           <name>Jack</name>
+           <pose>stargazing</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>The long wait in line, not worth the cold, it's a story that's often told. </content>
+		<balloon status="speech">			<content>Deaths, destruction, and lasting trauma - couldn't they have found another way to tower?</content>
 		</balloon>
    </right>
 
-   <setting></setting>
+   <setting>libya</setting>
 </panel><panel>
-   <above>"The Eiffel Tower is amazing, pride of Paris! But it symbolizes colonial past and nationalism, weak and useless!"</above>
+   <above>Northern Ireland has come far, a testament to resilience and spirit. Yet, scars remain.</above>
    <left>
        <figure>
-           <name>Jack</name>
-           <pose></pose>
+           <name>Jane</name>
+           <pose>lawyer</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>The city's pride, it's a beautiful sight.</content>
+		<balloon status="speech">			<content>Long-term adaptation brought strength and pride</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Rebecca</name>
-           <pose></pose>
+           <name>Jack</name>
+           <pose>pleading</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Represents colonialism and nationalist might, it's all bark, no bite. </content>
+		<balloon status="speech">			<content>But segregation and hardship were never a welcome ride</content>
 		</balloon>
    </right>
 
-   <setting></setting>
+   <setting>naples</setting>
 </panel><panel>
-   <above>"Eiffel Tower - beautiful, but designed for an event! Now it stands as an eyesore, unplanned and temporary construction."</above>
+   <above>In this historic moment, peace was won, though not all are content with the settlement.</above>
    <left>
        <figure>
-           <name>Jack</name>
-           <pose></pose>
+           <name>Jane</name>
+           <pose>shaking hands</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Designed for an event, now standing tall.</content>
+		<balloon status="speech">			<content>A historic moment to remember down the line</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Rebecca</name>
-           <pose></pose>
+           <name>Jack</name>
+           <pose>holding flower</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>An unplanned eyesore, its place here is just a stall. </content>
+		<balloon status="speech">			<content>Some are still dissatisfied with federal compromise design</content>
 		</balloon>
    </right>
 
-   <setting></setting>
+   <setting>michigan</setting>
 </panel><panel>
-   <above>"The Eiffel Tower hosts grand events, full of life, beautiful! But it's also a security risk, enemies target it, terrible!"</above>
+   <above>Partnership kindled a new hope in Northern Ireland, though competing interests still menace it.</above>
    <left>
        <figure>
-           <name>Jack</name>
-           <pose></pose>
+           <name>Jane</name>
+           <pose>building</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Hosts occasions full of life and grandeur.</content>
+		<balloon status="speech">			<content>After decades of turmoil, partnership brought hope</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Rebecca</name>
-           <pose></pose>
+           <name>Jack</name>
+           <pose>shaking hands</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>A security threat, often the target of attackers. </content>
+		<balloon status="speech">			<content>Competing interests still threaten to undo the scope</content>
 		</balloon>
    </right>
 
-   <setting></setting>
+   <setting>interview room</setting>
 </panel><panel>
-   <above>"The Eiffel Tower looks beautiful at night, a bright shining light! But it's wasteful and hurts the environment, very bad!"</above>
+   <above>With differences come debate, healthy and vital, but conflict brings destruction.</above>
    <left>
        <figure>
-           <name>Jack</name>
-           <pose></pose>
+           <name>Jane</name>
+           <pose>kneeling</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>At night it shines bright, painting the skyline.</content>
+		<balloon status="speech">			<content>Difference of opinion is a vital aspect</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Rebecca</name>
-           <pose></pose>
+           <name>Jack</name>
+           <pose>holding fireball</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>A waste of energy, at the cost of the earth's lifeline. </content>
+		<balloon status="speech">			<content>But sometimes the conflict gets too much to accept</content>
 		</balloon>
    </right>
 
-   <setting></setting>
+   <setting>garden party</setting>
 </panel><panel>
-   <above>"The Eiffel Tower is iconic and world-famous, with mentions in books and movies! But, honestly, it's a bit overrated, not as great as hyped."</above>
+   <above>The progress in Northern Ireland has been slow yet steady, but deep-rooted issues still linger, burdening the people with despair.</above>
    <left>
        <figure>
-           <name>Jack</name>
-           <pose></pose>
+           <name>Jane</name>
+           <pose>dying</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Known worldwide, through literature and screen.</content>
+		<balloon status="speech">			<content>Slow and steady process continues</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Rebecca</name>
-           <pose></pose>
+           <name>Jack</name>
+           <pose>shrugging</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Anti-climactic and over-hyped, it's not all it may seem.</content>
+		<balloon status="speech">			<content>Deep-rooted issues still unresolved, often leaving people in despair and feeling blue</content>
 		</balloon>
    </right>
 
-   <setting></setting>
+   <setting>providence</setting>
 </panel>	</panels>
 </comic>

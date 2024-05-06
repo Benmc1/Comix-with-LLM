@@ -8,32 +8,22 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class LinesTest {
-
+    Lines lines = new Lines("Speed limit");
     @Test
     void testNumOfLines() {
-        Lines l = new Lines("Towers of sorrow");
-        assertEquals(10, l.getAntiLines().size());
-        assertEquals(10, l.getProLines().size());
+
+        assertEquals(10, lines.getAntiLines().size());
+        assertEquals(10, lines.getProLines().size());
     }
 
     @Test
     public void test_returnsListOfStringArrays() {
-        Lines lines = new Lines("Speed limit");
-        List<String[]> suggestions = lines.generateBatchedSuggestions("speed limit");
+        List<String[]> suggestions = lines.generateBatchedSuggestions();
 
         assertNotNull(suggestions);
         assertEquals(10, suggestions.size());
         for (String[] suggestion : suggestions) {
             assertEquals(3, suggestion.length);
         }
-    }
-
-    @Test
-    public void test_handlesInvalidInputPromptAndReturnsEmptyList() {
-        Lines lines = new Lines("topic");
-        List<String[]> suggestions = lines.generateBatchedSuggestions("invalid_topic");
-
-        assertNotNull(suggestions);
-        assertTrue(suggestions.isEmpty());
     }
 }

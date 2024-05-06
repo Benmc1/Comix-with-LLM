@@ -4,14 +4,17 @@ import Main.IO;
 import config.ConfigurationFile;
 
 import java.io.*;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
+import java.util.*;
+
 
 public class IndexDatabase {
 
     private static RandomAccessFile file;
     private final String DATA_FILE = ConfigurationFile.getProperty("INDEX_DATA");
+    // Mapping (Desc , type) -> pose/setting
+    private final Map<String, String> assetMap = new HashMap<>(1850);
+    // Store (Desc , type) at their index
+    private final List<String> indexList = new ArrayList<>(1850);
     public IndexDatabase() {
         try{
             file = new RandomAccessFile(DATA_FILE, "rw");
@@ -19,6 +22,7 @@ public class IndexDatabase {
                 List<String[]> data = IO.readPlainData();
                 initializeDatabase(data);
             }
+            readInData();
         } catch (FileNotFoundException e) {
             System.out.println("could not find or create embedding file");
         } catch (IOException e) {
@@ -28,11 +32,8 @@ public class IndexDatabase {
 
     private void initializeDatabase(List<String[]> keys) {
         try {
-            String headers = "Description, Type, Value\n";
-            file.writeBytes(headers);
             for (String[] key : keys) {
-                String line = Arrays.stream(key).map(string ->  string+", ").collect(Collectors.joining());
-                System.out.println(line);
+                String line = key[0] + "," + key[1] + "," + key[2];
                 file.writeBytes(line+"\n");
             }
             System.out.println("Index file has been created successfully.");
@@ -43,26 +44,29 @@ public class IndexDatabase {
 
     // Method to get description value by index
     public String getByIndex(int index) {
-        try {
-            // Move the file pointer to the position of desired index
-            file.seek(0);
-            for (int i = 0; i < index; i++){
-                file.readLine();
-            }
-            return file.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
+        if(index > indexList.size()-1 || index < 0){
+            return "";
+        }else {
+            return indexList.get(index);
         }
+    }
+    public String getByKey(String key) {
+        return assetMap.get(key);
+    }
+    public Boolean contains(String key) {
+        return assetMap.containsKey(key);
     }
 
     // Method to append a new description value to the index file 
     public void appendToFile(String newDescription) {
-        if(!doesDescriptionExist(newDescription)) {
+        if(newDescription.isBlank() || newDescription.split(",").length != 3) return;
+        String key = newDescription.substring(0,newDescription.lastIndexOf(","));
+        if(!assetMap.containsKey(key)) {
             try {
                 file.seek(file.length());
                 file.writeBytes(newDescription + "\n");
-                System.out.println("Description has been appended to the index file.");
+                addToMemory(newDescription);
+                System.out.println(newDescription + "  has been appended to the index file.");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -72,27 +76,20 @@ public class IndexDatabase {
 }
 
     // Method to check if a description exists in the database
-    private boolean doesDescriptionExist(String description) {
+    private void readInData() {
         try (BufferedReader reader = new BufferedReader(new FileReader(DATA_FILE))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                String[] parts = line.split(",");
-                if (parts.length > 0 && parts[0].trim().equals(description)) {
-                    return true;
-                }
+                addToMemory(line);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return false;
     }
 
-    public static void main(String[] args) {
-        IndexDatabase indexDatabase = new IndexDatabase();
-
-        int index = 5;
-        String descAtIndex = indexDatabase.getByIndex(index);
-        System.out.println("Description at index " + index + ": " + descAtIndex);
-        indexDatabase.appendToFile("asdasdasdasdasdasdasdasdasdasdadadasdasdasdasd");
+    private void addToMemory(String s){
+        String[] parts = s.split(",");
+        assetMap.put(parts[0]+","+parts[1],parts[2]);
+        indexList.add(parts[0]+","+parts[1]);
     }
 }

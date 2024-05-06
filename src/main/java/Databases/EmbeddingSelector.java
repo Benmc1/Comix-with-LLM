@@ -13,18 +13,22 @@ public class EmbeddingSelector {
     }
 
     public static String getRelevantChoice(String description,String type) {
-        String ans = "";
+        String ans;
         embeddingDatabase = new EmbeddingDatabase();
         indexDatabase = new IndexDatabase();
-        if(false) {
+        String key = description +","+ type;
+
+        if(indexDatabase.contains(key)) {
+            ans = indexDatabase.getByKey(key);
         } else {
             int index = findClosestMatchIndex(description,type);
             embeddingDatabase.appendToFile(description);
 
-            String[] match = indexDatabase.getByIndex(index).split(",");
-            String newEntry = description + ","+match[1]+","+match[2];
+            String match = indexDatabase.getByIndex(index);
+            String value = indexDatabase.getByKey(match);
+            String newEntry = description + "," + type + "," + value;
             indexDatabase.appendToFile(newEntry);
-            ans = match[2];
+            ans = value;
         }
         return ans;
     }
@@ -49,6 +53,8 @@ public class EmbeddingSelector {
                     closestMatchIndex = index;
                 }
             }
+            index++;
+            keys = indexDatabase.getByIndex(index);
         }
         return closestMatchIndex;
     }
@@ -58,10 +64,5 @@ public class EmbeddingSelector {
             dotProduct += vector1.get(i) * vector2.get(i);
         }
         return dotProduct;
-    }
-
-    public static void main(String[] args) {
-
-        EmbeddingSelector.getRelevantChoice("pose","waving heavily");
     }
 }

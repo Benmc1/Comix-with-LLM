@@ -36,8 +36,11 @@ public class IO {
 
                 String[] descriptions = values[2].split(",");
                 for (String s : descriptions) {
-                    String[] newline = {s,values[1],values[0]};
-                    PoseData.add(newline);
+                    s = s.stripLeading();
+                    if(!s.isBlank()) {
+                        String[] newline = {s, values[1], values[0]};
+                        PoseData.add(newline);
+                    }
                 }
             }
         } catch (FileNotFoundException e) {

@@ -8,15 +8,17 @@ public class Lines {
     private final List<String> antiLines;
     private final List<String> captions;
     private final Conversation conversation = new Conversation();
+    private final String topic;
 
     public Lines(String topic) {
         this.proLines = new ArrayList<>();
         this.antiLines = new ArrayList<>();
         this.captions = new ArrayList<>();
-        generateLines(topic);
+        this.topic = topic;
+        generateLines();
     }
 
-    private void generateLines(String topic) {
+    private void generateLines() {
         conversation.addSystemMessage(ConfigurationFile.getProperty("SYSTEM_PROMPT"));
         String pointsList = conversation.getResponse("Write a list of " + ConfigurationFile.getProperty("NUM_OF_PANELS") + " points about "+ topic
                 + ". Theses points should be concise and benign.");
@@ -46,13 +48,15 @@ public class Lines {
 
         //clean up lines
         for (String string :lines) {
-            System.out.println(string);
-            if(string.contains("Pro:")){
+            if(string.contains("Pro:") && string.contains("Anti:")){
+                string = string.split("Pro:")[1];
+                proLines.add(string.split("Anti:")[0]);
+                antiLines.add(string.split("Anti:")[1]);
+            }else if (string.contains("Pro:")){
                 string = string.split("Pro:")[1];
                 string = string.stripLeading();
                 proLines.add(string);
             } else if (string.contains("Anti:")) {
-                System.out.println("runs");
                 string = string.split("Anti:")[1];
                 string = string.stripLeading();
                 antiLines.add(string);
@@ -60,10 +64,10 @@ public class Lines {
         }
     }
 
-    public List<String[]> generateBatchedSuggestions(String topic) {
-        String prompt = conversation.getResponse(ConfigurationFile.getProperty("SUGGESTIONS_PROMPT") + "The topic of the comic is:" + topic);
-        System.out.println(prompt);
-        return parseSuggestions(prompt);
+    public List<String[]> generateBatchedSuggestions() {
+        String conversationResponse = conversation.getResponse(ConfigurationFile.getProperty("SUGGESTIONS_PROMPT") + "The topic of the comic is:" + topic);
+        System.out.println(conversationResponse);
+        return parseSuggestions(conversationResponse);
     }
 
     public List<String[]> parseSuggestions(String suggestions) {
@@ -112,15 +116,5 @@ public class Lines {
             str.append("\nAnti: ").append(antiLines.get(i));
         }
         return str.toString();
-    }
-
-    public static void main(String[] args) {
-        Lines l = new Lines("The troubles in Northern Ireland");
-        List<String[]> sugg = l.generateBatchedSuggestions("The troubles in Northern Ireland");
-        System.out.println(sugg.size());
-        for (String[] s :
-                sugg) {
-            System.out.println(Arrays.toString(s));
-        }
     }
 }

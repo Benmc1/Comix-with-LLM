@@ -33,5 +33,8 @@ In this sprint we added the panel and character class to hold the data of each c
 Creating and retrieving the embedding data is handled by the EmbeddingData class. The prompt used for the embedding is a concatination of the 3 different pose descriptions + the name of the pose.
 If the embedding is unavailable it will look for the plain csv file and get the embedding from there. 
 Both these files are specified in the configuration file. Choosing which embedding to use to handled by the EmbeddingSelector class. You pass the prompt and the embedding data of thing you want, and it returns the name of the answer.
- Finally we added some more tests for the new classes.
+ Finally, we added some more tests for the new classes.
+
+## Sprint 5
+Equates "Lighting a memorial candle" to "terrorizing" so slight issues
 ### To run "java -jar Comix-with-LLM-1.0-SNAPSHOT-jar-with-dependencies.jar"

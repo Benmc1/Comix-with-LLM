@@ -13,22 +13,21 @@ public class Panel {
     private String poseRight;
     private String setting;
 
-    public Panel(String charLeft, String charRight, String[] lines, String topic, String[] suggestions) {
+    public Panel(String charLeft, String charRight, String[] lines, String[] suggestions) {
         this.charLeft = charLeft;
         this.charRight = charRight;
         this.lines = lines;
-        generatePoses();
-        generateSetting(topic);
+        generatePoses(suggestions);
+        generateSetting(suggestions);
     }
 
-    private void generatePoses(){
-        poseLeft = EmbeddingSelector.getRelevantChoice(lines[0], "pose");
-        poseRight = EmbeddingSelector.getRelevantChoice(lines[1], "pose");
+    private void generatePoses(String[] suggestions){
+        poseLeft = EmbeddingSelector.getRelevantChoice(suggestions[0], "pose");
+        poseRight = EmbeddingSelector.getRelevantChoice(suggestions[1], "pose");
     }
 
-    private void generateSetting(String topic){
-        String input = String.join("", lines) + " " + topic;
-        setting = EmbeddingSelector.getRelevantChoice(input, "setting");
+    private void generateSetting(String[] suggestions){
+        setting = EmbeddingSelector.getRelevantChoice(suggestions[2], "setting");
     }
 
     public String getSetting() {

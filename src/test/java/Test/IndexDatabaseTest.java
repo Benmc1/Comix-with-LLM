@@ -3,38 +3,45 @@ package Test;
 import Databases.IndexDatabase;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.RandomAccessFile;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class IndexDatabaseTest {
-
+    IndexDatabase indexDatabase = new IndexDatabase();
     @Test
-    void getByIndex() throws IOException {
-        File tempFile = File.createTempFile("index", ".dat");
-        tempFile.deleteOnExit();
+    void appendToFile() {
+        indexDatabase.appendToFile("New Description, Type, New Value");
+        assertTrue(indexDatabase.contains("New Description, Type"));
 
-        IndexDatabase indexDatabase = new IndexDatabase();
+        indexDatabase.appendToFile("");
+        assertFalse(indexDatabase.contains(""));
 
-        // Test getting descriptions by index
-        assertEquals("in heat, pose, attracted, ", indexDatabase.getByIndex(1));
-        assertEquals(" attraction, pose, attracted, ", indexDatabase.getByIndex(2));
-        assertEquals(" attarcted to someone, pose, attracted, ", indexDatabase.getByIndex(3));
-        assertEquals("a bow, pose, bowing, ", indexDatabase.getByIndex(4));
-        assertEquals(" showing respect, pose, bowing, ", indexDatabase.getByIndex(5));
+        indexDatabase.appendToFile("New Description, New Value");
+        assertFalse(indexDatabase.contains("New Description, New Value"));
     }
 
     @Test
-    void appendToFile() throws IOException {
-        File tempFile = File.createTempFile("index", ".dat");
-        tempFile.deleteOnExit();
+    void getByIndex() {
+        String ans = "attarcted to someone,pose";
+        assertEquals(ans, indexDatabase.getByIndex(2));
 
-        IndexDatabase indexDatabase = new IndexDatabase();
-        indexDatabase.appendToFile("Description, Type, Value");
-        int indexLength = (int) tempFile.length();
+        String blank = "";
+        assertEquals(blank, indexDatabase.getByIndex(-11));
 
-        assertEquals("Description, Type, Value", indexDatabase.getByIndex(indexLength));
+        assertEquals(blank, indexDatabase.getByIndex(9999999));
+    }
+    @Test
+    void getByKey() {
+        String key = "attracted to someone,pose";
+        String ans = "attracted";
+        assertEquals(ans, indexDatabase.getByKey(key));
+
+        String invalidOrder = "pose,joy";
+        assertNull(indexDatabase.getByKey(invalidOrder));
+
+        String invalidKey = "asdasdasdasdad";
+        assertNull(indexDatabase.getByKey(invalidKey));
+
+        String blankKey = "";
+        assertNull(indexDatabase.getByKey(blankKey));
     }
 }

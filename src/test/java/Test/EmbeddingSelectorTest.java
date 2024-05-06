@@ -9,17 +9,22 @@ class EmbeddingSelectorTest {
 
     @Test
     void selectEmbedding() {
-        String poseInput = " You know, these historical divisions, while they've caused a lot of pain, also remind us of our roots and the struggles our ancestors went through.";
-        String poseAns = "split in two";
-        String poseResult = EmbeddingSelector.getRelevantChoice("pose",poseInput);
+        String poseInput = "thinking hard";
+        String poseAns = "thinking";
+        String poseResult = EmbeddingSelector.getRelevantChoice(poseInput,"pose");
         assertEquals(poseAns,poseResult);
 
-        String settingInput = "Pro: You know, these historical divisions, while they've caused a lot of pain, also remind us of our roots and the struggles our ancestors went through.\n" +
-                "Anti: But don't you think these divisions are just fueling the fire? They're keeping us trapped in the past, preventing any real progress towards unity.";
-        String settingAns = "debate stage";
-        String settingResult = EmbeddingSelector.getRelevantChoice("setting",settingInput);
+        String settingInput = "putting on a show";
+        String settingAns = "stage curtains";
+        String settingResult = EmbeddingSelector.getRelevantChoice(settingInput,"setting");
         assertEquals(settingAns,settingResult);
     }
-
+    @Test
+    void selectOddEmbedding() {
+        String randomPose = "Lighting a memorial candle";
+        String ans = "terrorizing";
+        String result = EmbeddingSelector.getRelevantChoice(randomPose,"pose");
+        assertEquals(ans,result);
+    }
 
 }
