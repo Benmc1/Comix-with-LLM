@@ -34,6 +34,38 @@ public class Panel {
         return this.setting;
     }
 
+    public static Panel OpeningPanel() {
+        String charLeft = "Historical Hero";
+        String charRight = "Student";
+        String[] lines = {
+            "Join our heroes on a laugh-out-loud journey through the ages!",
+            "Where every era brings new comedic chaos!",
+            "The Hilarious History Adventures",
+            "Time Traveling Hijinks Await!"
+        };
+        String[] suggestions = {
+            "charRight", "charLeft", "historical setting"
+        };
+
+        return new Panel(charLeft, charRight, lines, suggestions);
+    }
+
+    public static Panel ClosingPanel() {
+        String charLeft = "Historical Hero";
+        String charRight = "Student";
+        String[] lines = {
+            "Laugh until you cry with this timeless comedy!",
+            "Available now at your nearest bookstore or online retailer!",
+            "Don't Miss Out!",
+            "The Ultimate Historical Comedy Extravaganza!"
+        };
+        String[] suggestions = {
+            "charRight", "charLeft", "historical setting"
+        };
+
+        return new Panel(charLeft, charRight, lines, suggestions);
+    }
+
     @Override
     public String toString() {
         return "Panel{" +

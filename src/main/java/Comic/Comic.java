@@ -25,9 +25,11 @@ public class Comic {
         int numOfPanels = Integer.parseInt(ConfigurationFile.getProperty("NUM_OF_PANELS"));
         List<String[]> suggestions = lines.generateBatchedSuggestions();
 
+        panels.add(Panel.OpeningPanel());
         for (int i = 0; i < numOfPanels; i++) {
             panels.add(new Panel(characterLeft.getName(), characterRight.getName(), lines.getPanelLines(i), suggestions.get(i)));
         }
+        panels.add(Panel.ClosingPanel());
     }
 
     public String getTopic() {
