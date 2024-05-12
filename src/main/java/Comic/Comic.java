@@ -1,7 +1,7 @@
 package Comic;
 
-import Main.Lines;
-import config.ConfigurationFile;
+import Generation.Lines;
+import Main.ConfigurationFile;
 
 import java.util.ArrayList;
 import java.util.List;

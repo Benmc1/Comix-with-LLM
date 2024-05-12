@@ -1,6 +1,6 @@
 package Test;
 
-import Main.Lines;
+import Generation.Lines;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

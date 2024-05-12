@@ -1,7 +1,8 @@
-package Comic;
+package Generation;
 
-import Main.Conversation;
+import Generation.Conversation;
 
+import java.util.List;
 import java.util.Random;
 
 public class Narrator {
@@ -26,7 +27,13 @@ public class Narrator {
     }
 
     // Simulate generating a caption in the style of the narrator
-    public String generateCaption(String pro, String anti) {
-        return conversation.getResponse(pro + "\n" + anti);
+    public List<String> generateCaptions(String text) {
+        String response = conversation.getResponse(text);
+        if(response.isBlank()) {
+            System.out.println("generate captions failed");
+            response = conversation.getResponse(text);
+        }
+        List<String> captions = TextParser.parseCaptions(response);
+        return captions;
     }
 }

@@ -1,6 +1,6 @@
 package Test;
 
-import Main.Conversation;
+import Generation.Conversation;
 import com.theokanning.openai.completion.chat.ChatMessage;
 import org.junit.jupiter.api.Test;
 

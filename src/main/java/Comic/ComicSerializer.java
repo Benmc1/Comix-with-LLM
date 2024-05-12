@@ -1,6 +1,6 @@
 package Comic;
 
-import config.ConfigurationFile;
+import Main.ConfigurationFile;
 
 import java.io.File;
 import java.nio.file.Files;

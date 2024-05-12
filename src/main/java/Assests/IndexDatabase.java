@@ -1,7 +1,7 @@
 package Assests;
 
 import Main.IO;
-import config.ConfigurationFile;
+import Main.ConfigurationFile;
 
 import java.io.*;
 import java.util.*;

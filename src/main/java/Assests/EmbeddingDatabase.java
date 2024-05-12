@@ -3,7 +3,7 @@ package Assests;
 import Main.API;
 import Main.IO;
 import com.theokanning.openai.embedding.Embedding;
-import config.ConfigurationFile;
+import Main.ConfigurationFile;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;

@@ -1,5 +1,6 @@
-package Main;
+package Generation;
 
+import Main.API;
 import com.theokanning.openai.completion.chat.ChatMessage;
 
 import java.util.ArrayList;
