@@ -15,7 +15,7 @@ public class IO {
         System.out.println("Enter the prompt for chat completion:");
         return scanner.nextLine();
     }
-    
+
     public static Character createStudentCharacter() {
         System.out.println("Choose what the student character will look like");
         Scanner scanner = new Scanner(System.in);
