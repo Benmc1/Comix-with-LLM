@@ -3,6 +3,7 @@ package Comic;
 import Generation.Lines;
 import Generation.TextGenerator;
 import Main.ConfigurationFile;
+import Main.IO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,8 +19,9 @@ public class Comic {
     private Mode mode;
     public Comic(String topic) {
         this.topic = topic;
-        characterLeft = new Character("");
-        characterRight = new Character("");
+        characterLeft = new Character("Professor Malcolm Sterling");
+        characterLeft.setFeatures("male", "grey", "white", "pink");
+        characterRight = IO.createStudentCharacter();
         generator = new TextGenerator(topic,mode);
         makePanels();
     }
