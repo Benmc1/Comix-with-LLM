@@ -62,6 +62,7 @@ public class TextGenerator {
         String conversationResponse = conversation.getResponse(text + "\n"
                 + ConfigurationFile.getProperty("SUGGESTIONS_PROMPT")
                 + "The topic of the comic is: " + topic);
+        System.out.println(conversationResponse);
         suggestions = TextParser.parseSuggestions(conversationResponse);
     }
 }

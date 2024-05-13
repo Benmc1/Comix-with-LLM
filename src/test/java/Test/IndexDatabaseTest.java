@@ -31,7 +31,8 @@ class IndexDatabaseTest {
     }
     @Test
     void getByKey() {
-        String key = "attracted to someone,pose";
+        //It's misspelled in the data don't fix
+        String key = "attarcted to someone,pose";
         String ans = "attracted";
         assertEquals(ans, indexDatabase.getByKey(key));
 

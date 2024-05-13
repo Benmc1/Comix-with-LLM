@@ -14,8 +14,8 @@ public class Narrator {
         style = getRandomNarratorStyle();
         conversation = new Conversation();
         System.out.println(style);
-        conversation.addSystemMessage("You are writing narration for a comic you will be given a numbered list of points and are expected to provide an narration for each point."
-                + "Your answer should be no more than 15 words. Answer in the style and vocabulary of " + style + ". "
+        conversation.addSystemMessage("You are writing narration for a comic you will be given a numbered list of 10 points and are expected to provide a narration of each point."
+                + "Your answer should be brief and expressive. Answer in the style and vocabulary of " + style + ". "
                 + "example: 1. narration  2. narration 3. ... ."
                 + "The lines will be talking about " + topic);
     }

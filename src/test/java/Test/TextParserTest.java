@@ -55,6 +55,16 @@ class TextParserTest {
 
     @Test
     void parseSuggestions() {
+        String text = """
+                1. (adoration, ignorance, Roman Forum)
+                2. (amazement, skepticism, Pantheon)
+                3. (fascinated, repulsed, Colosseum arena floor)
+                4. (knowledgeable, clueless, Temple of Caesar)
+                5. (impressed, indifferent, Capitoline Hill)""";
+        List<String[]> suggestions = TextParser.parseSuggestions(text);
 
+        assertEquals(5, suggestions.size());
+        assertEquals("Roman Forum", suggestions.get(0)[2]);
+        assertEquals("indifferent", suggestions.get(4)[1]);
     }
 }

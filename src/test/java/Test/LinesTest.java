@@ -23,6 +23,8 @@ class LinesTest {
 
     @Test
     void testGetPanelLines(){
+        lines.addLeftLines(List.of("How are you", "what do you want to do"));
+        lines.addRightLines(List.of("Im doing well", "lets go to the beach"));
         lines.addCaptions(List.of("Start of the day","Going to the beach"));
         String[] panelLines = lines.getPanelLines(1);
         assertEquals("what do you want to do", panelLines[0]);
