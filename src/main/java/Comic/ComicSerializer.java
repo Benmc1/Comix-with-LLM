@@ -20,12 +20,10 @@ public class ComicSerializer {
 
             xmlBuilder.append("\t<topic>").append(comic.getTopic()).append("</topic>\n");
             xmlBuilder.append("\t<panels>\n");
-            xmlBuilder.append(Panel.OpeningPanel().toXML());
 
             for (Panel panel : comic.getPanels()) {
                 xmlBuilder.append(panel.toXML());
             }
-            xmlBuilder.append(Panel.ClosingPanel().toXML());
 
             xmlBuilder.append("\t</panels>\n");
             xmlBuilder.append("</comic>");

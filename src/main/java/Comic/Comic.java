@@ -1,6 +1,5 @@
 package Comic;
 
-import Generation.Lines;
 import Generation.TextGenerator;
 import Main.ConfigurationFile;
 import Main.IO;
@@ -16,12 +15,20 @@ public class Comic {
     private final Character characterRight;
     public enum Mode {DEBATE,HISTORY}
 
-    private Mode mode;
+    private final Mode mode;
     public Comic(String topic) {
         this.topic = topic;
-        characterLeft = new Character("Professor Malcolm Sterling");
-        characterLeft.setFeatures("male", "grey", "white", "pink");
-        characterRight = IO.createStudentCharacter();
+        mode = IO.chooseMode();
+        if(mode == Mode.HISTORY) {
+            characterLeft = new Character("Professor Malcolm Sterling");
+            characterLeft.setFeatures("male", "grey", "white", "pink");
+            characterRight = IO.createStudentCharacter();
+            panels.add(Panel.OpeningPanel());
+        }else{
+            characterLeft = new Character("");
+            characterRight = new Character("");
+        }
+
         generator = new TextGenerator(topic,mode);
         makePanels();
     }
@@ -29,12 +36,11 @@ public class Comic {
     private void makePanels() {
         int numOfPanels = Integer.parseInt(ConfigurationFile.getProperty("NUM_OF_PANELS"));
         List<String[]> suggestions = generator.getSuggestions();
-
-        panels.add(Panel.OpeningPanel());
+        if(mode == Mode.HISTORY) panels.add(Panel.OpeningPanel());
         for (int i = 0; i < numOfPanels; i++) {
             panels.add(new Panel(characterLeft.getName(), characterRight.getName(), generator.getLines().getPanelLines(i), suggestions.get(i)));
         }
-        panels.add(Panel.ClosingPanel());
+        if(mode == Mode.HISTORY) panels.add(Panel.ClosingPanel());
     }
 
     public String getTopic() {

@@ -35,7 +35,7 @@ public class Panel {
     }
 
     public static Panel OpeningPanel() {
-        String charLeft = "Historical Hero";
+        String charLeft = "Professor";
         String charRight = "Student";
         String[] lines = {
             "Join our heroes on a laugh-out-loud journey through the ages!",
@@ -51,7 +51,7 @@ public class Panel {
     }
 
     public static Panel ClosingPanel() {
-        String charLeft = "Historical Hero";
+        String charLeft = "Professor";
         String charRight = "Student";
         String[] lines = {
             "Laugh until you cry with this timeless comedy!",

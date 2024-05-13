@@ -1,5 +1,8 @@
 package Main;
 
+import Comic.Character;
+import Comic.Comic;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -12,16 +15,10 @@ public class IO {
         System.out.println("Enter the prompt for chat completion:");
         return scanner.nextLine();
     }
-
-    public static String getCharacterName() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the name of the character you want in the comic.");
-        return scanner.nextLine();
-    }
-
+    
     public static Character createStudentCharacter() {
+        System.out.println("Choose what the student character will look like");
         Scanner scanner = new Scanner(System.in);
-        String name = getCharacterName();
         System.out.println("Enter the appearance (male or female):");
         String appearance = scanner.nextLine();
         System.out.println("Enter a hair color:");
@@ -30,7 +27,7 @@ public class IO {
         String skinColor = scanner.nextLine();
         System.out.println("Enter a lip color:");
         String lipColor = scanner.nextLine();
-        Character student = new Character(name);
+        Character student = new Character("Student");
         student.setFeatures(appearance, hairColor, skinColor, lipColor);
         return student;
     }
@@ -64,6 +61,16 @@ public class IO {
         return PoseData;
     }
     public static Comic.Mode chooseMode(){
-        return Comic.Mode.DEBATE;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("""
+                Choose between History and Debate mode.(type the number)
+                1.History
+                2.Debate.""");
+        String input = scanner.next();
+        while (!input.equals("1") && !input.equals("2")){
+            System.out.println("Invalid input type 1 or 2.");
+            input = scanner.next();
+        }
+        return input.equals("1") ? Comic.Mode.HISTORY : Comic.Mode.DEBATE ;
     }
 }

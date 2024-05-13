@@ -47,7 +47,8 @@ public class Conversation implements Interfaces.Conversation {
                 "I don't have the ability to",
                 "I'm not able to",
                 "unable to complete your request",
-                "an AI language model"
+                "an AI language model",
+                "cannot mimic people"
         );
         for (String phrase : denialPhrases) {
             if (message.getContent().contains(phrase)) {

@@ -1,7 +1,5 @@
 package Generation;
 
-import Generation.Conversation;
-
 import java.util.List;
 import java.util.Random;
 
@@ -16,12 +14,11 @@ public class Narrator {
         style = getRandomNarratorStyle();
         conversation = new Conversation();
         System.out.println(style);
-        conversation.addSystemMessage("You are writing captions for a comic you will be given a list of points and dialog and expected to provide a caption for each point."
-                + "The caption should narrate whats is going on and should take into account the dialogue"
-                + "Your answer should be no more than 12 words. Answer in the style and vocabulary of" + style+". "
+        conversation.addSystemMessage("You are writing narration for a comic you will be given a numbered list of points and are expected to provide an narration for each point."
+                + "Your answer should be no more than 15 words. Answer in the style and vocabulary of " + style + ". "
+                + "example: 1. narration  2. narration 3. ... ."
                 + "The lines will be talking about " + topic);
     }
-
     private static String getRandomNarratorStyle() {
         Random rand = new Random();
         return NARRATOR_STYLES[rand.nextInt(NARRATOR_STYLES.length)];
@@ -36,5 +33,9 @@ public class Narrator {
         }
         System.out.println(response);
         return TextParser.parseCaptions(response);
+    }
+
+    public static void main(String[] args) {
+
     }
 }

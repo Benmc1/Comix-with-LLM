@@ -46,8 +46,7 @@ public class Lines {
     public String toString() {
         StringBuilder str = new StringBuilder();
         for (int i = 0; i < leftLines.size(); i++) {
-            //TODO enable
-            //str.append("\nCaption:").append(captions.get(i));
+            str.append("\nCaption:").append(captions.get(i));
             str.append("\nLeft: ").append(leftLines.get(i));
             str.append("\nRight: ").append(rightLines.get(i));
         }
