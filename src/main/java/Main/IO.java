@@ -1,5 +1,7 @@
 package Main;
 
+import Comic.Character;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -17,6 +19,22 @@ public class IO {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the name of the character you want in the comic.");
         return scanner.nextLine();
+    }
+
+    public static Character createStudentCharacter() {
+        Scanner scanner = new Scanner(System.in);
+        String name = getCharacterName();
+        System.out.println("Enter the appearance (male or female):");
+        String appearance = scanner.nextLine();
+        System.out.println("Enter a hair color:");
+        String hairColor = scanner.nextLine();
+        System.out.println("Enter a skin color:");
+        String skinColor = scanner.nextLine();
+        System.out.println("Enter a lip color:");
+        String lipColor = scanner.nextLine();
+        Character student = new Character(name);
+        student.setFeatures(appearance, hairColor, skinColor, lipColor);
+        return student;
     }
 
     public static List<String[]> readPlainData() {

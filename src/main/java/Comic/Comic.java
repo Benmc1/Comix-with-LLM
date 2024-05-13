@@ -2,6 +2,7 @@ package Comic;
 
 import Generation.Lines;
 import Main.ConfigurationFile;
+import Main.IO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,8 +16,9 @@ public class Comic {
 
     public Comic(String topic) {
         this.topic = topic;
-        characterLeft = new Character("");
-        characterRight = new Character("");
+        characterLeft = new Character("Professor Malcolm Sterling");
+        characterLeft.setFeatures("male", "grey", "white", "pink");
+        characterRight = IO.createStudentCharacter();
         lines = new Lines(topic);
         makePanels();
     }

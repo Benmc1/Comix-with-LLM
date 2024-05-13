@@ -19,6 +19,12 @@ public class Character {
         return name;
     }
 
+    public void setFeatures(String appearance, String hairColour, String skinColour, String lips) {
+        this.appearance = appearance;
+        this.hairColour = hairColour;
+        this.skinColour = skinColour;
+        this.lips = lips;
+    }
     private void generateFeatures() {
         String[] names = {"John", "Jane", "Bob", "Jack", "Rebecca"};
         String[] hairColours = {"Blonde", "Black", "Blue", "Red", "White", "Yellow"};
