@@ -1,5 +1,7 @@
 package Main;
 
+import Comic.Comic;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -46,5 +48,8 @@ public class IO {
             System.out.println(file + " not found, cannot create embeddings data");
         }
         return PoseData;
+    }
+    public static Comic.Mode chooseMode(){
+        return Comic.Mode.DEBATE;
     }
 }

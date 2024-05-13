@@ -1,40 +1,52 @@
 package Generation;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class TextParser {
 
-    public static List<String[]> parseDialogue(String text){
+    public static List<List<String>> parseDialogue(String text){
         //divide into individual lines
         String[] lines = text.split("\n");
-        System.out.println(text);
+        List<String> leftLines = new ArrayList<>();
+        List<String> rightLines = new ArrayList<>();
 
         //clean up lines
         for (String string :lines) {
-            if(string.contains("Pro:") && string.contains("Anti:")){
-                string = string.split("Pro:")[1];
-                proLines.add(string.split("Anti:")[0]);
-                antiLines.add(string.split("Anti:")[1]);
-            }else if (string.contains("Pro:")){
-                string = string.split("Pro:")[1];
+            //remove quotes
+            string = string.replaceAll("\"","");
+
+            if(string.contains("Left:") && string.contains("Right:")){
+                string = string.split("Left:")[1];
+                leftLines.add(string.split("Right:")[0]);
+                rightLines.add(string.split("Right:")[1]);
+            }else if (string.contains("Left:")){
+                string = string.split("Left:")[1];
                 string = string.stripLeading();
-                proLines.add(string);
-            } else if (string.contains("Anti:")) {
-                string = string.split("Anti:")[1];
+                leftLines.add(string);
+            } else if (string.contains("Right:")) {
+                string = string.split("Right:")[1];
                 string = string.stripLeading();
-                antiLines.add(string);
+                rightLines.add(string);
             }
         }
+        return List.of(leftLines,rightLines);
     }
 
-    public static void parseCaptions(String text){
-
+    public static List<String> parseCaptions(String text){
+        List<String> captions = new ArrayList<>();
+        String[] lines = text.split("\n");
+        for (String s : lines) {
+           captions.add(s.replaceAll("\"",""));
+        }
+        return captions;
     }
 
-    public static void parseSuggestions(String text){
+    public static List<String[]> parseSuggestions(String text){
         List<String[]> parsedSuggestions = new ArrayList<>();
         String[] lines = text.split("\n");
+
         for (String line : lines) {
             int startIndex = line.indexOf("(");
             int endIndex = line.lastIndexOf(")");
@@ -47,4 +59,6 @@ public class TextParser {
         }
         return parsedSuggestions;
     }
+
+
 }

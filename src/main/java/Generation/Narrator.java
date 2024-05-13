@@ -16,9 +16,10 @@ public class Narrator {
         style = getRandomNarratorStyle();
         conversation = new Conversation();
         System.out.println(style);
-        conversation.addSystemMessage("You are writing captions for a comic you will be given a line and expected to provide a captions " +
-                "that describes the conversation. Your answer should be no more than 12 words. Answer in the style and vocabulary of" + style+". " +
-                "The lines will be talking about " + topic);
+        conversation.addSystemMessage("You are writing captions for a comic you will be given a list of points and dialog and expected to provide a caption for each point."
+                + "The caption should narrate whats is going on and should take into account the dialogue"
+                + "Your answer should be no more than 12 words. Answer in the style and vocabulary of" + style+". "
+                + "The lines will be talking about " + topic);
     }
 
     private static String getRandomNarratorStyle() {
@@ -33,7 +34,7 @@ public class Narrator {
             System.out.println("generate captions failed");
             response = conversation.getResponse(text);
         }
-        List<String> captions = TextParser.parseCaptions(response);
-        return captions;
+        System.out.println(response);
+        return TextParser.parseCaptions(response);
     }
 }

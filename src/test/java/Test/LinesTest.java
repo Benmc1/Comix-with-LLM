@@ -12,8 +12,8 @@ class LinesTest {
     @Test
     void testNumOfLines() {
 
-        assertEquals(10, lines.getAntiLines().size());
-        assertEquals(10, lines.getProLines().size());
+        assertEquals(10, lines.getRightLines().size());
+        assertEquals(10, lines.getLeftLines().size());
     }
 
     @Test

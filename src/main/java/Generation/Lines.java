@@ -1,57 +1,55 @@
 package Generation;
 
-import Main.ConfigurationFile;
 import java.util.*;
 
 public class Lines {
-    private final List<String> proLines;
-    private final List<String> antiLines;
+    private final List<String> leftLines;
+    private final List<String> rightLines;
     private final List<String> captions;
 
     public Lines() {
-        this.proLines = new ArrayList<>();
-        this.antiLines = new ArrayList<>();
+        this.leftLines = new ArrayList<>();
+        this.rightLines = new ArrayList<>();
         this.captions = new ArrayList<>();
     }
 
-    private void generateLines() {
-
-        extractLines(text);
-
-        Narrator narrator = new Narrator(topic);
-        for (int i = 0; i < proLines.size(); i++) {
-            captions.add(narrator.generateCaption(getProLine(i),getAntiLine(i)));
-        }
+    public void addLeftLines(List<String> input){
+        leftLines.addAll(input);
     }
-
-
-
-    public String getAntiLine(int n) {
-        return antiLines.get(n);
+    public void addRightLines(List<String> input){
+        rightLines.addAll(input);
     }
-    public String getProLine(int n) {
-        return proLines.get(n);
+    public void addCaptions(List<String> input){
+        captions.addAll(input);
+    }
+    public String getRightLine(int n) {
+        return rightLines.get(n);
+    }
+    public String getLeftLine(int n) {
+        return leftLines.get(n);
     }
     public String getCaption(int n) {
         return captions.get(n);
     }
     public String[] getPanelLines(int n) {
-        return new String[]{getProLine(n),getAntiLine(n),getCaption(n)};
+        return new String[]{getLeftLine(n),getRightLine(n),getCaption(n)};
     }
-    public List<String> getAntiLines() {
-        return antiLines;
+    public List<String> getRightLines() {
+        return rightLines;
     }
-    public List<String> getProLines() {
-        return proLines;
+    public List<String> getLeftLines() {
+        return leftLines;
     }
 
 
     @Override
     public String toString() {
         StringBuilder str = new StringBuilder();
-        for (int i = 0; i < proLines.size(); i++) {
-            str.append("\nPro: ").append(proLines.get(i));
-            str.append("\nAnti: ").append(antiLines.get(i));
+        for (int i = 0; i < leftLines.size(); i++) {
+            //TODO enable
+            //str.append("\nCaption:").append(captions.get(i));
+            str.append("\nLeft: ").append(leftLines.get(i));
+            str.append("\nRight: ").append(rightLines.get(i));
         }
         return str.toString();
     }
