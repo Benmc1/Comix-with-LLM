@@ -22,7 +22,7 @@ Follow the prompts and input the correct information and the application will pe
 ## Sprint 3
 For Sprint 3 we added to the lines generator from the previous sprint to create the rhyming lines.
 Then we added a narrator class to generate the captions for the comic. It generates the lines based off the topic a randomly chosen character
-and a pair of pro+anti lines. For the XML we have a comic serializer class that takes a comic and pulls all the data from it to create a string 
+and a pair of pro+anti lines. For the XML we have a comic serializer class that takes a comic and pulls all the data from it to create a string
 with the relevent information then writes it to a file.
 
 Make sure to add your API key to the config file.
@@ -31,13 +31,19 @@ Make sure to add your API key to the config file.
 
 In this sprint we added the panel and character class to hold the data of each component and to give easier access.
 Creating and retrieving the embedding data is handled by the EmbeddingData class. The prompt used for the embedding is a concatination of the 3 different pose descriptions + the name of the pose.
-If the embedding is unavailable it will look for the plain csv file and get the embedding from there. 
+If the embedding is unavailable it will look for the plain csv file and get the embedding from there.
 Both these files are specified in the configuration file. Choosing which embedding to use to handled by the EmbeddingSelector class. You pass the prompt and the embedding data of thing you want, and it returns the name of the answer.
- Finally, we added some more tests for the new classes.
+Finally, we added some more tests for the new classes.
 
 ## Sprint 5
+
 In the sprint we changed the embedding storage to avoid having all embeddings in memory we did this with a RandomAccessFile and an index database to store what was where.
 This index file is kept in memory as a hashtable for the desc+type -> value pairs and in an arraylist for the index's.
 We also got the AI to recommend poses and settings by adding to the lines class. Some class were moved into different packages.
 Cosine similarity equates "Lighting a memorial candle" to "terrorizing" so it's not perfect.
+
+## Sprint 6
+
+For this sprint we decieded to add a new type of comic. In the comic a professor and student are brought to a given time period and discuss all the things they see around them.
+Both comic types are still available via a mode selection at startup. Aswell with the history mode we added Opening and closing panels to make it more like a story. These are preset in the panels class. Theres also a character creator where you can choose the appearance of the student character.
 ### To run "java -jar Comix-with-LLM-1.0-SNAPSHOT-jar-with-dependencies.jar"
