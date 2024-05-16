@@ -7,7 +7,7 @@ import java.util.List;
 
 public class TextGenerator {
     private final String topic;
-    private List<String[]> suggestions;
+    private final Suggestions suggestions;
     private final Lines lines = new Lines();
     private static final int NUM_PANELS = Integer.parseInt(ConfigurationFile.getProperty("NUM_OF_PANELS"));
     public TextGenerator(String topic, Comic.Mode mode){
@@ -18,7 +18,7 @@ public class TextGenerator {
         lines.addLeftLines(parsedDialogue.get(0));
         lines.addRightLines(parsedDialogue.get(1));
 
-        generateSuggestions(dialogue);
+        suggestions = new Suggestions(dialogue,topic);
 
         Narrator narrator = new Narrator(topic);
         List<String> captions = narrator.generateCaptions(dialogue);
@@ -31,7 +31,7 @@ public class TextGenerator {
     }
 
     public List<String[]> getSuggestions() {
-        return suggestions;
+        return suggestions.getSuggestions();
     }
 
     private String generateDialogue(Comic.Mode mode){
@@ -56,17 +56,6 @@ public class TextGenerator {
         }
         System.out.println(text);
         return text;
-    }
-
-    private void generateSuggestions(String text){
-        System.out.println("\nGenerating Suggestions...\n");
-
-        Conversation conversation = new Conversation();
-        String conversationResponse = conversation.getResponse(text + "\n"
-                + ConfigurationFile.getProperty("SUGGESTIONS_PROMPT")
-                + "The topic of the comic is: " + topic);
-        System.out.println(conversationResponse);
-        suggestions = TextParser.parseSuggestions(conversationResponse);
     }
 }
 
