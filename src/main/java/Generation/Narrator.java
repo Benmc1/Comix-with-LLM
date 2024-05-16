@@ -26,16 +26,13 @@ public class Narrator {
 
     // Simulate generating a caption in the style of the narrator
     public List<String> generateCaptions(String text) {
+        System.out.println("\nGenerating Captions...");
         String response = conversation.getResponse(text);
         if(response.isBlank()) {
-            System.out.println("generate captions failed");
+            System.out.println("generate captions failed trying again");
             response = conversation.getResponse(text);
         }
         System.out.println(response);
         return TextParser.parseCaptions(response);
-    }
-
-    public static void main(String[] args) {
-
     }
 }

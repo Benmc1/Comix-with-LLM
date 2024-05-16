@@ -35,6 +35,7 @@ public class TextGenerator {
     }
 
     private String generateDialogue(Comic.Mode mode){
+        System.out.println("\nGenerating Dialogue...\n");
         Conversation conversation = new Conversation();
 
 
@@ -44,7 +45,7 @@ public class TextGenerator {
         String pointsList = conversation.getResponse(pointsPrompt);
 
         if(pointsList.isEmpty()) {
-            System.out.println("generating points returned a DOS moving to backup");
+            System.out.println("Generating points returned a DOS moving to backup.");
             conversation.addMessageAndResponse(ConfigurationFile.getProperty(mode.toString() + "_DOS_PROMPT"),ConfigurationFile.getProperty(mode + "_DOS_RESPONSE"));
             conversation.getResponse(pointsPrompt);
         }
@@ -58,6 +59,8 @@ public class TextGenerator {
     }
 
     private void generateSuggestions(String text){
+        System.out.println("\nGenerating Suggestions...\n");
+
         Conversation conversation = new Conversation();
         String conversationResponse = conversation.getResponse(text + "\n"
                 + ConfigurationFile.getProperty("SUGGESTIONS_PROMPT")

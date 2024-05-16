@@ -2,271 +2,346 @@
 <comic>
 	<figures>
 <figure>
-	<name>Rebecca</name>
+	<name>Professor Malcolm Sterling</name>
 	<appearance>male</appearance>
-	<hair>Blonde</hair>
-	<skin>White</skin>
-	<lips>White</lips>
+	<hair>grey</hair>
+	<skin>white</skin>
+	<lips>pink</lips>
 </figure>
 <figure>
-	<name>Bob</name>
-	<appearance>male</appearance>
-	<hair>Black</hair>
-	<skin>White</skin>
-	<lips>White</lips>
+	<name>Student</name>
+	<appearance>m</appearance>
+	<hair>a</hair>
+	<skin>a</skin>
+	<lips>a</lips>
 </figure>
 	</figures>
-	<topic>troubles in northern ireland </topic>
+	<topic>Ancient Rome </topic>
 	<panels>
 <panel>
-   <above> Troubles in Ireland, a dark time, we remember.</above>
+   <above>The Hilarious History Adventures</above>
    <left>
        <figure>
-           <name>Rebecca</name>
-           <pose>sacrificing</pose>
+           <name>Professor</name>
+           <pose>campaigning against</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>It's a historical period we must know</content>
+		<balloon status="speech">			<content>Join our heroes on a laugh-out-loud journey through the ages!</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Bob</name>
-           <pose>condescending</pose>
+           <name>Student</name>
+           <pose>swallowing</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>It's just a violent waste of time and blow</content>
+		<balloon status="speech">			<content>Where every era brings new comedic chaos!</content>
 		</balloon>
    </right>
 
-   <setting>minnesota</setting>
+   <setting>car factory</setting>
 </panel><panel>
-   <above> Differences so deep, respect for opinions needed, unity we should engender.</above>
+   <above>The Hilarious History Adventures</above>
    <left>
        <figure>
-           <name>Rebecca</name>
-           <pose>angry</pose>
+           <name>Professor</name>
+           <pose>campaigning against</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>We must embrace diversity and respect each other's opinions</content>
+		<balloon status="speech">			<content>Join our heroes on a laugh-out-loud journey through the ages!</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Bob</name>
-           <pose>angry</pose>
+           <name>Student</name>
+           <pose>swallowing</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>It's hard to reconcile when both sides can't find common dominions</content>
+		<balloon status="speech">			<content>Where every era brings new comedic chaos!</content>
 		</balloon>
    </right>
 
-   <setting>buffalo</setting>
+   <setting>car factory</setting>
 </panel><panel>
-   <above> Violence begets violence, a cycle of pain.</above>
+   <above>The Roman Empire Left: Behold, the grandeur of the mighty Roman Empire. Right: A civilization that stood the test of time with sheer power and glory.</above>
    <left>
        <figure>
-           <name>Rebecca</name>
-           <pose>sad</pose>
+           <name>Professor Malcolm Sterling</name>
+           <pose>monitoring</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>It's a reminder of the human cost of war</content>
+		<balloon status="speech">			<content>Where are we?</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Bob</name>
-           <pose>shrugging</pose>
+           <name>Student</name>
+           <pose>chronicling</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>It's just an endless cycle, how can peace be born?</content>
+		<balloon status="speech">			<content>In the impressive Roman Empire!</content>
 		</balloon>
    </right>
 
-   <setting>libya</setting>
+   <setting>hollywood</setting>
 </panel><panel>
-   <above> The Good Friday Accord, a glimmer of hope, but can it be sustained?</above>
+   <above></above>
    <left>
        <figure>
-           <name>Rebecca</name>
-           <pose>haughty</pose>
+           <name>Professor Malcolm Sterling</name>
+           <pose>inspired</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>A landmark achievement in the face of adversity </content>
+		<balloon status="speech">			<content>Wow, look at all the roads!</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Bob</name>
-           <pose>kneeling</pose>
+           <name>Student</name>
+           <pose>chronicling</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>It's just the illusion of peace with no real continuity</content>
+		<balloon status="speech">			<content>Yes, they paved the way for culture... and chariots.</content>
 		</balloon>
    </right>
 
-   <setting>minnesota</setting>
+   <setting>government</setting>
 </panel><panel>
-   <above> Past mistakes still haunt us, truth must be faced.</above>
+   <above>Extensive Road Network Left: What sorcery is this? Right: Nay, it's their advanced engineering and the vast road network that connects the empire from end to end.</above>
    <left>
        <figure>
-           <name>Rebecca</name>
-           <pose>kneeling</pose>
+           <name>Professor Malcolm Sterling</name>
+           <pose>speeding</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>We must address the past to move on</content>
+		<balloon status="speech">			<content>Do they speak English?</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Bob</name>
-           <pose>starving</pose>
+           <name>Student</name>
+           <pose>questioning</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>It's just a constant reminder of what once had gone</content>
+		<balloon status="speech">			<content>No, but Latin's the universal language, soon you'll be fluent.</content>
 		</balloon>
    </right>
 
-   <setting>boston</setting>
+   <setting>low trench</setting>
 </panel><panel>
-   <above> Internment without trial, human rights replaced.</above>
+   <above></above>
    <left>
        <figure>
-           <name>Rebecca</name>
-           <pose>hiding</pose>
+           <name>Professor Malcolm Sterling</name>
+           <pose>cooking</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>It's a violation of human rights and dignity </content>
+		<balloon status="speech">			<content>How did they bring water here?</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Bob</name>
-           <pose>defiant</pose>
+           <name>Student</name>
+           <pose>reading newspaper</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>It's just a necessary measure in times of calamity </content>
+		<balloon status="speech">			<content>They built aqueducts, it's an engineering marvel!</content>
 		</balloon>
    </right>
 
-   <setting>prison</setting>
+   <setting>canada</setting>
 </panel><panel>
-   <above> Hunger strike, brave fight for justice, but at a deadly cost.</above>
+   <above>Official Language Left: Can they comprehend our language, Bane? Right: Silence, fool. We must learn the ways of their language - Latin, the lingua franca of the empire.</above>
    <left>
        <figure>
-           <name>Rebecca</name>
-           <pose>patriotic</pose>
+           <name>Professor Malcolm Sterling</name>
+           <pose>attracted</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Brave individuals who fought for justice </content>
+		<balloon status="speech">			<content>How did they run this place?</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Bob</name>
-           <pose>spitting</pose>
+           <name>Student</name>
+           <pose>preachy</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Dangerous fanatics who risked innocent lives for just this</content>
+		<balloon status="speech">			<content>They had a republic: two consuls, checks & balances, democracy!</content>
 		</balloon>
    </right>
 
-   <setting>graveyard</setting>
+   <setting>canada</setting>
 </panel><panel>
-   <above> Economic losses, rebuild we must, but wastefulness we cannot afford.</above>
+   <above></above>
    <left>
        <figure>
-           <name>Rebecca</name>
-           <pose>frowning</pose>
+           <name>Professor Malcolm Sterling</name>
+           <pose>pleading</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>It's an opportunity to rebuild and heal </content>
+		<balloon status="speech">			<content>What's that giant building?</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Bob</name>
-           <pose>poking</pose>
+           <name>Student</name>
+           <pose>stargazing</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>It's just a sign of lost potential and forever a bad deal </content>
+		<balloon status="speech">			<content>The Colosseum--where the ancient world went for entertainment.</content>
 		</balloon>
    </right>
 
-   <setting>battlefield</setting>
+   <setting>indonesia</setting>
 </panel><panel>
-   <above> Dangerous armed groups, peace they've betrayed.</above>
+   <above>Advanced Engineering Left: How did they construct these great structures? Right: It's their mastery of engineering, my dear friend - aqueducts, roads, amphitheaters, and more.</above>
    <left>
        <figure>
-           <name>Rebecca</name>
-           <pose>promoting</pose>
+           <name>Professor Malcolm Sterling</name>
+           <pose>bowing</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>It's complicated, but peace can be found </content>
+		<balloon status="speech">			<content>Who's this guy waving at us?</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Bob</name>
-           <pose>angry</pose>
+           <name>Student</name>
+           <pose>bowing</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>It's just a bunch of terrorists causing unrest all around </content>
+		<balloon status="speech">			<content>It's Caesar, he crossed the Rubicon to become a dictator.</content>
 		</balloon>
    </right>
 
-   <setting>naples</setting>
+   <setting>hollywood</setting>
 </panel><panel>
-   <above> Better future ahead, the path towards it, perseverance and patience we must display.</above>
+   <above></above>
    <left>
        <figure>
-           <name>Rebecca</name>
-           <pose>treating</pose>
+           <name>Professor Malcolm Sterling</name>
+           <pose>joy</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>It's a step towards a better future we hope to see </content>
+		<balloon status="speech">			<content>Who do they worship here?</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Bob</name>
-           <pose>defensive</pose>
+           <name>Student</name>
+           <pose>serving plate</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>It's just a naive attempt, peace is an elusive guarantee.</content>
+		<balloon status="speech">			<content>They have gods and goddesses and fancy festivals.</content>
 		</balloon>
    </right>
 
-   <setting>interview room</setting>
+   <setting>south pole</setting>
+</panel><panel>
+   <above>Roman Republic Left: Such political order, how did they achieve that? Right: The Roman republic - a state where every voice counts, with consuls and democracy at its helm.</above>
+   <left>
+       <figure>
+           <name>Professor Malcolm Sterling</name>
+           <pose>wooing</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>Why are those people in chains?</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>Student</name>
+           <pose>freeing</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>Unfortunately, slavery was an integral part of our society.</content>
+		</balloon>
+   </right>
+
+   <setting>police state</setting>
+</panel><panel>
+   <above></above>
+   <left>
+       <figure>
+           <name>Professor Malcolm Sterling</name>
+           <pose>rising from coffin</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>Are they like our laws?</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>Student</name>
+           <pose>reading newspaper</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>Roman law has had a lasting impact on the world today.</content>
+		</balloon>
+   </right>
+
+   <setting>canada</setting>
+</panel><panel>
+   <above>Don't Miss Out!</above>
+   <left>
+       <figure>
+           <name>Professor</name>
+           <pose>campaigning against</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>Laugh until you cry with this timeless comedy!</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>Student</name>
+           <pose>swallowing</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>Available now at your nearest bookstore or online retailer!</content>
+		</balloon>
+   </right>
+
+   <setting>car factory</setting>
 </panel>	</panels>
 </comic>

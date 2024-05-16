@@ -33,6 +33,7 @@ public class TextParser {
     public static List<String> parseCaptions(String text){
         List<String> captions = new ArrayList<>();
         String[] lines = extractLines(text);
+        //parse by getting the '.' after each number and returning string after it.
         for (String s : lines) {
             int begining = s.indexOf(".");
             s = s.substring(begining+1);
@@ -45,7 +46,7 @@ public class TextParser {
     public static List<String[]> parseSuggestions(String text){
         List<String[]> parsedSuggestions = new ArrayList<>();
         String[] lines = extractLines(text);
-
+        //parse by finding all the strings between parenthesis (...)
         for (String line : lines) {
             int startIndex = line.indexOf("(");
             int endIndex = line.lastIndexOf(")");
