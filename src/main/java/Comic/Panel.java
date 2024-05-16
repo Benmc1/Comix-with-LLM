@@ -1,6 +1,7 @@
 package Comic;
 
 import Assests.AssetSelector;
+import Main.ConfigurationFile;
 
 import java.util.Arrays;
 
@@ -12,7 +13,8 @@ public class Panel {
     private String poseLeft;
     private String poseRight;
     private String setting;
-
+    //Max size a caption can be before being split above and below.
+    private static final int MAX_CAPTION_PER_LINE = Integer.parseInt(ConfigurationFile.getProperty("MAX_CAPTION_PER_LINE"));
     public Panel(String charLeft, String charRight, String[] lines, String[] suggestions) {
         this.charLeft = charLeft;
         this.charRight = charRight;
@@ -44,7 +46,7 @@ public class Panel {
             "Time Traveling Hijinks Await!"
         };
         String[] suggestions = {
-            "charRight", "charLeft", "historical setting"
+            "waving", "watching the clock", "historical setting"
         };
 
         return new Panel(charLeft, charRight, lines, suggestions);
@@ -60,7 +62,7 @@ public class Panel {
             "The Ultimate Historical Comedy Extravaganza!"
         };
         String[] suggestions = {
-            "charRight", "charLeft", "historical setting"
+            "Leaving", "goodbye", "historical setting"
         };
 
         return new Panel(charLeft, charRight, lines, suggestions);
@@ -79,8 +81,9 @@ public class Panel {
     }
 
     public String toXML() {
+        String[] splitCaption = splitCaption(lines[2]);
         return "<panel>\n" +
-                "   <above>" + lines[2] + "</above>\n"+
+                "   <above>" + splitCaption[0] + "</above>\n"+
                 "   <left>\n"+
                 "       <figure>\n"+
                 "           <name>" + charLeft + "</name>\n"+
@@ -97,11 +100,36 @@ public class Panel {
                 "       </figure>\n\n"+
                         speechBalloon(lines[1])+
                 "   </right>\n\n"+
+                (splitCaption[1].isBlank() ?"": "   <below>"+ splitCaption[1] +"</below>\n")+
                 "   <setting>" + setting + "</setting>\n"+
                 "</panel>";
     }
 
     private String speechBalloon(String speech) {
         return "\t\t<balloon status=\"speech\">\r\t\t\t<content>" + speech + "</content>\n\t\t</balloon>\n";
+    }
+
+    private String[] splitCaption(String caption){
+        String[] splitCaption = new String[2];
+        String[] captionWords = caption.split(" ");
+
+        if(captionWords.length < MAX_CAPTION_PER_LINE){
+            splitCaption[0] = caption;
+            splitCaption[1] = "";
+            return splitCaption;
+        }
+
+        int totalWords = captionWords.length;
+        StringBuilder firstHalf = new StringBuilder();
+        StringBuilder secondHalf = new StringBuilder();
+
+        for (int i = 0; i < totalWords/2; i++) {
+            firstHalf.append(captionWords[i]).append(" ");
+            secondHalf.append(captionWords[i + totalWords/2]).append(" ");
+        }
+
+        splitCaption[0] = firstHalf.toString();
+        splitCaption[1] = secondHalf.toString();
+        return splitCaption;
     }
 }
