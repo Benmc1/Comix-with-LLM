@@ -43,19 +43,40 @@ public class TextGenerator {
         String pointsPrompt = "Write a list of " + NUM_PANELS + " points about "+ topic
                 + ". Theses points should be concise and benign and interesting.";
         String pointsList = conversation.getResponse(pointsPrompt);
-
+        //If it's a DOS conversation returns a blank string
         if(pointsList.isEmpty()) {
             System.out.println("Generating points returned a DOS moving to backup.");
             conversation.addMessageAndResponse(ConfigurationFile.getProperty(mode.toString() + "_DOS_PROMPT"),ConfigurationFile.getProperty(mode + "_DOS_RESPONSE"));
             conversation.getResponse(pointsPrompt);
         }
-        //Generate pro and anti sides from the points
-        String text = conversation.getResponse(ConfigurationFile.getProperty(mode.toString() + "_PROMPT"));
-        if(text.isEmpty()) {
-            System.out.println("Could not generate text");
+        //Generate dialogue for both sides from the points
+        String dialoguePrompt = ConfigurationFile.getProperty(mode.toString() + "_PROMPT");
+        String text = conversation.getResponse(dialoguePrompt);
+        int tries = 0;
+        while(!isValidDialogue(text) && tries < 3 ){
+            System.out.println("Dialogue invalid trying again with example");
+            String example = ConfigurationFile.getProperty("DIALOGUE_EXAMPLE");
+            text =  conversation.getResponse("Try again. It should follow the same structure as this: " + example);
+            tries++;
         }
+        if(tries >= 4) System.out.println("Unable to produce valid suggestions.");
         System.out.println(text);
         return text;
+    }
+
+    private Boolean isValidDialogue(String text){
+        List<List<String>> parsed = TextParser.parseDialogue(text);
+
+        if(parsed.size() != 2) return false;
+        for (List<String> list : parsed) {
+            if(list.size() != 10) return false;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        TextGenerator t = new TextGenerator("The drug trade", Comic.Mode.DEBATE);
+        System.out.println(t);
     }
 }
 
