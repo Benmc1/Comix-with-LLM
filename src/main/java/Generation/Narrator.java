@@ -40,7 +40,7 @@ public class Narrator {
             System.out.println("generate captions failed trying again");
             response = conversation.getResponse(text);
         }
-        System.out.println(response);
+        System.out.println(response + "\n");
         return TextParser.parseCaptions(response);
     }
 }

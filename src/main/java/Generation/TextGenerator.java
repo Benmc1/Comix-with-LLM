@@ -19,10 +19,10 @@ public class TextGenerator {
         lines.addRightLines(parsedDialogue.get(1));
 
         suggestions = new Suggestions(dialogue,topic);
+        printSuggestions();
 
         Narrator narrator = new Narrator(dialogue,topic);
         lines.addCaptions(narrator.getCaptions());
-
     }
 
     public Lines getLines(){
@@ -33,13 +33,28 @@ public class TextGenerator {
         return suggestions.getSuggestions();
     }
 
+    private void printSuggestions() {
+        List<String[]> suggestionsList = suggestions.getSuggestions();
+        for (String[] suggestion : suggestionsList) {
+            StringBuilder sb = new StringBuilder("(");
+            for (int i = 0; i < suggestion.length; i++) {
+                sb.append(suggestion[i]);
+                if (i < suggestion.length - 1) {
+                    sb.append(", ");
+                }
+            }
+            sb.append(")");
+            System.out.println(sb.toString());
+        }
+    }
+
     private String generateDialogue(Comic.Mode mode){
         System.out.println("\nGenerating Dialogue...\n");
         Conversation conversation = new Conversation();
 
 
         conversation.addSystemMessage(ConfigurationFile.getProperty("SYSTEM_PROMPT"));
-        String pointsPrompt = "Write a list of " + NUM_PANELS + " points about "+ topic
+        String pointsPrompt = "Write a list of " + NUM_PANELS + " points about " + topic
                 + ". Theses points should be concise and benign and interesting.";
         String pointsList = conversation.getResponse(pointsPrompt);
         //If it's a DOS conversation returns a blank string
