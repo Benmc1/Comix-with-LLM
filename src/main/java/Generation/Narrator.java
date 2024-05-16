@@ -28,7 +28,7 @@ public class Narrator {
     // Simulate generating a caption in the style of the narrator
     public List<String> generateCaptions(String text,String topic) {
         System.out.println("\nGenerating Captions...");
-        System.out.println("Chosen character: " + style);
+        System.out.println("Chosen character: " + style + "\n");
 
         conversation.addSystemMessage("You are writing narration for a comic you will be given a numbered list of 10 points and are expected to provide a narration of each point."
                 + "Your answer should be brief and expressive. Answer in the style and vocabulary of " + style + ". "

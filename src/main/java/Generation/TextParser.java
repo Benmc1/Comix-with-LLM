@@ -35,8 +35,8 @@ public class TextParser {
         String[] lines = extractLines(text);
         //parse by getting the '.' after each number and returning string after it.
         for (String s : lines) {
-            int begining = s.indexOf(".");
-            s = s.substring(begining+1);
+            int beginning = s.indexOf(".");
+            s = s.substring(beginning+1);
             s = s.stripLeading();
             captions.add(s);
         }

@@ -57,7 +57,7 @@ public class IndexDatabase {
         return assetMap.containsKey(key);
     }
 
-    // Method to append a new description value to the index file 
+    // Method to append a new description value to the index file
     public void appendToFile(String newDescription) {
         if(newDescription.isBlank() || newDescription.split(",").length != 3) return;
         String key = newDescription.substring(0,newDescription.lastIndexOf(","));
@@ -66,14 +66,14 @@ public class IndexDatabase {
                 file.seek(file.length());
                 file.writeBytes(newDescription + "\n");
                 addToMemory(newDescription);
-                System.out.println(newDescription + "  has been appended to the index file.");
+                System.out.println(newDescription + " has been appended to the index file.");
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }else {
-        System.out.println("Description and/or type already exists in the database.");
+        } else {
+            System.out.println("Description and/or type already exists in the database.");
+        }
     }
-}
 
     // Method to check if a description exists in the database
     private void readInData() {

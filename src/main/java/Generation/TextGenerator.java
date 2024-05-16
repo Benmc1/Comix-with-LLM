@@ -44,7 +44,7 @@ public class TextGenerator {
                 }
             }
             sb.append(")");
-            System.out.println(sb.toString());
+            System.out.println(sb);
         }
     }
 
