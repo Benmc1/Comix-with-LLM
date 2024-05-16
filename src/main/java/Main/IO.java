@@ -19,17 +19,41 @@ public class IO {
     public static Character createStudentCharacter() {
         System.out.println("Choose what the student character will look like");
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the appearance (male or female):");
-        String appearance = scanner.nextLine();
-        System.out.println("Enter a hair color:");
-        String hairColor = scanner.nextLine();
-        System.out.println("Enter a skin color:");
-        String skinColor = scanner.nextLine();
-        System.out.println("Enter a lip color:");
-        String lipColor = scanner.nextLine();
+
+        String appearance = getInputWithValidation(scanner, "Enter the appearance (male or female):", new String[]{"male", "female"});
+        String hairColor = getInputWithValidation(scanner, "Enter a hair color:", new String[]{"brown", "blonde", "black", "white", "red", "blue", "green", "purple", "pink", "yellow", "orange", "gray"}); 
+        String skinColor = getInputWithValidation(scanner, "Enter a skin color:", new String[]{"white", "black", "yellow", "pink", "purple", "blue", "green", "brown", "red", "gray"});
+        String lipColor = getInputWithValidation(scanner, "Enter a lip color:", new String[]{"white", "black", "yellow", "pink", "purple", "blue", "green", "brown", "red", "gray"});
+
         Character student = new Character("Student");
         student.setFeatures(appearance, hairColor, skinColor, lipColor);
         return student;
+    }
+
+    private static String getInputWithValidation(Scanner scanner, String prompt, String[] validResponses) {
+        System.out.println(prompt);
+        String input = scanner.nextLine();
+        if (validResponses != null) {
+            while (!isValidResponse(input, validResponses)) {
+                System.out.println("Invalid input.\nPlease enter one of the following:\n" + String.join(", ", validResponses));
+                input = scanner.nextLine();
+            }
+        } else {
+            while (input.isBlank()) {
+                System.out.println("Input cannot be blank.\nPlease enter a valid input:");
+                input = scanner.nextLine();
+            }
+        }
+        return input;
+    }
+
+    private static boolean isValidResponse(String input, String[] validResponses) {
+        for (String validResponse : validResponses) {
+            if (input.equalsIgnoreCase(validResponse)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public static List<String[]> readPlainData() {
@@ -72,5 +96,10 @@ public class IO {
             input = scanner.next();
         }
         return input.equals("1") ? Comic.Mode.HISTORY : Comic.Mode.DEBATE ;
+    }
+
+    public static void main(String[] args) {
+        Character studentCharacter = createStudentCharacter();
+        System.out.println("Created character details:");
     }
 }
