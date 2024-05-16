@@ -10,8 +10,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class NarratorTest {
     @Test
     void generateCaption() {
-        Narrator narrator = new Narrator("Ancient Rome");
-        List<String> captions = narrator.generateCaptions(text);
+        Narrator narrator = new Narrator(text,"Ancient Rome");
+        List<String> captions = narrator.getCaptions();
         System.out.println(captions);
         assertEquals(10,captions.size());
     }

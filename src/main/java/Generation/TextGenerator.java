@@ -20,9 +20,8 @@ public class TextGenerator {
 
         suggestions = new Suggestions(dialogue,topic);
 
-        Narrator narrator = new Narrator(topic);
-        List<String> captions = narrator.generateCaptions(dialogue);
-        lines.addCaptions(captions);
+        Narrator narrator = new Narrator(dialogue,topic);
+        lines.addCaptions(narrator.getCaptions());
 
     }
 
@@ -72,11 +71,6 @@ public class TextGenerator {
             if(list.size() != 10) return false;
         }
         return true;
-    }
-
-    public static void main(String[] args) {
-        TextGenerator t = new TextGenerator("The drug trade", Comic.Mode.DEBATE);
-        System.out.println(t);
     }
 }
 
