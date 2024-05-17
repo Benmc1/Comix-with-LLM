@@ -2,281 +2,356 @@
 <comic>
 	<figures>
 <figure>
-	<name>Jack</name>
+	<name>Professor Malcolm Sterling</name>
 	<appearance>male</appearance>
-	<hair>Yellow</hair>
-	<skin>Yellow</skin>
-	<lips>Red</lips>
+	<hair>grey</hair>
+	<skin>white</skin>
+	<lips>pink</lips>
 </figure>
 <figure>
-	<name>Rebecca</name>
-	<appearance>female</appearance>
-	<hair>Blue</hair>
-	<skin>Orange</skin>
-	<lips>Red</lips>
+	<name>Student</name>
+	<appearance>male</appearance>
+	<hair>red</hair>
+	<skin>red</skin>
+	<lips>red</lips>
 </figure>
 	</figures>
-	<topic>World war 1</topic>
+	<topic>The Ice Age</topic>
 	<panels>
 <panel>
-   <above>The war was triggered by the assassination of Archduke </above>
+   <above>The Hilarious History Adventures</above>
    <left>
        <figure>
-           <name>Jack</name>
-           <pose>killing</pose>
+           <name>Professor</name>
+           <pose>waving flag</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Triggered by assassination</content>
+		<balloon status="speech">			<content>Join our heroes on a laugh-out-loud journey through the ages!</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Rebecca</name>
-           <pose>negotiating</pose>
+           <name>Student</name>
+           <pose>timekeeping</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Conflict that could have been avoided with negotiation</content>
+		<balloon status="speech">			<content>Where every era brings new comedic chaos!</content>
 		</balloon>
    </right>
 
-   <below>Franz Ferdinand while conflicts could have been resolved through </below>
-   <setting>interview room</setting>
+   <setting>parthenon</setting>
 </panel><panel>
-   <above>Soldiers dug trenches and fought battles </above>
+   <above>The Hilarious History Adventures</above>
    <left>
        <figure>
-           <name>Jack</name>
-           <pose>mining</pose>
+           <name>Professor</name>
+           <pose>waving flag</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Soldiers dug in, battles won and lost</content>
+		<balloon status="speech">			<content>Join our heroes on a laugh-out-loud journey through the ages!</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Rebecca</name>
-           <pose>falling</pose>
+           <name>Student</name>
+           <pose>timekeeping</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Foot-deep mud and many lives were the cost</content>
+		<balloon status="speech">			<content>Where every era brings new comedic chaos!</content>
 		</balloon>
    </right>
 
-   <below>with many lives lost in foot-deep </below>
-   <setting>arizona</setting>
+   <setting>parthenon</setting>
 </panel><panel>
-   <above>The use of chemical warfare was efficient in </above>
+   <above>My dear friends, we must address the issue of the global drug trade. Promoting </above>
    <left>
        <figure>
-           <name>Jack</name>
-           <pose>farting</pose>
+           <name>Professor Malcolm Sterling</name>
+           <pose>shivering</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Efficient in taking down foes</content>
+		<balloon status="speech">			<content>Professor, why is everything so cold?</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Rebecca</name>
-           <pose>drowning</pose>
+           <name>Student</name>
+           <pose>pointing</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Leaves a legacy of agony and woes</content>
+		<balloon status="speech">			<content>Well, my dear student, welcome to the Pleistocene epoch or the Ice Age!</content>
 		</balloon>
    </right>
 
-   <below>taking down foes, but it caused long-lasting agony. </below>
-   <setting>battlefield</setting>
+   <below>wealth through pain, it is currently worth over $300 billion. What a ghastly business! </below>
+   <setting>winter</setting>
 </panel><panel>
-   <above>Women took on active roles in supporting </above>
+   <above>This trade primarily relies on the opium poppy, a reprehensible root that </above>
    <left>
        <figure>
-           <name>Jack</name>
-           <pose>feeding</pose>
+           <name>Professor Malcolm Sterling</name>
+           <pose>alarmed</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Active participation in support and fight</content>
+		<balloon status="speech">			<content>Wow, those ice sheets span for miles and miles!</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Rebecca</name>
-           <pose>working</pose>
+           <name>Student</name>
+           <pose>pointing</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Men's jobs taken, traditional roles out of sight</content>
+		<balloon status="speech">			<content>Yes, indeed! Up to 30% of the Earth's surface was covered in glaciers.</content>
 		</balloon>
    </right>
 
-   <below>and fighting, taking on jobs traditionally for </below>
-   <setting>minnesota</setting>
+   <below>grips its users and serves as a primary source for illicit heroin. </below>
+   <setting>cave</setting>
 </panel><panel>
-   <above>The war brought new opportunities, but </above>
+   <above>As criticism against the war on drugs grows, we </above>
    <left>
        <figure>
-           <name>Jack</name>
-           <pose>building</pose>
+           <name>Professor Malcolm Sterling</name>
+           <pose>stepping down</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>The war brought new opportunities</content>
+		<balloon status="speech">			<content>What kinds of animals lived during this era?</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Rebecca</name>
-           <pose>dying</pose>
+           <name>Student</name>
+           <pose>elephant</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Left behind shattered communities</content>
+		<balloon status="speech">			<content>We have woolly mammoths, saber-toothed tigers, and giant ground sloths, to name a few.</content>
 		</balloon>
    </right>
 
-   <below>it also left shattered communities behind. </below>
-   <setting>poland</setting>
+   <below>must prioritize help over punishment to end this ongoing </below>
+   <setting>cave rocks</setting>
 </panel><panel>
-   <above>The Treaty of Versailles held Germany </above>
+   <above>The demand for drugs is pervasive, ranging from </above>
    <left>
        <figure>
-           <name>Jack</name>
-           <pose>signing</pose>
+           <name>Professor Malcolm Sterling</name>
+           <pose>waving flag</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Held Germany responsible for the conflict</content>
+		<balloon status="speech">			<content>Did early humans survive this freezing cold?</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Rebecca</name>
+           <name>Student</name>
+           <pose>disagreeing</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>Absolutely! Humans had to adapt to extreme conditions during this time.</content>
+		</balloon>
+   </right>
+
+   <below>natural plants to opioids found in prescription medications. </below>
+   <setting>cave rocks</setting>
+</panel><panel>
+   <above>This abhorrent drug trade links to danger, violence, and </above>
+   <left>
+       <figure>
+           <name>Professor Malcolm Sterling</name>
+           <pose>indicating</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>What are those bridges that connect the land masses?</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>Student</name>
+           <pose>sitting on rock</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>Those are land bridges that formed during the Ice Age when sea levels dropped.</content>
+		</balloon>
+   </right>
+
+   <below>corruption, creating fear, instability, and ultimately leading to destruction. </below>
+   <setting>bosnia</setting>
+</panel><panel>
+   <above>Opioid overdose death rates continue to rise, making it </above>
+   <left>
+       <figure>
+           <name>Professor Malcolm Sterling</name>
            <pose>insisting</pose>
-           <facing>left</facing>
-       </figure>
-
-		<balloon status="speech">			<content>Blame and penalties lead to national embroilment</content>
-		</balloon>
-   </right>
-
-   <below>responsible and lead to national embroilment. </below>
-   <setting>georgia</setting>
-</panel><panel>
-   <above>Planes and machines led to progress, but they </above>
-   <left>
-       <figure>
-           <name>Jack</name>
-           <pose>angelic</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Planes and machines that led to progress</content>
+		<balloon status="speech">			<content>Why are the landscapes so different from what we know?</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Rebecca</name>
-           <pose>operating</pose>
+           <name>Student</name>
+           <pose>sitting on rock</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Tools for massacre and regret</content>
+		<balloon status="speech">			<content>The weight of the ice sheets caused the earth's crust to sink, leading to the formation of new landscapes.</content>
 		</balloon>
    </right>
 
-   <below>were used as tools for massacre and regret. </below>
-   <setting>factory</setting>
+   <below>vital to rally and advise for prevention and change. </below>
+   <setting>mountain pass</setting>
 </panel><panel>
-   <above>Artists used creative outlets to cope, but their </above>
+   <above>Decriminalization and legalization of drugs could lead to freedom </above>
    <left>
        <figure>
-           <name>Jack</name>
-           <pose>painting</pose>
+           <name>Professor Malcolm Sterling</name>
+           <pose>disappointed</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>A creative outlet from the horror at bay</content>
+		<balloon status="speech">			<content>What happened to the creatures that lived during the Ice Age?</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Rebecca</name>
-           <pose>sculpting</pose>
+           <name>Student</name>
+           <pose>stroking cat</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Pain captured in works but no one wants to stay</content>
+		<balloon status="speech">			<content>Many large mammals went extinct, including megafauna like the woolly mammoth.</content>
 		</balloon>
    </right>
 
-   <below>works captured the pain and horror of war. </below>
-   <setting>art studio</setting>
+   <below>of choice, with appropriate public scrutiny and medicinal guidance. </below>
+   <setting>wales</setting>
 </panel><panel>
-   <above>The end of an era in sight for Europe, but </above>
+   <above>Those involved in this trade use sophisticated methods and </above>
    <left>
        <figure>
-           <name>Jack</name>
-           <pose>building</pose>
+           <name>Professor Malcolm Sterling</name>
+           <pose>holding globe</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>End of an era, a fresh dawn ahead in sight</content>
+		<balloon status="speech">			<content>How did the weather change during the Ice Age?</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Rebecca</name>
-           <pose>dying</pose>
+           <name>Student</name>
+           <pose>indicating</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>For Europeans left behind, decades of war and plight</content>
+		<balloon status="speech">			<content>The Ice Age is actually responsible for modern ocean currents and weather patterns.</content>
 		</balloon>
    </right>
 
-   <below>left behind decades of war and plight for its people. </below>
-   <setting>minnesota</setting>
+   <below>poison in suspension to avoid apprehension, cheating at the </below>
+   <setting>laboratory</setting>
 </panel><panel>
-   <above>The conflicts and treaties made history, and the seeds </above>
+   <above>Narco-states are ruling and spreading, utilizing their wealth and power </above>
    <left>
        <figure>
-           <name>Jack</name>
-           <pose>patriotic</pose>
+           <name>Professor Malcolm Sterling</name>
+           <pose>pushing</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Conflicts and treaties that made history</content>
+		<balloon status="speech">			<content>Look at those cave paintings! What do they mean?</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Rebecca</name>
-           <pose>blackmailing</pose>
+           <name>Student</name>
+           <pose>spraying paint</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Seeds of the future's battles, a warning for eternity</content>
+		<balloon status="speech">			<content>Those prehistoric art pieces provide a glimpse into how early humans lived during this time.</content>
 		</balloon>
    </right>
 
-   <below>of future battles serve as a warning for eternity. </below>
-   <setting>georgia</setting>
+   <below>to oppress the poor and prevent any gains for them. </below>
+   <setting>cave</setting>
+</panel><panel>
+   <above>The challenge of overcoming the lasting effects of the drug trade on society is </above>
+   <left>
+       <figure>
+           <name>Professor Malcolm Sterling</name>
+           <pose>questioning</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>Are we still in an Ice Age?</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>Student</name>
+           <pose>examining</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>No, but the effects are still visible in places like Antarctica and Greenland.</content>
+		</balloon>
+   </right>
+
+   <below>immense, but we must learn from our mistakes one by one and move towards </below>
+   <setting>laboratory</setting>
+</panel><panel>
+   <above>Don't Miss Out!</above>
+   <left>
+       <figure>
+           <name>Professor</name>
+           <pose>running away</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>Laugh until you cry with this timeless comedy!</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>Student</name>
+           <pose>banishing</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>Available now at your nearest bookstore or online retailer!</content>
+		</balloon>
+   </right>
+
+   <setting>parthenon</setting>
 </panel>	</panels>
 </comic>
