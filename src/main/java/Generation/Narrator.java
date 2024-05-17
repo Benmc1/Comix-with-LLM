@@ -17,6 +17,9 @@ public class Narrator {
         style = getRandomNarratorStyle();
         conversation = new Conversation();
         captions = generateCaptions(text,topic);
+        String s = captions.get(0);
+        String firstLine = style + "-" + s;
+        captions.set(0,firstLine);
     }
     private static String getRandomNarratorStyle() {
         Random rand = new Random();
