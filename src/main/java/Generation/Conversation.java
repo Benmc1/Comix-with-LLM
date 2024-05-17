@@ -57,4 +57,10 @@ public class Conversation implements Interfaces.Conversation {
         }
         return false;
     }
+    public void removeLastExchange(){
+        int size = messageList.size();
+        if(size < 2) return;
+        messageList.remove(size-1);
+        messageList.remove(size-2);
+    }
 }

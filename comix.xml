@@ -27,7 +27,8 @@
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>A sight to see, a majestic sight</content>
+		<balloon status="speech">
+			<content>A sight to see, a majestic sight</content>
 		</balloon>
    </left>
 
@@ -38,7 +39,8 @@
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Just a bunch of metal, not quite right</content>
+		<balloon status="speech">
+			<content>Just a bunch of metal, not quite right</content>
 		</balloon>
    </right>
 
@@ -52,7 +54,8 @@
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Stands tall and proud, a true icon</content>
+		<balloon status="speech">
+			<content>Stands tall and proud, a true icon</content>
 		</balloon>
    </left>
 
@@ -63,11 +66,12 @@
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Overrated and old, time to move on</content>
+		<balloon status="speech">
+			<content>Overrated and old, time to move on</content>
 		</balloon>
    </right>
 
-   <below>a symbol of human endeavor </below>
+   <below>a symbol of human endeavor</below>
    <setting>boat dock</setting>
 </panel><panel>
    <above>A bridge that connects, a bond that unites</above>
@@ -78,7 +82,8 @@
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Brings people together, a connection made</content>
+		<balloon status="speech">
+			<content>Brings people together, a connection made</content>
 		</balloon>
    </left>
 
@@ -89,7 +94,8 @@
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Traffic trap, a headache, too much time paid</content>
+		<balloon status="speech">
+			<content>Traffic trap, a headache, too much time paid</content>
 		</balloon>
    </right>
 
@@ -103,7 +109,8 @@
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>A bright orange masterpiece</content>
+		<balloon status="speech">
+			<content>A bright orange masterpiece</content>
 		</balloon>
    </left>
 
@@ -114,7 +121,8 @@
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Eyesore, clashes, an aesthetic decrease</content>
+		<balloon status="speech">
+			<content>Eyesore, clashes, an aesthetic decrease</content>
 		</balloon>
    </right>
 
@@ -128,7 +136,8 @@
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>An elevated view, an adventure above</content>
+		<balloon status="speech">
+			<content>An elevated view, an adventure above</content>
 		</balloon>
    </left>
 
@@ -139,7 +148,8 @@
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Heights too extreme, a fear not worth love</content>
+		<balloon status="speech">
+			<content>Heights too extreme, a fear not worth love</content>
 		</balloon>
    </right>
 
@@ -154,7 +164,8 @@
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Saves time and gas, a true boon</content>
+		<balloon status="speech">
+			<content>Saves time and gas, a true boon</content>
 		</balloon>
    </left>
 
@@ -165,7 +176,8 @@
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Overpriced, too expensive, too soon</content>
+		<balloon status="speech">
+			<content>Overpriced, too expensive, too soon</content>
 		</balloon>
    </right>
 
@@ -179,7 +191,8 @@
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>A scenic stroll and bike ride</content>
+		<balloon status="speech">
+			<content>A scenic stroll and bike ride</content>
 		</balloon>
    </left>
 
@@ -190,7 +203,8 @@
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Pedestrian congestion, traffic slow inside</content>
+		<balloon status="speech">
+			<content>Pedestrian congestion, traffic slow inside</content>
 		</balloon>
    </right>
 
@@ -204,7 +218,8 @@
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>A haunting and mystical sound</content>
+		<balloon status="speech">
+			<content>A haunting and mystical sound</content>
 		</balloon>
    </left>
 
@@ -215,7 +230,8 @@
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Annoying, grating, noisy and round</content>
+		<balloon status="speech">
+			<content>Annoying, grating, noisy and round</content>
 		</balloon>
    </right>
 
@@ -230,7 +246,8 @@
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>A bucket list item, a must-see</content>
+		<balloon status="speech">
+			<content>A bucket list item, a must-see</content>
 		</balloon>
    </left>
 
@@ -241,7 +258,8 @@
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Waste of time and money, don't bother with glee</content>
+		<balloon status="speech">
+			<content>Waste of time and money, don't bother with glee</content>
 		</balloon>
    </right>
 
@@ -256,7 +274,8 @@
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>An engineering marvel, a wonder of the earth</content>
+		<balloon status="speech">
+			<content>An engineering marvel, a wonder of the earth</content>
 		</balloon>
    </left>
 
@@ -267,7 +286,8 @@
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Overrated, just a big bridge, not much worth</content>
+		<balloon status="speech">
+			<content>Overrated, just a big bridge, not much worth</content>
 		</balloon>
    </right>
 

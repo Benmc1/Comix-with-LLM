@@ -34,17 +34,19 @@ public class Narrator {
     public List<String> generateCaptions(String text,String topic) {
         System.out.println("\nGenerating Captions...");
         System.out.println("Chosen character: " + style + "\n");
+        String example = ConfigurationFile.getProperty("NARRATION_EXAMPLE");
+
         conversation.addSystemMessage("You are writing narration for a comic you will be given a numbered list of 10 points and are expected to provide a narration of each point."
                 + "Your answer should be brief and expressive. Answer in the style and vocabulary of " + style + ". "
-                + "Answer should be in the format: 1. narration 2. narration 3. ... . "
+                + "Answer should be a numbered list in the format: " + example
                 + "The lines will be talking about " + topic);
 
         String response = conversation.getResponse(text);
         int tries = 0;
         while (!isValidNarration(response) && tries < 3) {
-            System.out.println("Narration invalid trying again with example");
-            String example = ConfigurationFile.getProperty("NARRATION_EXAMPLE");
-            response = conversation.getResponse("Try again. It should follow the same layout as this but stick to the original topic and character: " + example);
+            System.out.println("Narration invalid trying again.");
+            conversation.removeLastExchange();
+            response = conversation.getResponse(text);
             tries++;
         }
         System.out.println(response + "\n");
