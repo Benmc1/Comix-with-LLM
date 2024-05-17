@@ -49,7 +49,6 @@ public class Narrator {
     }
     private Boolean isValidNarration(String input){
         List<String> attempt = TextParser.parseCaptions(input);
-        System.out.println(attempt.size());
         return attempt.size() == 10;
     }
     public static void main(String[] args) {

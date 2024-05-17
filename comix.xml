@@ -2,356 +2,281 @@
 <comic>
 	<figures>
 <figure>
-	<name>Professor Malcolm Sterling</name>
-	<appearance>male</appearance>
-	<hair>grey</hair>
-	<skin>white</skin>
-	<lips>pink</lips>
+	<name>Rebecca</name>
+	<appearance>female</appearance>
+	<hair>Red</hair>
+	<skin>White</skin>
+	<lips>Red</lips>
 </figure>
 <figure>
-	<name>Student</name>
-	<appearance>male</appearance>
-	<hair>red</hair>
-	<skin>red</skin>
-	<lips>red</lips>
+	<name>Jane</name>
+	<appearance>female</appearance>
+	<hair>Yellow</hair>
+	<skin>Yellow</skin>
+	<lips>Red</lips>
 </figure>
 	</figures>
-	<topic>The Ice Age</topic>
+	<topic>North Korea vs South Korea</topic>
 	<panels>
 <panel>
-   <above>The Hilarious History Adventures</above>
+   <above>Juche and democracy stand in opposition, one focused </above>
    <left>
        <figure>
-           <name>Professor</name>
+           <name>Rebecca</name>
+           <pose>holding drum</pose>
+           <facing>right</facing>
+       </figure>
+
+		<balloon status="speech">			<content>North Korea's Juche, to each their share,</content>
+		</balloon>
+   </left>
+
+   <right>
+       <figure>
+           <name>Jane</name>
+           <pose>voting for</pose>
+           <facing>left</facing>
+       </figure>
+
+		<balloon status="speech">			<content>But South Korean voters choose with great care.</content>
+		</balloon>
+   </right>
+
+   <below>on individualistic freedom, the other on shared responsibility. </below>
+   <setting>polling station</setting>
+</panel><panel>
+   <above>The armistice may hold for now, but </above>
+   <left>
+       <figure>
+           <name>Rebecca</name>
            <pose>waving flag</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Join our heroes on a laugh-out-loud journey through the ages!</content>
+		<balloon status="speech">			<content>The Korean War has come to a halt,</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Student</name>
-           <pose>timekeeping</pose>
+           <name>Jane</name>
+           <pose>haughty</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Where every era brings new comedic chaos!</content>
+		<balloon status="speech">			<content>But when it resumes, it'll be without fault.</content>
 		</balloon>
    </right>
 
-   <setting>parthenon</setting>
+   <below>the inevitability of war looms in the </below>
+   <setting>battlefield</setting>
 </panel><panel>
-   <above>The Hilarious History Adventures</above>
+   <above>North Korea prioritizes control at the expense of innovation, while </above>
    <left>
        <figure>
-           <name>Professor</name>
-           <pose>waving flag</pose>
+           <name>Rebecca</name>
+           <pose>examining document</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Join our heroes on a laugh-out-loud journey through the ages!</content>
+		<balloon status="speech">			<content>North Korea ensures order's maintained,</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Student</name>
-           <pose>timekeeping</pose>
+           <name>Jane</name>
+           <pose>enchanting</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Where every era brings new comedic chaos!</content>
+		<balloon status="speech">			<content>But South Korea's tech can't be contained.</content>
 		</balloon>
    </right>
 
-   <setting>parthenon</setting>
+   <below>South Korea is a tech giant unable to be restrained. </below>
+   <setting>singapore</setting>
 </panel><panel>
-   <above>My dear friends, we must address the issue of the global drug trade. Promoting </above>
+   <above>North Korea's centralized economy ensures equal distribution, while South </above>
    <left>
        <figure>
-           <name>Professor Malcolm Sterling</name>
-           <pose>shivering</pose>
+           <name>Rebecca</name>
+           <pose>campaigning</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Professor, why is everything so cold?</content>
+		<balloon status="speech">			<content>North Korea distributes wealth without fuss,</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Student</name>
-           <pose>pointing</pose>
+           <name>Jane</name>
+           <pose>reading magazine</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Well, my dear student, welcome to the Pleistocene epoch or the Ice Age!</content>
+		<balloon status="speech">			<content>But South Korea's growth is known for its thrust.</content>
 		</balloon>
    </right>
 
-   <below>wealth through pain, it is currently worth over $300 billion. What a ghastly business! </below>
-   <setting>winter</setting>
+   <below>Korea's market economy is known for its rapid growth. </below>
+   <setting>superstore</setting>
 </panel><panel>
-   <above>This trade primarily relies on the opium poppy, a reprehensible root that </above>
+   <above>Kim Jong-un's unique hairstyle may catch attention, while </above>
    <left>
        <figure>
-           <name>Professor Malcolm Sterling</name>
-           <pose>alarmed</pose>
+           <name>Rebecca</name>
+           <pose>patriotic</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Wow, those ice sheets span for miles and miles!</content>
+		<balloon status="speech">			<content>Kim Jong-un's hair is quite a sight,</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Student</name>
-           <pose>pointing</pose>
+           <name>Jane</name>
+           <pose>shaking hands</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Yes, indeed! Up to 30% of the Earth's surface was covered in glaciers.</content>
+		<balloon status="speech">			<content>But Moon Jae-in's appeasement is far too light.</content>
 		</balloon>
    </right>
 
-   <below>grips its users and serves as a primary source for illicit heroin. </below>
-   <setting>cave</setting>
+   <below>Moon Jae-in's leadership style is criticized as too </below>
+   <setting>buffalo</setting>
 </panel><panel>
-   <above>As criticism against the war on drugs grows, we </above>
+   <above>North Korea's nuclear program poses a threat that cannot be tamed, </above>
    <left>
        <figure>
-           <name>Professor Malcolm Sterling</name>
-           <pose>stepping down</pose>
+           <name>Rebecca</name>
+           <pose>examining document</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>What kinds of animals lived during this era?</content>
+		<balloon status="speech">			<content>North Korea's nuclear program, not to be tamed,</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Student</name>
-           <pose>elephant</pose>
+           <name>Jane</name>
+           <pose>shielding behind umbrella</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>We have woolly mammoths, saber-toothed tigers, and giant ground sloths, to name a few.</content>
+		<balloon status="speech">			<content>But South Korea lacks defense from nuclear flame.</content>
 		</balloon>
    </right>
 
-   <below>must prioritize help over punishment to end this ongoing </below>
-   <setting>cave rocks</setting>
+   <below>while South Korea lacks the defenses to handle a nuclear attack. </below>
+   <setting>nuclear plant</setting>
 </panel><panel>
-   <above>The demand for drugs is pervasive, ranging from </above>
+   <above>South Korean entertainment is globally acclaimed, but </above>
    <left>
        <figure>
-           <name>Professor Malcolm Sterling</name>
-           <pose>waving flag</pose>
+           <name>Rebecca</name>
+           <pose>singing</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>Did early humans survive this freezing cold?</content>
+		<balloon status="speech">			<content>South Korean entertainment is filled with sensation,</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Student</name>
-           <pose>disagreeing</pose>
+           <name>Jane</name>
+           <pose>offering</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Absolutely! Humans had to adapt to extreme conditions during this time.</content>
+		<balloon status="speech">			<content>But it's a distraction from lives in damnation.</content>
 		</balloon>
    </right>
 
-   <below>natural plants to opioids found in prescription medications. </below>
-   <setting>cave rocks</setting>
+   <below>distracts from the realities of everyday life. </below>
+   <setting>manhattan</setting>
 </panel><panel>
-   <above>This abhorrent drug trade links to danger, violence, and </above>
+   <above>The border is heavily fortified to prevent invasion, </above>
    <left>
        <figure>
-           <name>Professor Malcolm Sterling</name>
-           <pose>indicating</pose>
+           <name>Rebecca</name>
+           <pose>defending</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>What are those bridges that connect the land masses?</content>
+		<balloon status="speech">			<content>The border's protected from enemies' invasion,</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Student</name>
-           <pose>sitting on rock</pose>
+           <name>Jane</name>
+           <pose>cycling</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Those are land bridges that formed during the Ice Age when sea levels dropped.</content>
+		<balloon status="speech">			<content>But mobility is hindered without any persuasion.</content>
 		</balloon>
    </right>
 
-   <below>corruption, creating fear, instability, and ultimately leading to destruction. </below>
-   <setting>bosnia</setting>
-</panel><panel>
-   <above>Opioid overdose death rates continue to rise, making it </above>
-   <left>
-       <figure>
-           <name>Professor Malcolm Sterling</name>
-           <pose>insisting</pose>
-           <facing>right</facing>
-       </figure>
-
-		<balloon status="speech">			<content>Why are the landscapes so different from what we know?</content>
-		</balloon>
-   </left>
-
-   <right>
-       <figure>
-           <name>Student</name>
-           <pose>sitting on rock</pose>
-           <facing>left</facing>
-       </figure>
-
-		<balloon status="speech">			<content>The weight of the ice sheets caused the earth's crust to sink, leading to the formation of new landscapes.</content>
-		</balloon>
-   </right>
-
-   <below>vital to rally and advise for prevention and change. </below>
+   <below>but mobility is hindered for those on both </below>
    <setting>mountain pass</setting>
 </panel><panel>
-   <above>Decriminalization and legalization of drugs could lead to freedom </above>
+   <above>North Korea's name emphasizes the presence of democracy, </above>
    <left>
        <figure>
-           <name>Professor Malcolm Sterling</name>
-           <pose>disappointed</pose>
+           <name>Rebecca</name>
+           <pose>patriotic</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>What happened to the creatures that lived during the Ice Age?</content>
+		<balloon status="speech">			<content>North Korea's name conveys democracy's presence,</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Student</name>
-           <pose>stroking cat</pose>
+           <name>Jane</name>
+           <pose>haughty</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>Many large mammals went extinct, including megafauna like the woolly mammoth.</content>
+		<balloon status="speech">			<content>But South Korea's name just claims a title's essence.</content>
 		</balloon>
    </right>
 
-   <below>of choice, with appropriate public scrutiny and medicinal guidance. </below>
-   <setting>wales</setting>
+   <below>while South Korea's name simply implies a title. </below>
+   <setting>united nations</setting>
 </panel><panel>
-   <above>Those involved in this trade use sophisticated methods and </above>
+   <above>Without diplomacy, the already fragile relationship between </above>
    <left>
        <figure>
-           <name>Professor Malcolm Sterling</name>
-           <pose>holding globe</pose>
+           <name>Rebecca</name>
+           <pose>shaking hands</pose>
            <facing>right</facing>
        </figure>
 
-		<balloon status="speech">			<content>How did the weather change during the Ice Age?</content>
+		<balloon status="speech">			<content>North and South could bridge the gap,</content>
 		</balloon>
    </left>
 
    <right>
        <figure>
-           <name>Student</name>
-           <pose>indicating</pose>
+           <name>Jane</name>
+           <pose>cutting bread</pose>
            <facing>left</facing>
        </figure>
 
-		<balloon status="speech">			<content>The Ice Age is actually responsible for modern ocean currents and weather patterns.</content>
+		<balloon status="speech">			<content>But without diplomacy, the ties will snap.</content>
 		</balloon>
    </right>
 
-   <below>poison in suspension to avoid apprehension, cheating at the </below>
-   <setting>laboratory</setting>
-</panel><panel>
-   <above>Narco-states are ruling and spreading, utilizing their wealth and power </above>
-   <left>
-       <figure>
-           <name>Professor Malcolm Sterling</name>
-           <pose>pushing</pose>
-           <facing>right</facing>
-       </figure>
-
-		<balloon status="speech">			<content>Look at those cave paintings! What do they mean?</content>
-		</balloon>
-   </left>
-
-   <right>
-       <figure>
-           <name>Student</name>
-           <pose>spraying paint</pose>
-           <facing>left</facing>
-       </figure>
-
-		<balloon status="speech">			<content>Those prehistoric art pieces provide a glimpse into how early humans lived during this time.</content>
-		</balloon>
-   </right>
-
-   <below>to oppress the poor and prevent any gains for them. </below>
-   <setting>cave</setting>
-</panel><panel>
-   <above>The challenge of overcoming the lasting effects of the drug trade on society is </above>
-   <left>
-       <figure>
-           <name>Professor Malcolm Sterling</name>
-           <pose>questioning</pose>
-           <facing>right</facing>
-       </figure>
-
-		<balloon status="speech">			<content>Are we still in an Ice Age?</content>
-		</balloon>
-   </left>
-
-   <right>
-       <figure>
-           <name>Student</name>
-           <pose>examining</pose>
-           <facing>left</facing>
-       </figure>
-
-		<balloon status="speech">			<content>No, but the effects are still visible in places like Antarctica and Greenland.</content>
-		</balloon>
-   </right>
-
-   <below>immense, but we must learn from our mistakes one by one and move towards </below>
-   <setting>laboratory</setting>
-</panel><panel>
-   <above>Don't Miss Out!</above>
-   <left>
-       <figure>
-           <name>Professor</name>
-           <pose>running away</pose>
-           <facing>right</facing>
-       </figure>
-
-		<balloon status="speech">			<content>Laugh until you cry with this timeless comedy!</content>
-		</balloon>
-   </left>
-
-   <right>
-       <figure>
-           <name>Student</name>
-           <pose>banishing</pose>
-           <facing>left</facing>
-       </figure>
-
-		<balloon status="speech">			<content>Available now at your nearest bookstore or online retailer!</content>
-		</balloon>
-   </right>
-
-   <setting>parthenon</setting>
+   <below>North and South Korea is destined to </below>
+   <setting>battlefield</setting>
 </panel>	</panels>
 </comic>

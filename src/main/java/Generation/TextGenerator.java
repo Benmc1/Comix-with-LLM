@@ -83,7 +83,7 @@ public class TextGenerator {
 
         if(parsed.size() != 2) return false;
         for (List<String> list : parsed) {
-            if(list.size() != 10) return false;
+            if(list.size() != NUM_PANELS) return false;
         }
         return true;
     }

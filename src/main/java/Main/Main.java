@@ -12,7 +12,6 @@ public class Main {
 
         Comic comic = new Comic(IO.getTopic());
 
-
         ComicSerializer serializer = new ComicSerializer();
         // Serialize Comic object to XML and write to file
         serializer.serializeToXml(comic);

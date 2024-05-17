@@ -8,9 +8,6 @@ public class AssetSelector {
     private static EmbeddingDatabase embeddingDatabase;
     private static IndexDatabase indexDatabase;
 
-    public AssetSelector() {
-
-    }
 
     public static String getRelevantChoice(String description,String type) {
         String ans;

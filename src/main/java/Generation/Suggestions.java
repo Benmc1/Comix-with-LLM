@@ -4,10 +4,9 @@ import Main.ConfigurationFile;
 
 import java.util.Arrays;
 import java.util.List;
-
 public class Suggestions {
     private List<String[]> suggestions;
-
+    private final int NUM_PANELS = Integer.parseInt(ConfigurationFile.getProperty("NUM_OF_PANELS"));
     Suggestions(String text, String topic){
         generateSuggestions(text,topic);
     }
@@ -37,7 +36,7 @@ public class Suggestions {
     }
 
     private boolean isValidSuggestion(List<String[]> input){
-        if(input.size() != 10) return false;
+        if(input.size() != NUM_PANELS) return false;
         for (String[] array : input) {
             if (array.length != 3) return false;
         }

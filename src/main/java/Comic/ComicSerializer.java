@@ -31,7 +31,7 @@ public class ComicSerializer {
             File file = new File(ConfigurationFile.getProperty("XML_FILE"));
             Files.writeString(file.toPath(), xmlBuilder.toString());
 
-            System.out.println("XML file generated successfully!");
+            System.out.println("\nXML file generated successfully!");
         } catch (Exception e) {
             e.printStackTrace();
         }
