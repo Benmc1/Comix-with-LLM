@@ -12,8 +12,16 @@ import java.util.Scanner;
 public class IO {
     public static String getTopic() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the prompt for chat completion:");
-        return scanner.nextLine();
+        String topic = null;
+        while (topic == null || topic.trim().isEmpty()) {
+            System.out.println("Enter the prompt for chat completion:");
+            topic = scanner.nextLine();
+            if (topic.trim().isEmpty()) {
+                System.out.println("Input is invalid. Please enter a non-empty topic.");
+            }
+        }
+
+        return topic;
     }
 
     public static Character createStudentCharacter() {
