@@ -10,7 +10,7 @@ public class Narrator {
     private final Conversation conversation;
     private final List<String> captions;
     private static final String[] NARRATOR_STYLES = {
-             "Buggs Bunny"
+             "Buggs Bunny","Captain Jack Sparrow","Yoda","Bain","The Joker"
     };
     //
     public Narrator(String text,String topic) {
