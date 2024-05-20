@@ -44,6 +44,12 @@ Cosine similarity equates "Lighting a memorial candle" to "terrorizing" so it's 
 
 ## Sprint 6
 
-For this sprint we decieded to add a new type of comic. In the comic a professor and student are brought to a given time period and discuss all the things they see around them.
+For this sprint we decided to add a new type of comic. In the comic a professor and student are brought to a given time period and discuss all the things they see around them.
 Both comic types are still available via a mode selection at startup. Aswell with the history mode we added Opening and closing panels to make it more like a story. These are preset in the panels class. Theres also a character creator where you can choose the appearance of the student character.
+
+## Sprint 7
+In the final sprint most of the changes were to improve reliability and some QoL changes for the user.
+To improve reliability we added checks on the generators to ensure the result was of the correct form. If this failed the model would try at most 3 more times.
+The captions were the most sensitive so for the best chance we just reset the chat every try instead of asking it to try again.
+
 ### To run "java -jar Comix-with-LLM-1.0-SNAPSHOT-jar-with-dependencies.jar"
