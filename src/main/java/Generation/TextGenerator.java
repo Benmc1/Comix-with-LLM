@@ -61,6 +61,7 @@ public class TextGenerator {
             text =  conversation.getResponse(dialoguePrompt + ". It should follow the same structure as this: " + example);
             tries++;
         }
+        if(tries ==  3) text = conversation.getResponse("try again but make it shorter");
         System.out.println(text);
         return text;
     }

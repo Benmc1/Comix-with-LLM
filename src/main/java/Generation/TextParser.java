@@ -36,6 +36,9 @@ public class TextParser {
         //parse by getting the '.' after each number and returning string after it.
         for (String s : lines) {
             int beginning = s.indexOf(".");
+            if(s.contains("Narration:")){
+               s = s.replaceAll("Narration:","");
+            }
             s = s.substring(beginning+1);
             s = s.stripLeading();
             captions.add(s);

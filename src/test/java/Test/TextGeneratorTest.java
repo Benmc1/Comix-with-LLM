@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TextGeneratorTest {
-    TextGenerator t = new TextGenerator("ancient rome", Comic.Mode.HISTORY);
+    TextGenerator t = new TextGenerator("Ancient rome", Comic.Mode.HISTORY);
     @Test
     void getLines() {
         assertNotNull(t.getLines());
