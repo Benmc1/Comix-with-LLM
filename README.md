@@ -45,7 +45,7 @@ Cosine similarity equates "Lighting a memorial candle" to "terrorizing" so it's 
 ## Sprint 6
 
 For this sprint we decided to add a new type of comic. In the comic a professor and student are brought to a given time period and discuss all the things they see around them.
-Both comic types are still available via a mode selection at startup. Aswell with the history mode we added Opening and closing panels to make it more like a story. These are preset in the panels class. Theres also a character creator where you can choose the appearance of the student character.
+Both comic types are still available via a mode selection at startup. Aswell with the history mode we added Opening and closing panels to make it more like a story. These are preset in the panels class. There is also a character creator where you can choose the appearance of the student character.
 
 ## Sprint 7
 In the final sprint most of the changes were to improve reliability and some QoL changes for the user.

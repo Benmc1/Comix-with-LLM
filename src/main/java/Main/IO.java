@@ -30,8 +30,8 @@ public class IO {
 
         String appearance = getInputWithValidation(scanner, "Enter the appearance (male or female):", new String[]{"male", "female"});
         String hairColor = getInputWithValidation(scanner, "Enter a hair color:", new String[]{"brown", "blonde", "black", "white", "red", "blue", "green", "purple", "pink", "yellow", "orange", "gray"}); 
-        String skinColor = getInputWithValidation(scanner, "Enter a skin color:", new String[]{"white", "black", "yellow", "pink", "purple", "blue", "green", "brown", "red", "gray"});
-        String lipColor = getInputWithValidation(scanner, "Enter a lip color:", new String[]{"white", "black", "yellow", "pink", "purple", "blue", "green", "brown", "red", "gray"});
+        String skinColor = getInputWithValidation(scanner, "Enter a skin color:", new String[]{"white", "black", "yellow", "pink", "brown"});
+        String lipColor = getInputWithValidation(scanner, "Enter a lip color:", new String[]{"white","pink", "blue", "green", "brown", "red"});
 
         Character student = new Character("Student");
         student.setFeatures(appearance, hairColor, skinColor, lipColor);
@@ -106,8 +106,4 @@ public class IO {
         return input.equals("1") ? Comic.Mode.HISTORY : Comic.Mode.DEBATE ;
     }
 
-    public static void main(String[] args) {
-        Character studentCharacter = createStudentCharacter();
-        System.out.println("Created character details:");
-    }
 }

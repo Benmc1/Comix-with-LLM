@@ -10,9 +10,9 @@ public class Narrator {
     private final Conversation conversation;
     private final List<String> captions;
     private static final String[] NARRATOR_STYLES = {
-            "Yoda", "Darth Vader", "Donald Trump", "Bane", "Boris Johnson"
+             "Buggs Bunny"
     };
-
+    //
     public Narrator(String text,String topic) {
         style = getRandomNarratorStyle();
         conversation = new Conversation();
@@ -49,11 +49,15 @@ public class Narrator {
             response = conversation.getResponse(text);
             tries++;
         }
+        if(tries ==  3) response = conversation.getResponse("try again but make it shorter");
         System.out.println(response + "\n");
         return TextParser.parseCaptions(response);
     }
     private Boolean isValidNarration(String input){
         List<String> attempt = TextParser.parseCaptions(input);
+        for (String s : attempt) {
+            if (s.length() > 135) return false;
+        }
         return attempt.size() == 10;
     }
     public static void main(String[] args) {

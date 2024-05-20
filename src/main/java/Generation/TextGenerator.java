@@ -54,11 +54,11 @@ public class TextGenerator {
         int tries = 0;
         while(!isValidDialogue(text) && tries < 3 ){
             System.out.println("Dialogue invalid trying again with example");
+            conversation.removeLastExchange();
             String example = ConfigurationFile.getProperty("DIALOGUE_EXAMPLE");
-            text =  conversation.getResponse("Try again. It should follow the same structure as this: " + example);
+            text =  conversation.getResponse(dialoguePrompt + ". It should follow the same structure as this: " + example);
             tries++;
         }
-        if(tries >= 4) System.out.println("Unable to produce valid suggestions.");
         System.out.println(text);
         return text;
     }
