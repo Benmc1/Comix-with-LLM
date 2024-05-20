@@ -2,7 +2,6 @@ package Generation;
 
 import Main.ConfigurationFile;
 
-import java.util.Arrays;
 import java.util.List;
 public class Suggestions {
     private List<String[]> suggestions;
@@ -45,10 +44,17 @@ public class Suggestions {
 
     @Override
     public String toString() {
-        StringBuilder str = new StringBuilder();
-        for (String[] arr :suggestions){
-            str.append(Arrays.toString(arr)).append("\n");
+        StringBuilder sb = new StringBuilder();
+        for (String[] suggestion : suggestions) {
+            sb.append("(");
+            for (int i = 0; i < suggestion.length; i++) {
+                sb.append(suggestion[i]);
+                if (i < suggestion.length - 1) {
+                    sb.append(", ");
+                }
+            }
+            sb.append(")\n");
         }
-        return str.toString();
+        return sb.toString();
     }
 }

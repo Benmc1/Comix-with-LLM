@@ -19,7 +19,7 @@ public class TextGenerator {
         lines.addRightLines(parsedDialogue.get(1));
 
         suggestions = new Suggestions(dialogue,topic);
-        printSuggestions();
+        System.out.println(suggestions);
 
         Narrator narrator = new Narrator(dialogue,topic);
         lines.addCaptions(narrator.getCaptions());
@@ -31,21 +31,6 @@ public class TextGenerator {
 
     public List<String[]> getSuggestions() {
         return suggestions.getSuggestions();
-    }
-
-    private void printSuggestions() {
-        List<String[]> suggestionsList = suggestions.getSuggestions();
-        for (String[] suggestion : suggestionsList) {
-            StringBuilder sb = new StringBuilder("(");
-            for (int i = 0; i < suggestion.length; i++) {
-                sb.append(suggestion[i]);
-                if (i < suggestion.length - 1) {
-                    sb.append(", ");
-                }
-            }
-            sb.append(")");
-            System.out.println(sb);
-        }
     }
 
     private String generateDialogue(Comic.Mode mode){
