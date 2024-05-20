@@ -45,7 +45,9 @@ public class TextGenerator {
         //If it's a DOS conversation returns a blank string
         if(pointsList.isEmpty()) {
             System.out.println("Generating points returned a DOS moving to backup.");
-            conversation.addMessageAndResponse(ConfigurationFile.getProperty(mode.toString() + "_DOS_PROMPT"),ConfigurationFile.getProperty(mode + "_DOS_RESPONSE"));
+            String dosPrompt = ConfigurationFile.getProperty("DOS_PROMPT") + "now we are talking about" + topic;
+            String dosResponse = ConfigurationFile.getProperty("DOS_RESPONSE");
+            conversation.addMessageAndResponse(dosPrompt,dosResponse);
             conversation.getResponse(pointsPrompt);
         }
         //Generate dialogue for both sides from the points
@@ -68,6 +70,9 @@ public class TextGenerator {
 
         if(parsed.size() != 2) return false;
         for (List<String> list : parsed) {
+            for (String s: list) {
+                if(s.length() > 85) return false;
+            }
             if(list.size() != NUM_PANELS) return false;
         }
         return true;

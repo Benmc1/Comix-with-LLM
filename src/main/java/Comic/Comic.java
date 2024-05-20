@@ -20,10 +20,9 @@ public class Comic {
         this.topic = topic;
         mode = IO.chooseMode();
         if(mode == Mode.HISTORY) {
-            characterLeft = new Character("Professor Malcolm Sterling");
-            characterLeft.setFeatures("male", "grey", "white", "pink");
-            characterRight = IO.createStudentCharacter();
-            panels.add(Panel.OpeningPanel());
+            characterRight = new Character("Professor");
+            characterRight.setFeatures("male", "grey", "white", "pink");
+            characterLeft = IO.createStudentCharacter();
         }else{
             characterLeft = new Character("");
             characterRight = new Character("");
